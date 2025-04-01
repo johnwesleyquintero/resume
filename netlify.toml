@@ -11,4 +11,4 @@
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
-    Content-Security-Policy = "default-src 'self' https://cdn.tailwindcss.com"
+    Content-Security-Policy = "default-src 'self' https://cdn.tailwindcss.com https://avatars.githubusercontent.com; img-src 'self' https://avatars.githubusercontent.com https://wesleyquintero.vercel.app; script-src 'self' https://cdn.tailwindcss.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
