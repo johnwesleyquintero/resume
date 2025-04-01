@@ -35,7 +35,7 @@ http-server
 
 ## 🎯 Demo
 [![Live Demo](https://img.shields.io/badge/View-Live_Demo-blue?style=for-the-badge)](https://wesley-quintero-resume.netlify.app)  
-[![GitHub Repo](https://img.shields.io/badge/View-Source_Code-black?style=for-the-badge&logo=github)](https://github.com/johnwesleyquintero/resume/resume.git)
+[![GitHub Repo](https://img.shields.io/badge/View-Source_Code-black?style=for-the-badge&logo=github)](https://github.com/johnwesleyquintero/resume/)
 
 ## 🛠 Customization
 To personalize this resume template:
