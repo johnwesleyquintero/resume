@@ -1,7 +1,7 @@
 # Wesley Quintero - Professional Resume
 
 ## 📝 Project Overview
-This repository hosts my professional resume and portfolio materials, designed to showcase my expertise as an Amazon Specialist with skills in SEO, PPC, Inventory Management, and Account Health.
+This repository hosts my professional resume and portfolio materials, designed to showcase my expertise as an Amazon Specialist with SEO, PPC, Inventory Management, and Account Health skills.
 
 ## ✨ Key Features
 - **Fully Responsive** - Adapts seamlessly to all device sizes
@@ -34,7 +34,7 @@ http-server
 ```
 
 ## 🎯 Demo
-[![Live Demo](https://img.shields.io/badge/View-Live_Demo-blue?style=for-the-badge)](https://wq-resume.netlify.app)  
+[![Live Demo](https://img.shields.io/badge/View-Live_Demo-blue?style=for-the-badge)](https://johnwesleyquintero-resume.netlify.app)  
 [![GitHub Repo](https://img.shields.io/badge/View-Source_Code-black?style=for-the-badge&logo=github)](https://github.com/johnwesleyquintero/resume/)
 
 ## 🛠 Customization
