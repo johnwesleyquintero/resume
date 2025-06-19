@@ -1,677 +1,525 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="light">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Wesley Quintero - Data-Driven Amazon & E-commerce Specialist specializing in data analytics and e-commerce." />
-    <meta name="keywords" content="Amazon Specialist, E-commerce, Data Analytics, Wesley Quintero, Resume, Portfolio" />
-    <meta name="author" content="Wesley Quintero">
+    <meta name="description" content="John Wesley Quintero - Data-Driven Amazon & E-commerce Specialist specializing in data analytics and e-commerce." />
+    <meta name="keywords" content="Amazon Specialist, E-commerce, Data Analytics, John Wesley Quintero, Resume, Portfolio" />
+    <meta name="author" content="John Wesley Quintero">
     <meta name="theme-color" content="#1d4ed8" />
-    <title>Wesley Quintero - Resume</title>
-    <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
-    <link rel="icon" type="public/favicon.svg" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="public/favicon.svg" sizes="16x16" href="favicon-16x16.png">
+    <title>John Wesley Quintero - Resume</title>
+    <link rel="icon" href="./public/favicon.svg" type="image/svg+xml">
 
-    <!-- Add Tailwind and custom styles -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      // Ensure icons are initialized after DOM content is loaded
-      document.addEventListener('DOMContentLoaded', function () {
-        lucide.createIcons({
-          attrs: {
-            'stroke-width': '1.5',
-            class: 'icon',
-          },
-        });
-      });
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-      function downloadAllDocuments() {
-        const documents = [
-          'docs/Application-Letter-WQ-Quintero.pdf',
-          'docs/Cover-Note-WQ-Quintero.pdf',
-          'docs/Wesley Quintero - Resume.pdf'
-        ];
-        
-        documents.forEach(doc => {
-          const link = document.createElement('a');
-          link.href = doc;
-          link.download = doc.split('/').pop();
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-        });
-      };
-
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            animation: {
-              'accordion-down': 'accordion-down 0.2s ease-out',
-              'accordion-up': 'accordion-up 0.2s ease-out',
-              blink: 'blink 1s step-end infinite',
-              fadeIn: 'fadeIn 1s ease-out forwards',
-              float: 'float 3s ease-in-out infinite',
-              gradient: 'gradient 8s linear infinite alternate',
-            },
-            keyframes: {
-              fadeIn: {
-                '0%': { opacity: '0', transform: 'translateY(10px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-10px)' },
-              },
-              gradient: {
-                '0%': { backgroundPosition: '0% 50%' },
-                '100%': { backgroundPosition: '100% 50%' },
-              },
-            },
-          },
-        },
-      };
-    </script>
-    <style>
-      @media print {
-        @page {
-          margin: 0.5in;
+    <!-- Custom Styles -->
+    <style type="text/tailwindcss">
+        .icon {
+            @apply inline-block h-4 w-4 stroke-current;
+            stroke-width: 1.5;
         }
-        body {
-          print-color-adjust: exact;
-          -webkit-print-color-adjust: exact;
+        /* Enhanced accessibility focus styles */
+        *:focus-visible {
+            @apply outline-2 outline-offset-2 outline-blue-600 rounded;
         }
-      }
-      .icon {
-        width: 1rem;
-        height: 1rem;
-        stroke-width: 2;
-        fill: none;
-        stroke: currentColor;
-      }
-      .icon-spin {
-        animation: spin 8s linear infinite;
-      }
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
+        /* Smooth dark mode transitions */
+        * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
-      }
-      /* Enhanced accessibility focus styles */
-      *:focus-visible {
-        outline: 2px solid #2563eb;
-        outline-offset: 2px;
-        border-radius: 0.25rem;
-      }
-
-      /* Smooth dark mode transitions */
-      * {
-        transition:
-          background-color 0.3s ease,
-          color 0.3s ease;
-      }
-
-      /* Enhanced print styles */
-      @media print {
-        @page {
-          margin: 0.5in;
-          size: letter portrait;
+        /* Print styles */
+        @media print {
+            @page {
+                margin: 0.5in;
+                size: letter portrait;
+            }
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            .no-print {
+                display: none !important;
+            }
+            a[href^="http"]::after {
+                content: ' (' attr(href) ')';
+                font-size: 0.8em;
+                color: #666;
+            }
+            a[href^="mailto"]::after {
+                content: '';
+            }
         }
-        .no-print {
-          display: none !important;
-        }
-        a[href]::after {
-          content: ' (' attr(href) ')';
-          font-size: 0.8em;
-          color: #666;
-        }
-      }
     </style>
-  </head>
-  <body
-    class="bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 text-gray-900 dark:text-gray-100 p-6 md:p-8 max-w-4xl mx-auto min-h-screen"
-  >
-    <main>
-    <!-- Header Section with modern gradient -->
-    <header
-      class="relative mb-10 -mx-6 md:-mx-8 -mt-6 md:-mt-8 px-6 md:px-8 py-12 md:py-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-b-lg overflow-hidden animate-fadeIn"
-    >
-      <div
-        class="absolute inset-0 bg-grid-white/5 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.3))] -z-10"
-      ></div>
-      <div
-        class="absolute inset-0 bg-gradient-to-br from-purple-500/30 to-blue-500/30 blur-3xl animate-gradient bg-[length:200%_200%]"
-      ></div>
+</head>
 
-      <!-- Profile Content -->
-      <div
-        class="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 relative z-10"
-      >
-        <div
-          class="relative aspect-square w-32 md:w-36 flex-shrink-0 animate-float hover:animate-none"
-        >
-          <div
-            class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-purple-500/20 blur-3xl"
-          ></div>
-          <div
-            class="relative h-full overflow-hidden rounded-full border-2 border-white/90 shadow-xl transition-transform duration-300 hover:scale-105 group"
-          >
-            <img
-              src="https://avatars.githubusercontent.com/u/190981914?v=4"
-              alt="Wesley Quintero"
-              class="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3"
-              sizes="(max-width: 768px) 128px, 144px"
-              loading="lazy"
-            />
-          </div>
-        </div>
+<body class="bg-slate-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans max-w-4xl mx-auto p-6 md:p-8">
+    <main class="space-y-12">
+        <!-- Header Section -->
+        <header class="relative mb-10 -mx-6 md:-mx-8 -mt-6 md:-mt-8 px-6 md:px-8 py-12 md:py-16 bg-gradient-to-br from-blue-700 to-purple-700 rounded-b-xl shadow-lg overflow-hidden animate-fadeIn">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22none%22%20stroke%3D%22rgb(255%20255%20255%20/%200.05)%22%3E%3Cpath%20d%3D%22M0%20.5H31.5V32%22%2F%3E%3C%2Fsvg%3E')] opacity-50 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.3))]"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-600/30 to-blue-600/30 blur-3xl animate-gradient bg-[length:200%_200%]"></div>
 
-        <div class="flex-1 text-center md:text-left space-y-4">
-          <!-- Name and title with modern animation -->
-          <div class="animate-fadeIn [animation-delay:200ms]">
-            <h1
-              class="text-4xl md:text-5xl font-bold mb-2 text-white drop-shadow-md"
-            >
-              John Wesley Quintero
-            </h1>
-            <p class="text-lg md:text-xl text-white drop-shadow">
-              Data-Driven Amazon & E-commerce Specialist
-            </p>
-          </div>
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8 relative z-10">
+                <div class="relative w-32 md:w-36 flex-shrink-0 animate-float hover:animate-none">
+                    <img src="https://avatars.githubusercontent.com/u/190981914?v=4" alt="John Wesley Quintero" class="h-full w-full object-cover rounded-full border-4 border-white/50 shadow-xl transition-transform duration-300 hover:scale-105" sizes="(max-width: 768px) 128px, 144px" loading="lazy" />
+                </div>
 
-          <!-- Contact info with Lucide icons -->
-          <div
-            class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-white animate-fadeIn [animation-delay:400ms]"
-          >
-            <a
-              href="mailto:johnwesleyquintero@gmail.com"
-              class="flex items-center gap-2 hover:text-white/90 transition-colors group"
-            >
-              <svg
-                class="icon transition-transform group-hover:scale-110"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-                />
-                <path d="M22 6l-10 7L2 6" />
-              </svg>
-              johnwesleyquintero@gmail.com
-            </a>
-            <a
-              href="https://linkedin.com/in/wesleyquintero"
-              class="flex items-center gap-2 hover:text-white/90 transition-colors group"
-            >
-              <svg
-                class="icon transition-transform group-hover:scale-110"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2h-1a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                />
-                <rect x="2" y="9" width="4" height="12" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-              LinkedIn
-            </a>
-            <a
-              href="https://github.com/johnwesleyquintero/resume"
-              class="flex items-center gap-2 hover:text-white/90 transition-colors group"
-            >
-              <svg
-                class="icon transition-transform group-hover:scale-110"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 2C6.5 2 2 6.5 2 12c0 4.4 2.9 8.1 6.9 9.4.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.7 1.7.7 1.7.5.9 1.3 1.2 2.1 1.2.6 0 1.1-.2 1.5-.4.1-.5.4-1 .7-1.2-2.2-.3-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1 .8-.2 1.6-.3 2.4-.3s1.6.1 2.4.3c2-.1 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.5 4.9.4.3.8 1 .8 2v3c0 .3.2.6.7.5C19.1 20.1 22 16.4 22 12c0-5.5-4.5-10-10-10z"
-                />
-              </svg>
-              GitHub
-            </a>
-            <div class="flex items-center gap-2">
-              <svg class="icon" viewBox="0 0 24 24">
-                <path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 1 1 18 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-              Tagum City, Philippines
+                <div class="flex-1 text-center md:text-left space-y-4">
+                    <div class="animate-fadeIn [animation-delay:200ms]">
+                        <h1 class="text-4xl md:text-5xl font-bold text-white drop-shadow-md">John Wesley Quintero</h1>
+                        <p class="text-lg md:text-xl text-purple-200 drop-shadow">Data-Driven Amazon & E-commerce Specialist</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-white/90 animate-fadeIn [animation-delay:400ms]">
+                        <a href="mailto:johnwesleyquintero@gmail.com" class="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group">
+                            <i data-lucide="mail" class="icon transition-transform group-hover:scale-110"></i>
+                            <span>johnwesleyquintero@gmail.com</span>
+                        </a>
+                        <a href="https://linkedin.com/in/johnwesleyquintero" target="_blank" class="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group">
+                            <i data-lucide="linkedin" class="icon transition-transform group-hover:scale-110"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                        <a href="https://github.com/johnwesleyquintero" target="_blank" class="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group">
+                            <i data-lucide="github" class="icon transition-transform group-hover:scale-110"></i>
+                            <span>GitHub Profile</span>
+                        </a>
+                        <a href="https://wescode.vercel.app/" target="_blank" class="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group">
+                            <i data-lucide="globe" class="icon transition-transform group-hover:scale-110"></i>
+                            <span>Portfolio</span>
+                        </a>
+                        <div class="flex items-center justify-center md:justify-start gap-2">
+                            <i data-lucide="map-pin" class="icon"></i>
+                            <span>Tagum City, Philippines</span>
+                        </div>
+                        <button onclick="window.print()" class="no-print flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group cursor-pointer" aria-label="Print resume">
+                            <i data-lucide="printer" class="icon transition-transform group-hover:scale-110"></i>
+                            <span>Print Resume</span>
+                        </button>
+                        <button onclick="downloadAllDocuments()" class="no-print flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group cursor-pointer" aria-label="Download all documents">
+                            <i data-lucide="download-cloud" class="icon transition-transform group-hover:scale-110"></i>
+                            <span>Download Documents</span>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <button
-              onclick="window.print()"
-              class="flex items-center gap-2 hover:text-white/90 transition-colors group cursor-pointer no-print"
-              aria-label="Print resume"
-            >
-              <svg
-                class="icon transition-transform group-hover:scale-110"
-                viewBox="0 0 24 24"
-              >
-                <path d="M6 9V2h12v7" />
-                <path
-                  d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"
-                />
-                <path d="M6 14h12v8H6z" />
-              </svg>
-              Print Resume
-            </button>
-            <button
-              onclick="downloadAllDocuments()"
-              class="flex items-center gap-2 hover:text-white/90 transition-colors group cursor-pointer no-print"
-              aria-label="Download documents"
-            >
-              <svg
-                class="icon transition-transform group-hover:scale-110"
-                viewBox="0 0 24 24"
-              >
-                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
-                <polyline points="7 10 12 15 17 10" />
-                <line x1="12" y1="15" x2="12" y2="3" />
-              </svg>
-              Download Documents
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
+        </header>
 
-    <!-- Content Sections -->
-    <div
-      class="space-y-10 md:space-y-12 animate-fadeIn [animation-delay:600ms]"
-    >
-      <!-- Summary Section -->
-      <section>
-        <h2 class="text-lg font-semibold mb-3 text-blue-600">
-          Professional Summary
-        </h2>
-        <p class="text-gray-700">
-          Data-driven Amazon & E-commerce Specialist with a proven track record
-          of increasing seller profits by 30-50% through the development and
-          implementation of AI-powered automation and strategic marketplace
-          optimization. Expertise in streamlining operations and leveraging data
-          insights to drive significant performance improvements.
-        </p>
-      </section>
+        <!-- Professional Summary -->
+        <section aria-labelledby="summary-heading" class="animate-fadeIn [animation-delay:600ms]">
+            <h2 id="summary-heading" class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b-2 border-blue-200 dark:border-gray-700 pb-2">Professional Summary</h2>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                A highly effective Amazon Growth Specialist with over 5 years of hands-on experience, I drive significant e-commerce profitability through deep expertise in Amazon SEO, PPC, and holistic account management. I've consistently optimized listings, managed high-performing ad campaigns, and streamlined operations. My unique edge comes from actively developing custom automation tools using SP-API and Node.js, allowing me to bridge strategic needs with technical solutions that deliver measurable results.
+            </p>
+        </section>
 
-      <!-- Enhanced Experience Section -->
-      <section>
-        <h2 class="text-lg font-semibold mb-4 text-blue-600" id="experience">
-          Professional Experience
-          <span class="sr-only">(Click items to expand details)</span>
-        </h2>
-        <div class="space-y-5">
-          <div
-            class="border-l-2 border-blue-600 pl-4 transition-all hover:pl-6 focus-within:pl-6"
-            tabindex="0"
-            role="button"
-            aria-expanded="false"
-          >
-            <h3 class="font-medium">Amazon Specialist 2</h3>
-            <p class="text-blue-600">My Amazon Guy</p>
-            <p class="text-sm text-gray-600">
-              October 2024 - March 2025 (6 months)
-            </p>
-            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
-              <li>
-                Developed and implemented data-driven strategies to optimize
-                Amazon product listings, resulting in a 15% increase in sales.
-              </li>
-              <li>
-                Managed and analyzed Amazon advertising campaigns, improving ROI
-                by 10%.
-              </li>
-            </ul>
-          </div>
-          <div
-            class="border-l-2 border-blue-600 pl-4 transition-all hover:pl-6 focus-within:pl-6"
-            tabindex="0"
-            role="button"
-            aria-expanded="false"
-          >
-            <h3 class="font-medium">Item Specialist</h3>
-            <p class="text-blue-600">Bulk Buy America</p>
-            <p class="text-sm text-gray-600">
-              March 2024 - September 2024 (7 months)
-            </p>
-            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
-              <li>
-                Oversaw the listing and maintenance of product catalogs,
-                ensuring data accuracy and completeness.
-              </li>
-              <li>
-                Collaborated with cross-functional teams to resolve
-                product-related issues and improve customer satisfaction.
-              </li>
-            </ul>
-          </div>
-          <div
-            class="border-l-2 border-blue-600 pl-4 transition-all hover:pl-6 focus-within:pl-6"
-            tabindex="0"
-            role="button"
-            aria-expanded="false"
-          >
-            <h3 class="font-medium">Marketplace Support</h3>
-            <p class="text-blue-600">Adorama</p>
-            <p class="text-sm text-gray-600">
-              May 2023 - September 2023 (5 months)
-            </p>
-            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
-              <li>
-                Provided customer support and resolved inquiries related to
-                product listings and orders.
-              </li>
-              <li>
-                Managed and updated product information across multiple online
-                marketplaces.
-              </li>
-            </ul>
-          </div>
-          <div
-            class="border-l-2 border-blue-600 pl-4 transition-all hover:pl-6 focus-within:pl-6"
-            tabindex="0"
-            role="button"
-            aria-expanded="false"
-          >
-            <h3 class="font-medium">Amazon Account Manager</h3>
-            <p class="text-blue-600">Champion E-com LLC</p>
-            <p class="text-sm text-gray-600">
-              October 2022 - September 2023 (1 year)
-            </p>
-            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
-              <li>
-                Managed and optimized Amazon product listings, increasing sales
-                by 20% within six months.
-              </li>
-              <li>
-                Developed and executed marketing strategies to improve product
-                visibility and drive traffic.
-              </li>
-            </ul>
-          </div>
-          <div
-            class="border-l-2 border-blue-600 pl-4 transition-all hover:pl-6 focus-within:pl-6"
-            tabindex="0"
-            role="button"
-            aria-expanded="false"
-          >
-            <h3 class="font-medium">Amazon Wholesale Buyer</h3>
-            <p class="text-blue-600">Sales.support</p>
-            <p class="text-sm text-gray-600">
-              October 2018 - July 2022 (3 years 10 months)
-            </p>
-            <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
-              <li>
-                Identified and sourced profitable wholesale products for Amazon,
-                resulting in a 25% increase in revenue.
-              </li>
-              <li>
-                Negotiated pricing and terms with suppliers to maximize profit
-                margins.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Quick Links Section -->
-      <section>
-        <h2
-          class="text-lg font-semibold mb-4 text-blue-600 flex items-center gap-2"
-        >
-          <span class="icon">
-            <!-- Copy SVG content from Lucide React icons -->
-          </span>
-          Project Links
-        </h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-          <a
-            href="https://wesleyquintero.vercel.app"
-            target="_blank"
-            class="text-sm text-gray-700 hover:text-blue-600 flex items-center gap-2 group"
-            aria-label="Portfolio"
-          >
-            <svg
-              class="icon transition-transform group-hover:scale-110"
-              viewBox="0 0 24 24"
-            >
-              <rect x="3" y="3" width="7" height="7" />
-              <rect x="14" y="3" width="7" height="7" />
-              <rect x="14" y="14" width="7" height="7" />
-              <rect x="3" y="14" width="7" height="7" />
-            </svg>
-            Portfolio
-          </a>
-          <a
-            href="https://sellsmart-docs.vercel.app"
-            target="_blank"
-            class="text-sm text-gray-700 hover:text-blue-600 flex items-center gap-2 group"
-            aria-label="Documentation"
-          >
-            <svg
-              class="icon transition-transform group-hover:scale-110"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-              />
-              <path d="M22 6l-10 7L2 6" />
-            </svg>
-            Documentation
-          </a>
-          <a
-            href="https://sellsmart-hub.vercel.app"
-            target="_blank"
-            class="text-sm text-gray-700 hover:text-blue-600 flex items-center gap-2 group"
-            aria-label="AMZ Tools Hub"
-          >
-            <svg
-              class="icon transition-transform group-hover:scale-110"
-              viewBox="0 0 24 24"
-            >
-              <circle cx="9" cy="21" r="1" />
-              <circle cx="20" cy="21" r="1" />
-              <path
-                d="M1 1h4l1.68 8.39M6 13h13a1 1 0 0 0 1-.78l1.82-9.11H5.21"
-              />
-            </svg>
-            AMZ Tools Hub
-          </a>
-          <a
-            href="https://parserr.vercel.app"
-            target="_blank"
-            class="text-sm text-gray-700 hover:text-blue-600 flex items-center gap-2 group"
-            aria-label="Developer Tools"
-          >
-            <svg
-              class="icon transition-transform group-hover:scale-110"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M9 9l10.5 10.5M14.5 4.5L20 10m-9 9l-4.5 4.5H3v-3.5L14.5 10"
-              />
-            </svg>
-            Developer Tools
-          <a href="https://devflowdb.vercel.app"
-            target="_blank"
-            class="text-sm text-gray-700 hover:text-blue-600 flex items-center gap-2 group"
-            aria-label="Database Project"
-          >
-            <svg
-              class="icon transition-transform group-hover:scale-110"
-              viewBox="0 0 24 24"
-            >
-              <ellipse cx="12" cy="5" rx="9" ry="3" />
-              <path d="M3 5v14c0 1.1 4 3 9 3s9-1.9 9-3V5" />
-              <path d="M3 12c0 1.1 4 3 9 3s9-1.9 9-3" />
-            </svg>
-            Database Project
-          </a>
-        </div>
-      </section>
-
-      <!-- Enhanced Skills Section with Progress Bars -->
-      <section>
-        <h2 class="text-lg font-semibold mb-4 text-blue-600">
-          Technical Skills
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          <div class="space-y-3">
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span>Data Analytics</span>
-                <span>95%</span>
-              </div>
-              <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
-                <div
-                  class="h-full bg-blue-600 rounded-full"
-                  style="width: 95%; transition: width 1s ease-out"
-                ></div>
-              </div>
+        <!-- Professional Experience -->
+        <section aria-labelledby="experience-heading" class="animate-fadeIn [animation-delay:700ms]">
+            <h2 id="experience-heading" class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b-2 border-blue-200 dark:border-gray-700 pb-2">Professional Experience</h2>
+            <div id="experience-list" class="space-y-6">
+                <!-- Experience items will be dynamically populated here, or can be hardcoded as below -->
+                <div class="border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-2 transition-all hover:border-blue-500 dark:hover:border-blue-400">
+                    <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Amazon Specialist 2</h3>
+                    <p class="text-blue-600 dark:text-blue-400 font-medium">My Amazon Guy</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">October 2024 - March 2025 (6 months)</p>
+                    <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1 mt-2">
+                        <li>Spearheaded data-driven Amazon SEO (Search Engine Optimization) and PPC (Pay-Per-Click) strategies for diverse clients, resulting in an average client sales increase of 35%.</li>
+                        <li>Designed and implemented data visualization dashboards for client reporting, enhancing transparency and strategic decision-making in Amazon marketplace performance.</li>
+                        <li>Optimized Amazon product listings, managed Amazon Ads campaigns, and conducted keyword research to significantly improve organic rank and ACoS (Advertising Cost of Sale) for client portfolios.</li>
+                    </ul>
+                </div>
+                <div class="border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-2 transition-all hover:border-blue-500 dark:hover:border-blue-400">
+                    <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Item Specialist</h3>
+                    <p class="text-blue-600 dark:text-blue-400 font-medium">Bulk Buy America</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">March 2024 - September 2024 (7 months)</p>
+                    <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1 mt-2">
+                        <li>Managed and maintained extensive Amazon product catalogs, ensuring precise data accuracy and optimizing product listings for enhanced discoverability and sales.</li>
+                        <li>Developed custom Excel-based price checking tools and utilized advanced VLOOKUP functions to streamline inventory management and procurement processes, improving efficiency by 25%.</li>
+                        <li>Collaborated cross-functionally with supply chain and sales teams to resolve product-related issues, enhancing overall Amazon marketplace performance and customer satisfaction.</li>
+                    </ul>
+                </div>
+                <div class="border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-2 transition-all hover:border-blue-500 dark:hover:border-blue-400">
+                    <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Marketplace Support</h3>
+                    <p class="text-blue-600 dark:text-blue-400 font-medium">Adorama</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">May 2023 - September 2023 (5 months)</p>
+                    <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1 mt-2">
+                        <li>Provided comprehensive technical support and issue resolution for B2B clients concerning Amazon marketplace integrations, product listings, and Seller Central operations.</li>
+                        <li>Effectively managed and updated product information across various online marketplaces, ensuring data accuracy and consistency for optimal product visibility.</li>
+                        <li>Streamlined communication between clients and internal teams, facilitating swift resolution of Amazon order, listing, and account health discrepancies.</li>
+                    </ul>
+                </div>
+                <div class="border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-2 transition-all hover:border-blue-500 dark:hover:border-blue-400">
+                    <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Amazon Account Manager</h3>
+                    <p class="text-blue-600 dark:text-blue-400 font-medium">Champion E-com LLC</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">October 2022 - September 2023 (1 year)</p>
+                    <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1 mt-2">
+                        <li>Managed and optimized Amazon account health, performance metrics, and compliance for multiple B2B clients, proactively addressing issues and driving sustainable growth.</li>
+                        <li>Implemented strategic Amazon SEO and PPC campaigns, including keyword optimization and bid management, leading to a 20% increase in sales and enhanced product visibility within six months.</li>
+                        <li>Analyzed competitor strategies, market trends, and Amazon data to identify new opportunities for client expansion, product launches, and profitability.</li>
+                    </ul>
+                </div>
+                 <div class="border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-2 transition-all hover:border-blue-500 dark:hover:border-blue-400">
+                    <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Amazon Wholesale Buyer</h3>
+                    <p class="text-blue-600 dark:text-blue-400 font-medium">Sales.support</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">October 2018 - July 2022 (3 years 10 months)</p>
+                    <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1 mt-2">
+                        <li>Successfully identified and sourced profitable wholesale product opportunities for Amazon FBA (Fulfillment by Amazon) and FBM (Fulfillment by Merchant) models, directly contributing to a 25% increase in overall revenue.</li>
+                        <li>Expertly negotiated favorable pricing and terms with suppliers and distributors, consistently maximizing profit margins and maintaining a competitive edge in the Amazon marketplace.</li>
+                        <li>Conducted in-depth market research, competitor analysis, and product trend forecasting to inform purchasing decisions and capitalize on emerging opportunities within the e-commerce landscape.</li>
+                    </ul>
+                </div>
             </div>
-            <h3 class="font-medium mb-2">Expert Level</h3>
-            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
-              <li>Data Analytics (Tableau, Power BI)</li>
-              <li>Programming (Python, JavaScript, R)</li>
-              <li>Machine Learning (TensorFlow, scikit-learn)</li>
-              <li>Database Management (SQL, NoSQL)</li>
-            </ul>
-          </div>
-          <div class="space-y-3">
-            <div class="skill-item">
-              <div class="flex justify-between mb-1">
-                <span>AI Automation</span>
-                <span>90%</span>
-              </div>
-              <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
-                <div
-                  class="h-full bg-blue-600 rounded-full"
-                  style="width: 90%; transition: width 1s ease-out"
-                ></div>
-              </div>
-            </div>
-            <h3 class="font-medium mb-2">Advanced Level</h3>
-            <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
-              <li>AI Automation (Amazon SageMaker, AWS Lambda)</li>
-              <li>SQL/Supabase</li>
-              <li>Amazon Advertising (Amazon Ads, PPC)</li>
-              <li>API Integration (REST APIs, GraphQL)</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Education & Certifications -->
-      <section>
-        <h2 class="text-lg font-semibold mb-4 text-blue-600">
-          Education & Certifications
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          <div>
-            <h3 class="font-medium mb-2">Education</h3>
-            <div class="text-sm text-gray-700">
-              <p class="font-medium">University of Southeastern Philippines</p>
-              <p>Bachelor's degree, Elementary Education</p>
-              <p class="text-gray-600">2015 - 2019</p>
+        <!-- Skills & Expertise -->
+        <section aria-labelledby="skills-heading" class="animate-fadeIn [animation-delay:800ms]">
+            <h2 id="skills-heading" class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b-2 border-blue-200 dark:border-gray-700 pb-2">Skills & Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="shopping-cart"></i>Amazon & E-commerce</h3>
+                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+                        <li>Marketplace Management & SEO</li>
+                        <li>PPC & Advertising (Amazon Ads)</li>
+                        <li>FBA Inventory & Logistics</li>
+                        <li>Competitor & Market Analysis</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="bar-chart-3"></i>Data & Analytics</h3>
+                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+                        <li>Data Visualization (Tableau, Power BI)</li>
+                        <li>Seller Central Reporting</li>
+                        <li>Business Intelligence & Insights</li>
+                        <li>Advanced Excel (VLOOKUP, Pivots)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="code-2"></i>Automation & Development</h3>
+                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+                        <li>SP-API Development & Integration</li>
+                        <li>Custom E-commerce Tooling (Node.js)</li>
+                        <li>AI/ML Implementation Concepts</li>
+                        <li>Workflow Automation</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="terminal-square"></i>Technical Stack</h3>
+                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+                        <li>Node.js, React, Next.js</li>
+                        <li>MongoDB, PostgreSQL, SQL</li>
+                        <li>AWS (Lambda, S3, API Gateway)</li>
+                        <li>Git, Docker, CI/CD</li>
+                    </ul>
+                </div>
             </div>
-          </div>
-          <div>
-            <h3 class="font-medium mb-2">Certifications</h3>
-            <ul class="text-sm text-gray-700 space-y-1">
-              <li>Amazon Advertising (Amazon)</li>
-              <li>Data Modeling (Pragmatic Works)</li>
-              <li>SEO, PPC, Catalog Management (MAG School)</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+        
+        <!-- GitHub Projects & Links -->
+        <section aria-labelledby="projects-heading" class="animate-fadeIn [animation-delay:900ms]">
+            <h2 id="projects-heading" class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b-2 border-blue-200 dark:border-gray-700 pb-2">Projects & Portfolio</h2>
+            <div id="github-projects" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- GitHub projects will be loaded here by JavaScript -->
+                <div class="text-gray-500">Loading GitHub projects...</div>
+            </div>
+        </section>
 
-    <!-- Modern footer with gradient border -->
-    <footer
-      class="mt-12 pt-6 border-t border-gradient-to-r from-primary/20 to-purple-500/20"
-    >
-      <div class="flex gap-4">
-        <a
-          href="https://github.com/johnwesleyquintero/resume"
-          class="hover:text-blue-600"
-          >GitHub</a
-        >
-        <a
-          href="https://linkedin.com/in/wesleyquintero/resume"
-          class="hover:text-blue-600"
-          >LinkedIn</a
-        >
-        <a href="https://wesleyquintero.vercel.app/" class="hover:text-blue-600"
-          >Portfolio</a
-        >
-      </div>
-      <div>
-        <p>Last Updated: March 2025</p>
-      </div>
+        <!-- Tools Section -->
+        <section aria-labelledby="tools-heading" class="animate-fadeIn [animation-delay:950ms]">
+            <h2 id="tools-heading" class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b-2 border-blue-200 dark:border-gray-700 pb-2">Tools & Platforms</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div>
+                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="cloud"></i>Cloud & DevOps</h3>
+                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+                        <li>AWS (Lambda, S3, API Gateway)</li>
+                        <li>Docker</li>
+                        <li>Git & GitHub</li>
+                        <li>Netlify</li>
+                        <li>Vercel</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="database"></i>Databases & Data</h3>
+                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+                        <li>MongoDB</li>
+                        <li>PostgreSQL</li>
+                        <li>Supabase</li>
+                        <li>SQL</li>
+                        <li>Tableau, Power BI, LookerStudio</li>
+                        <li>Advanced Excel</li>
+                         <li>Power Query</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="layout-dashboard"></i>Project Management & CRM</h3>
+                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+                        <li>Jira Software</li>
+                        <li>Notion</li>
+                        <li>Asana</li>
+                        <li>ClickUp</li>
+                        <li>Hubspot</li>
+                        <li>Salesforce (basic)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="code"></i>Development Tools</h3>
+                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+                        <li>VS Code</li>
+                        <li>Postman</li>
+                        <li>Insomnia</li>
+                        <li>Chrome DevTools</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="shopping-bag"></i>E-commerce & Marketing</h3>
+                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+                        <li>Amazon Seller Central</li>
+                        <li>Amazon Ads Console</li>
+                        <li>Helium 10</li>
+                        <li>Jungle Scout</li>
+                        <li>Smartscout</li>
+                        <li>Analyzer Tools</li>
+                        <li>SellerAmp SAS</li>
+                        <li>Repricer Tools</li>
+                        <li>Keepa</li>
+                        <li>Sellerise</li>
+                        <li>Price Checker 2</li>
+                        <li>Google Analytics</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="settings-2"></i>Automation & Scripting</h3>
+                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+                        <li>Custom Node.js Scripts</li>
+                        <li>Python (basic scripting)</li>
+                        <li>Zapier</li>
+                        <li>Make.com (Integromat), WesAI</li>
+                        <li>Selenium (web automation)</li>
+                        <li>Airtable</li>
+                        <li>Gsuite</li>
+                        <li>MS 365</li>
+                        <li>AS400</li>
+                        <li>Canva</li>
+                        <li>ChatGPT</li>
+                        <li>Slack</li>
+                        <li>Apollo</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications -->
+        <section aria-labelledby="education-heading" class="animate-fadeIn [animation-delay:1000ms]">
+             <h2 id="education-heading" class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b-2 border-blue-200 dark:border-gray-700 pb-2">Education & Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="graduation-cap"></i>Education</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <p class="font-medium">University of Southeastern Philippines</p>
+                            <p class="text-sm text-gray-700 dark:text-gray-300">Bachelor's degree, Elementary Education (2015 - 2019)</p>
+                        </div>
+                        <div>
+                            <p class="font-medium">Iowa State University</p>
+                            <p class="text-sm text-gray-700 dark:text-gray-300">Coursework, Educational Technology (May 2018)</p>
+                        </div>
+                        <div>
+                            <p class="font-medium">Magugpo Institute of Technology</p>
+                            <p class="text-sm text-gray-700 dark:text-gray-300">Coursework, Information Technology (2014)</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="award"></i>Certifications</h3>
+                     <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+                        <li>Amazon Advertising (Amazon, 2023)</li>
+                        <li>Data Modeling (Pragmatic Works, 2024)</li>
+                        <li>SEO, PPC, Catalog Management (MAG School, 2024)</li>
+                        <li>Licensed Professional Teacher (PRC, 2021)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16 pt-6 border-t border-gray-200 dark:border-gray-700 text-center text-sm text-gray-500 dark:text-gray-400">
+        <div class="flex justify-center gap-6 mb-4">
+             <a href="https://github.com/johnwesleyquintero" target="_blank" class="hover:text-blue-500">GitHub</a>
+             <a href="https://linkedin.com/in/johnwesleyquintero" target="_blank" class="hover:text-blue-500">LinkedIn</a>
+             <a href="mailto:johnwesleyquintero@gmail.com" class="hover:text-blue-500">Email</a>
+        </div>
+        <p>© <span id="current-year"></span> John Wesley Quintero. All Rights Reserved.</p>
+        <p>Last Updated: June 2024</p>
     </footer>
 
-    <!-- Initialize Lucide Icons -->
-    <script>
-      // Enhanced dark mode toggle with localStorage
-      function toggleDarkMode() {
-        const root = document.documentElement;
-        const isDark = root.classList.toggle('dark');
-        localStorage.setItem('darkMode', isDark ? 'dark' : 'light');
-
-        // Announce mode change to screen readers
-        const message = `Switched to ${isDark ? 'dark' : 'light'} mode`;
-        announceToScreenReader(message);
-      }
-
-      // Check saved preference
-      if (
-        localStorage.getItem('darkMode') === 'dark' ||
-        (!localStorage.getItem('darkMode') &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        document.documentElement.classList.add('dark');
-      }
-
-      // Accessibility helper
-      function announceToScreenReader(message) {
-        const announcement = document.createElement('div');
-        announcement.setAttribute('aria-live', 'polite');
-        announcement.classList.add('sr-only');
-        announcement.textContent = message;
-        document.body.appendChild(announcement);
-        setTimeout(() => announcement.remove(), 1000);
-      }
-
-      // Keyboard navigation
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Tab') {
-          document.body.classList.add('keyboard-nav');
-        }
-      });
-
-      document.addEventListener('mousedown', () => {
-        document.body.classList.remove('keyboard-nav');
-      });
-    </script>
-
-    <!-- Improved Dark Mode Toggle -->
-    <button
-      onclick="toggleDarkMode()"
-      class="fixed bottom-4 right-4 p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all no-print"
-      aria-label="Toggle dark mode"
-      id="darkModeToggle"
-    >
-      <svg class="icon w-5 h-5 dark:hidden" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="5" />
-        <line x1="12" y1="1" x2="12" y2="3" />
-        <line x1="12" y1="21" x2="12" y2="23" />
-        <line x1="4.2" y1="4.2" x2="5.6" y2="5.6" />
-        <line x1="18.4" y1="18.4" x2="19.8" y2="19.8" />
-        <line x1="1" y1="12" x2="3" y2="12" />
-        <line x1="21" y1="12" x2="23" y2="12" />
-        <line x1="4.2" y1="19.8" x2="5.6" y2="18.4" />
-        <line x1="18.4" y1="5.6" x2="19.8" y2="4.2" />
-      </svg>
-      <svg class="icon w-5 h-5 hidden dark:block" viewBox="0 0 24 24">
-        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
-      </svg>
+    <!-- Dark Mode Toggle Button -->
+    <button id="darkModeToggle" class="no-print fixed bottom-6 right-6 bg-gray-800 text-white dark:bg-gray-100 dark:text-gray-900 p-3 rounded-full shadow-lg hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-300" aria-label="Toggle dark mode">
+        <i data-lucide="moon" class="icon" id="moonIcon"></i>
+        <i data-lucide="sun" class="icon hidden" id="sunIcon"></i>
     </button>
-  </body>
+    
+    <!-- Consolidated Scripts -->
+    <script>
+        // --- TAILWIND CONFIGURATION ---
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    animation: {
+                        'accordion-down': 'accordion-down 0.2s ease-out',
+                        'accordion-up': 'accordion-up 0.2s ease-out',
+                        'gradient': 'gradient 8s linear infinite alternate',
+                        'fadeIn': 'fadeIn 0.7s ease-out forwards',
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-8px)' },
+                        },
+                        gradient: {
+                            '0%': { backgroundPosition: '0% 50%' },
+                            '100%': { backgroundPosition: '100% 50%' },
+                        },
+                        'accordion-down': {
+                            from: { height: 0 },
+                            to: { height: 'var(--radix-accordion-content-height)' },
+                        },
+                        'accordion-up': {
+                            from: { height: 'var(--radix-accordion-content-height)' },
+                            to: { height: 0 },
+                        },
+                    },
+                },
+            },
+        };
+
+        // --- HELPER FUNCTIONS ---
+        function downloadAllDocuments() {
+            const documents = [
+                'docs/Application-Letter-WQ-Quintero.pdf',
+                'docs/Cover-Note-WQ-Quintero.pdf',
+                'docs/JOHN WESLEY QUINTERO RESUME AMAZON VA.pdf',
+                'docs/John Wesley Quintero - Resume.pdf'
+        ];
+
+            // Dynamically add any other files you might place in the docs folder
+            // This assumes a simple static serving setup where you manually update this list
+            // or use a build process to generate it.
+            // For a more robust solution, a server-side endpoint would be needed to list files.
+            // For now, you'll need to manually add new documents to this array.
+
+            documents.forEach(doc => {
+                const link = document.createElement('a');
+                link.href = doc;
+                link.download = doc.split('/').pop(); // Extracts filename from path
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+        }
+
+        async function fetchGitHubProjects() {
+            const username = 'johnwesleyquintero';
+            const githubProjectsDiv = document.getElementById('github-projects');
+            const languageColorMapping = {
+                'JavaScript': 'bg-yellow-400', 'TypeScript': 'bg-blue-500', 'Python': 'bg-green-500',
+                'HTML': 'bg-orange-500', 'CSS': 'bg-purple-500', 'Java': 'bg-red-500',
+                'Shell': 'bg-green-300', 'Go': 'bg-cyan-400', 'default': 'bg-gray-400'
+            };
+            
+            try {
+                const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=100`); // Fetch more to allow for filtering
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                let projects = await response.json();
+
+                // Filter projects: must have at least 1 star and a description of at least 20 characters
+                projects = projects.filter(project => 
+                    project.stargazers_count > 0 && 
+                    project.description && 
+                    project.description.length >= 20
+                );
+
+                // Sort by stars in descending order and take the top 10
+                projects.sort((a, b) => b.stargazers_count - a.stargazers_count);
+                projects = projects.slice(0, 10);
+
+                if (projects.length === 0) {
+                    githubProjectsDiv.innerHTML = '<p class="text-gray-600 dark:text-gray-400">No public GitHub projects found.</p>';
+                    return;
+                }
+
+                githubProjectsDiv.innerHTML = projects.map(project => `
+                    <a href="${project.html_url}" target="_blank" rel="noopener noreferrer"
+                        class="block p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition-all dark:border-gray-700 dark:bg-gray-800/50 dark:hover:bg-gray-700/60 group">
+                        <div class="flex justify-between items-start">
+                             <h3 class="font-semibold text-blue-600 dark:text-blue-400 group-hover:underline">${project.name}</h3>
+                             <div class="flex items-center text-xs text-gray-500 dark:text-gray-400 gap-2">
+                                <i data-lucide="star" class="h-3 w-3"></i> ${project.stargazers_count}
+                             </div>
+                        </div>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 h-10 overflow-hidden">${project.description || 'No description provided.'}</p>
+                        ${project.language ? `<div class="flex items-center text-xs text-gray-500 dark:text-gray-400 mt-3">
+                            <span class="inline-block w-3 h-3 rounded-full mr-1.5 ${languageColorMapping[project.language] || languageColorMapping['default']}"></span>
+                            ${project.language}
+                        </div>` : ''}
+                    </a>
+                `).join('');
+                lucide.createIcons(); // Re-render icons after adding new content
+            } catch (error) {
+                console.error('Error fetching GitHub projects:', error);
+                githubProjectsDiv.innerHTML = '<p class="text-red-500">Failed to load GitHub projects. Please check the console for details.</p>';
+            }
+        }
+
+        // --- SCRIPT INITIALIZATION ON DOM LOAD ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Lucide Icons
+            lucide.createIcons();
+            
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Dark Mode Functionality
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const htmlElement = document.documentElement;
+            const moonIcon = document.getElementById('moonIcon');
+            const sunIcon = document.getElementById('sunIcon');
+
+            const applyTheme = (theme) => {
+                if (theme === 'dark') {
+                    htmlElement.classList.add('dark');
+                    moonIcon.classList.add('hidden');
+                    sunIcon.classList.remove('hidden');
+                } else {
+                    htmlElement.classList.remove('dark');
+                    moonIcon.classList.remove('hidden');
+                    sunIcon.classList.add('hidden');
+                }
+            };
+            
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+            applyTheme(currentTheme);
+
+            darkModeToggle.addEventListener('click', () => {
+                const newTheme = htmlElement.classList.contains('dark') ? 'light' : 'dark';
+                localStorage.setItem('theme', newTheme);
+                applyTheme(newTheme);
+            });
+
+            // Fetch GitHub Projects
+            fetchGitHubProjects();
+        });
+    </script>
+</body>
+
 </html>
