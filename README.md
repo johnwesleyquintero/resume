@@ -25,14 +25,6 @@ cd resume
 
 ## 💻 Development
 To run locally:
-```bash
-# Install http-server if needed
-npm install -g http-server
-
-# Run the server
-http-server
-```
-
 ```
 python -m http.server
 ```
@@ -74,9 +66,10 @@ For professional inquiries:
 - Netlify (for deployment)
 
 For professional inquiries:  
-📧 johnwesleyquintero@gmail.com  
-🔗 [LinkedIn](https://linkedin.com/in/wesleyquintero)  
-🐦 [Portfolio](https://wesleyquintero.vercel.app/)  
+📧 wesley.ecomva@gmail.com  
+🔗 [LinkedIn](https://www.linkedin.com/in/johnwesleyquintero/)  
+🐦 [Portfolio](https://johnwesleyquintero.vercel.app/)  
+🐙 [GitHub](https://github.com/johnwesleyquintero)  
 ## 📸 Screenshot
 ![Resume Preview](public/screenshot.png)
 
