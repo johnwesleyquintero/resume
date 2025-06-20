@@ -4,7 +4,7 @@
   "description": "John Wesley Quintero's Resume Site",
   "main": "index.js",
   "scripts": {
-    "build": "mkdir -p dist && cp index.html dist/index.html && cp -r public dist/public"
+    "build": "if exist dist (rmdir /s /q dist) && mkdir dist && copy index.html dist\\index.html && xcopy public dist\\public /E /I /Y"
   },
   "keywords": [],
   "author": "John Wesley Quintero",
