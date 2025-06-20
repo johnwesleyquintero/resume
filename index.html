@@ -13,7 +13,7 @@
     <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
-        script-src 'self' https://cdn.tailwindcss.com https://unpkg.com https://cdnjs.cloudflare.com 'unsafe-inline';
+        script-src 'self' https://cdn.tailwindcss.com https://unpkg.com https://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';
         style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com;
         img-src 'self' https://avatars.githubusercontent.com data:;
         connect-src 'self' https://api.github.com;
@@ -242,6 +242,14 @@
         <!-- GitHub Projects & Links -->
         <section aria-labelledby="projects-heading" class="animate-fadeIn [animation-delay:900ms]">
             <h2 id="projects-heading" class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b-2 border-blue-200 dark:border-gray-700 pb-2">Projects & Portfolio</h2>
+            <div class="mb-8">
+                <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 text-blue-600 dark:text-blue-400"><i data-lucide="monitor"></i>Live Demo</h3>
+                <p class="text-gray-700 dark:text-gray-300 mb-2">Explore a live demonstration of my work:</p>
+                <a href="https://wescode.vercel.app/" target="_blank" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-blue-500 dark:hover:bg-blue-600">
+                    <i data-lucide="external-link" class="icon mr-2"></i>
+                    View Live Demo
+                </a>
+            </div>
             <div id="github-projects" class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <!-- GitHub projects will be loaded here by JavaScript -->
                 <div class="text-gray-500">Loading GitHub projects...</div>
@@ -374,9 +382,9 @@
             <a href="mailto:wesley.ecomva@gmail.com" target="_blank" class="text-blue-600 hover:underline dark:text-blue-400">Email</a> |
             <a href="https://wescode.vercel.app/" target="_blank" class="text-blue-600 hover:underline dark:text-blue-400">ScaleSmart</a>
             <br>
-            &copy; 2025 John Wesley Quintero. All Rights Reserved.
+            &copy; <span id="current-year"></span> John Wesley Quintero. All rights reserved.
             <br>
-            Last Updated: June 2024
+            Last Updated: June 2025
         </p>
     </footer>
 
