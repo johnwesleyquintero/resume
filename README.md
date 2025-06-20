@@ -69,6 +69,7 @@ For professional inquiries:
 📧 wesley.ecomva@gmail.com  
 🔗 [LinkedIn](https://www.linkedin.com/in/johnwesleyquintero/)  
 🐦 [Portfolio](https://johnwesleyquintero.vercel.app/)  
+💡 [ScaleSmart](https://wescode.vercel.app/)  
 🐙 [GitHub](https://github.com/johnwesleyquintero)  
 ## 📸 Screenshot
 ![Resume Preview](public/screenshot.png)
