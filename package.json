@@ -1,0 +1,12 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "John Wesley Quintero's Resume Site",
+  "main": "index.js",
+  "scripts": {
+    "build": "mkdir -p dist && cp index.html dist/index.html && cp -r public dist/public"
+  },
+  "keywords": [],
+  "author": "John Wesley Quintero",
+  "license": "ISC"
+}
