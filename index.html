@@ -13,7 +13,7 @@
     <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
-        script-src 'self' https://cdn.tailwindcss.com https://unpkg.com 'sha256-D55UT6n4PfkIdqKlwZ3FcM3AAWenNXRFOiyo39MWkhI=';
+        script-src 'self' https://cdn.tailwindcss.com https://unpkg.com https://cdnjs.cloudflare.com 'unsafe-inline';
         style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com;
         img-src 'self' https://avatars.githubusercontent.com data:;
         connect-src 'self' https://api.github.com;
@@ -29,6 +29,10 @@
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- JSZip -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <!-- FileSaver.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 
     <!-- Custom Styles -->
     <style type="text/tailwindcss">
@@ -108,11 +112,11 @@
                             <i data-lucide="map-pin" class="icon"></i>
                             <span>Tagum City, Philippines</span>
                         </div>
-                        <button onclick="window.print()" class="no-print flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group cursor-pointer" aria-label="Print resume">
+                        <button id="print-button" class="no-print flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group cursor-pointer" aria-label="Print resume">
                             <i data-lucide="printer" class="icon transition-transform group-hover:scale-110"></i>
                             <span>Print Resume</span>
                         </button>
-                        <button onclick="downloadAllDocuments()" class="no-print flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group cursor-pointer" aria-label="Download all documents">
+                        <button id="download-button" class="no-print flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group cursor-pointer" aria-label="Download all documents">
                             <i data-lucide="download-cloud" class="icon transition-transform group-hover:scale-110"></i>
                             <span>Download Documents</span>
                         </button>
@@ -415,29 +419,48 @@
         };
 
         // --- HELPER FUNCTIONS ---
-        function downloadAllDocuments() {
-            const documents = [
-                'docs/Application-Letter-WQ-Quintero.pdf',
-                'docs/Cover-Note-WQ-Quintero.pdf',
-                'docs/JOHN WESLEY QUINTERO RESUME AMAZON VA.pdf',
-                'docs/John Wesley Quintero - Resume.pdf'
-        ];
+            // Helper function to download all documents as a zip file
+            async function downloadAllDocuments() {
+                const documents = [
+                    { path: './public/documents/Application-Letter-WQ-Quintero.pdf', name: 'Application-Letter-WQ-Quintero.pdf' },
+                    { path: './public/documents/Cover-Note-WQ-Quintero.pdf', name: 'Cover-Note-WQ-Quintero.pdf' },
+                    { path: './public/documents/John Wesley Quintero - Resume.pdf', name: 'John Wesley Quintero - Resume.pdf' },
+                    { path: './public/documents/JOHN WESLEY QUINTERO RESUME AMAZON VA.pdf', name: 'JOHN WESLEY QUINTERO RESUME AMAZON VA.pdf' }
+                ];
 
-            // Dynamically add any other files you might place in the docs folder
-            // This assumes a simple static serving setup where you manually update this list
-            // or use a build process to generate it.
-            // For a more robust solution, a server-side endpoint would be needed to list files.
-            // For now, you'll need to manually add new documents to this array.
+                const zip = new JSZip();
+                const downloadPromises = documents.map(async (doc) => {
+                    try {
+                        const response = await fetch(doc.path);
+                        if (!response.ok) {
+                            throw new Error(`Failed to fetch ${doc.name}: ${response.statusText}`);
+                        }
+                        const blob = await response.blob();
+                        zip.file(doc.name, blob);
+                    } catch (error) {
+                        console.error(`Error adding ${doc.name} to zip:`, error);
+                    }
+                });
 
-            documents.forEach(doc => {
-                const link = document.createElement('a');
-                link.href = doc;
-                link.download = doc.split('/').pop(); // Extracts filename from path
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
+                await Promise.all(downloadPromises);
+
+                if (Object.keys(zip.files).length > 0) {
+                    zip.generateAsync({ type: 'blob' }).then(function(content) {
+                        saveAs(content, 'John Wesley Quintero - Documents.zip');
+                    }).catch(e => console.error('Error generating zip:', e));
+                } else {
+                    alert('No documents were successfully prepared for download.');
+                }
+            }
+
+            // Event Listeners
+            document.getElementById('print-button').addEventListener('click', () => {
+                window.print();
             });
-        }
+
+            document.getElementById('download-button').addEventListener('click', () => {
+                downloadAllDocuments();
+            });
 
         async function fetchGitHubProjects() {
             const username = 'johnwesleyquintero';
