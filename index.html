@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="John Wesley Quintero - Data-Driven Amazon & E-commerce Specialist specializing in data analytics and e-commerce." />
-    <meta name="keywords" content="Amazon Specialist, E-commerce, Data Analytics, John Wesley Quintero, Resume, Portfolio" />
+    <meta name="description" content="John Wesley Quintero - Hands-On Amazon & E-commerce Specialist. Expert in process-driven growth, data management, and operational excellence." />
+    <meta name="keywords" content="Amazon Specialist, E-commerce, Process Optimization, Flat File Management, John Wesley Quintero, Resume, Portfolio" />
     <meta name="author" content="John Wesley Quintero">
     <meta name="theme-color" content="#1d4ed8" />
-    <title>John Wesley Quintero - Resume</title>
-    <!-- Self-contained Favicon (Inline SVG) --> 
-     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23007bff' d='M10 90 L50 10 L90 90 L75 90 L50 40 L25 90 Z' /%3E%3C/svg%3E">
+    <title>John Wesley Quintero - Hands-On Amazon Specialist</title>
+    <!-- Self-contained Favicon (Inline SVG) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23007bff' d='M10 90 L50 10 L90 90 L75 90 L50 40 L25 90 Z' /%3E%3C/svg%3E">
     <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
         script-src 'self' https://cdn.tailwindcss.com https://unpkg.com https://cdnjs.cloudflare.com 'unsafe-inline' 'unsafe-eval';
         style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com;
-        img-src 'self' https://avatars.githubusercontent.com data:;
+        img-src 'self' https://avatars.githubusercontent.com https://api.qrserver.com data:;
         connect-src 'self' https://api.github.com;
         font-src 'self';
         object-src 'none';
@@ -27,7 +27,7 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <!-- JSZip -->
@@ -41,15 +41,12 @@
             @apply inline-block h-4 w-4 stroke-current;
             stroke-width: 1.5;
         }
-        /* Enhanced accessibility focus styles */
         *:focus-visible {
             @apply outline-2 outline-offset-2 outline-blue-600 rounded;
         }
-        /* Smooth dark mode transitions */
         * {
             transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
-        /* Print styles */
         @media print {
             @page {
                 margin: 0.5in;
@@ -63,9 +60,7 @@
                 display: none !important;
             }
             a[href^="http"]::after {
-                content: ' (' attr(href) ')';
-                font-size: 0.8em;
-                color: #666;
+                content: '';
             }
             a[href^="mailto"]::after {
                 content: '';
@@ -89,7 +84,7 @@
                 <div class="flex-1 text-center md:text-left space-y-4">
                     <div class="animate-fadeIn [animation-delay:200ms]">
                         <h1 class="text-4xl md:text-5xl font-bold text-white drop-shadow-md">John Wesley Quintero</h1>
-                        <p class="text-lg md:text-xl text-purple-200 drop-shadow">Data-Driven Amazon & E-commerce Specialist</p>
+                        <p class="text-lg md:text-xl text-purple-200 drop-shadow">Hands-On Amazon & E-commerce Specialist</p>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-white/90 animate-fadeIn [animation-delay:400ms]">
@@ -101,30 +96,22 @@
                             <i data-lucide="linkedin" class="icon transition-transform group-hover:scale-110"></i>
                             <span>LinkedIn Profile</span>
                         </a>
-                        <a href="https://github.com/johnwesleyquintero" target="_blank" class="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group">
-                            <i data-lucide="github" class="icon transition-transform group-hover:scale-110"></i>
-                            <span>GitHub Profile</span>
-                        </a>
                         <a href="https://wescode.vercel.app/" target="_blank" class="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group">
                             <i data-lucide="globe" class="icon transition-transform group-hover:scale-110"></i>
                             <span>Portfolio</span>
                         </a>
-                        <a href="https://johnwesleyquintero-article.netlify.app/" target="_blank" class="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group">
+                        <a href="https://wescode.vercel.app/blog" target="_blank" class="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group">
                             <i data-lucide="book-open" class="icon transition-transform group-hover:scale-110"></i>
-                            <span>Article</span>
+                            <span>Blog & Playbooks</span>
                         </a>
+                         <button id="print-button" class="no-print flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group cursor-pointer" aria-label="Print resume">
+                            <i data-lucide="printer" class="icon transition-transform group-hover:scale-110"></i>
+                            <span>Print Resume</span>
+                        </button>
                         <div class="flex items-center justify-center md:justify-start gap-2">
                             <i data-lucide="map-pin" class="icon"></i>
                             <span>Tagum City, Philippines</span>
                         </div>
-                        <button id="print-button" class="no-print flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group cursor-pointer" aria-label="Print resume">
-                            <i data-lucide="printer" class="icon transition-transform group-hover:scale-110"></i>
-                            <span>Print Resume</span>
-                        </button>
-                        <button id="download-button" class="no-print flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group cursor-pointer" aria-label="Download all documents">
-                            <i data-lucide="download-cloud" class="icon transition-transform group-hover:scale-110"></i>
-                            <span>Download Documents</span>
-                        </button>
                     </div>
                 </div>
             </div>
@@ -133,8 +120,13 @@
         <!-- Professional Summary -->
         <section aria-labelledby="summary-heading" class="animate-fadeIn [animation-delay:600ms]">
             <h2 id="summary-heading" class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b-2 border-blue-200 dark:border-gray-700 pb-2">Professional Summary</h2>
-            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                A highly effective Amazon Growth Specialist with over 5 years of hands-on experience, I drive significant e-commerce profitability through deep expertise in Amazon SEO, PPC, and holistic account management. I've consistently optimized listings, managed high-performing ad campaigns, and streamlined operations. My unique edge comes from actively developing custom automation tools using SP-API and Node.js, allowing me to bridge strategic needs with technical solutions that deliver measurable results.
+            <div class="p-4 bg-blue-50 dark:bg-gray-800/50 rounded-lg shadow">
+                 <p class="text-gray-700 dark:text-gray-300 leading-relaxed italic">
+                    "I don't just identify problems; I build the robust processes and SOPs that empower teams to solve them consistently and efficiently."
+                 </p>
+            </div>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+               With over 5 years of experience driving e-commerce profitability, I am a hands-on Amazon specialist who bridges high-level strategy with meticulous, in-the-trenches execution. My expertise is in transforming complex data and chaotic workflows into clean, high-performing listings and repeatable operational procedures. I excel at the core challenges of <strong>flat file management, bulk data processing, and systematic error correction</strong>, ensuring catalog integrity and unlocking sustainable growth. I am a dedicated problem-solver who provides reliable solutions that strengthen and streamline e-commerce operations.
             </p>
         </section>
 
@@ -142,211 +134,180 @@
         <section aria-labelledby="experience-heading" class="animate-fadeIn [animation-delay:700ms]">
             <h2 id="experience-heading" class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b-2 border-blue-200 dark:border-gray-700 pb-2">Professional Experience</h2>
             <div id="experience-list" class="space-y-6">
-                <!-- Experience items will be dynamically populated here, or can be hardcoded as below -->
-                <div class="border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-2 transition-all hover:border-blue-500 dark:hover:border-blue-400">
-                    <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Amazon Specialist 2</h3>
-                    <p class="text-blue-600 dark:text-blue-400 font-medium">My Amazon Guy</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">October 2024 - March 2025 (6 months)</p>
-                    <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1 mt-2">
-                        <li>Spearheaded data-driven Amazon SEO (Search Engine Optimization) and PPC (Pay-Per-Click) strategies for diverse clients, resulting in an average client sales increase of 35%.</li>
-                        <li>Designed and implemented data visualization dashboards for client reporting, enhancing transparency and strategic decision-making in Amazon marketplace performance.</li>
-                        <li>Optimized Amazon product listings, managed Amazon Ads campaigns, and conducted keyword research to significantly improve organic rank and ACoS (Advertising Cost of Sale) for client portfolios.</li>
-                        <li>Developed "My Amazon Analytics," a powerful analytics dashboard for monitoring and optimizing Amazon advertising performance. <a href="https://alerion.netlify.app/" target="_blank" class="text-blue-600 hover:underline dark:text-blue-400">View Project</a></li>
-                    </ul>
-                </div>
-                <div class="border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-2 transition-all hover:border-blue-500 dark:hover:border-blue-400">
+                 <div class="border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-2 transition-all hover:border-blue-500 dark:hover:border-blue-400">
                     <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Item Specialist</h3>
                     <p class="text-blue-600 dark:text-blue-400 font-medium">Bulk Buy America</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">March 2024 - September 2024 (7 months)</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">March 2024 - September 2024</p>
                     <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1 mt-2">
                         <li>Managed and maintained extensive Amazon product catalogs, ensuring precise data accuracy and optimizing product listings for enhanced discoverability and sales.</li>
                         <li>Developed custom Excel-based price checking tools and utilized advanced VLOOKUP functions to streamline inventory management and procurement processes, improving efficiency by 25%.</li>
-                        <li>Collaborated cross-functionally with supply chain and sales teams to resolve product-related issues, enhancing overall Amazon marketplace performance and customer satisfaction.</li>
+                    </ul>
+                </div>
+                 <div class="border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-2 transition-all hover:border-blue-500 dark:hover:border-blue-400">
+                    <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Amazon Specialist</h3>
+                    <p class="text-blue-600 dark:text-blue-400 font-medium">My Amazon Guy</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">October 2022 - March 2024</p>
+                    <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1 mt-2">
+                        <li>Spearheaded data-driven Amazon SEO and PPC strategies, resulting in an average client sales increase of 35%.</li>
+                        <li>Designed advanced reporting frameworks to enhance client transparency and strategic decision-making.</li>
+                        <li>Developed "My Amazon Analytics," an analytics dashboard for monitoring advertising performance. <a href="https://alerion.netlify.app/" target="_blank" class="text-blue-600 hover:underline dark:text-blue-400">View Project</a></li>
                     </ul>
                 </div>
                 <div class="border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-2 transition-all hover:border-blue-500 dark:hover:border-blue-400">
                     <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Marketplace Support</h3>
                     <p class="text-blue-600 dark:text-blue-400 font-medium">Adorama</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">May 2023 - September 2023 (5 months)</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">May 2023 - September 2023</p>
                     <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1 mt-2">
-                        <li>Provided comprehensive technical support and issue resolution for B2B clients concerning Amazon marketplace integrations, product listings, and Seller Central operations.</li>
-                        <li>Effectively managed and updated product information across various online marketplaces, ensuring data accuracy and consistency for optimal product visibility.</li>
-                        <li>Streamlined communication between clients and internal teams, facilitating swift resolution of Amazon order, listing, and account health discrepancies.</li>
-                        <li>Developed and implemented a comprehensive Standard Operating Procedure (SOP) for the Amazon Reimbursement Process, improving efficiency and accuracy. <a href="https://docs.google.com/spreadsheets/d/1e9Z5XJ1P0x8PR8T5pSqWJ1zCs6W4nBUO/edit?usp=sharing&ouid=116050988128963817360&rtpof=true&sd=true" target="_blank" class="text-blue-600 hover:underline dark:text-blue-400">View SOP</a></li>
-                        <li>Created a Google Sheet SOP for Amazon Jira Issues, enhancing issue tracking and resolution efficiency. <a href="https://docs.google.com/spreadsheets/d/1vNUC94hgtNINdk3u57DufQUQVAmOsiEr/edit?usp=sharing&ouid=116050988128963817360&rtpof=true&sd=true" target="_blank" class="text-blue-600 hover:underline dark:text-blue-400">View SOP</a></li>
+                        <li>Provided technical support for B2B clients on Amazon marketplace integrations and Seller Central operations.</li>
+                        <li>Developed and implemented an SOP for the Amazon Reimbursement Process. <a href="https://docs.google.com/spreadsheets/d/1e9Z5XJ1P0x8PR8T5pSqWJ1zCs6W4nBUO/edit?usp=sharing&ouid=116050988128963817360&rtpof=true&sd=true" target="_blank" class="text-blue-600 hover:underline dark:text-blue-400">View SOP</a></li>
+                        <li>Created a Google Sheet SOP for Amazon Jira Issues to enhance issue tracking. <a href="https://docs.google.com/spreadsheets/d/1vNUC94hgtNINdk3u57DufQUQVAmOsiEr/edit?usp=sharing&ouid=116050988128963817360&rtpof=true&sd=true" target="_blank" class="text-blue-600 hover:underline dark:text-blue-400">View SOP</a></li>
                     </ul>
                 </div>
                 <div class="border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-2 transition-all hover:border-blue-500 dark:hover:border-blue-400">
                     <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Amazon Account Manager</h3>
                     <p class="text-blue-600 dark:text-blue-400 font-medium">Champion E-com LLC</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">October 2022 - September 2023 (1 year)</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">October 2022 - September 2023</p>
                     <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1 mt-2">
-                        <li>Managed and optimized Amazon account health, performance metrics, and compliance for multiple B2B clients, proactively addressing issues and driving sustainable growth.</li>
-                        <li>Implemented strategic Amazon SEO and PPC campaigns, including keyword optimization and bid management, leading to a 20% increase in sales and enhanced product visibility within six months.</li>
-                        <li>Analyzed competitor strategies, market trends, and Amazon data to identify new opportunities for client expansion, product launches, and profitability.</li>
-                        <li>Developed and implemented a comprehensive Standard Operating Procedure (SOP) for Amazon FBA Department Operations, enhancing workflow efficiency and team productivity. <a href="https://docs.google.com/document/d/1bRH9HDYbzK4NaVwLjTbAY-a6RlxMaTw3/edit?usp=sharing&ouid=116050988128963817360&rtpof=true&sd=true" target="_blank" class="text-blue-600 hover:underline dark:text-blue-400">View SOP</a></li>
+                        <li>Managed account health, performance metrics, and compliance for multiple B2B clients, driving sustainable growth.</li>
+                        <li>Implemented strategic SEO and PPC campaigns, leading to a 20% increase in sales within six months.</li>
+                        <li>Developed a comprehensive SOP for FBA Department Operations. <a href="https://docs.google.com/document/d/1bRH9HDYbzK4NaVwLjTbAY-a6RlxMaTw3/edit?usp=sharing&ouid=116050988128963817360&rtpof=true&sd=true" target="_blank" class="text-blue-600 hover:underline dark:text-blue-400">View SOP</a></li>
                     </ul>
                 </div>
                  <div class="border-l-4 border-gray-300 dark:border-gray-600 pl-4 py-2 transition-all hover:border-blue-500 dark:hover:border-blue-400">
                     <h3 class="font-semibold text-lg text-gray-900 dark:text-white">Amazon Wholesale Buyer</h3>
                     <p class="text-blue-600 dark:text-blue-400 font-medium">Sales.support</p>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">October 2018 - July 2022 (3 years 10 months)</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">October 2018 - July 2022</p>
                     <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1 mt-2">
-                        <li>Successfully identified and sourced profitable wholesale product opportunities for Amazon FBA (Fulfillment by Amazon) and FBM (Fulfillment by Merchant) models, directly contributing to a 25% increase in overall revenue.</li>
-                        <li>Expertly negotiated favorable pricing and terms with suppliers and distributors, consistently maximizing profit margins and maintaining a competitive edge in the Amazon marketplace.</li>
-                        <li>Conducted in-depth market research, competitor analysis, and product trend forecasting to inform purchasing decisions and capitalize on emerging opportunities within the e-commerce landscape.</li>
-                        <li>Developed a comprehensive Standard Operating Procedure (SOP) for Amazon Wholesale Buyers, streamlining the sourcing and negotiation process. <a href="https://docs.google.com/document/d/143PWwLDuCBMsXHWcmdAS83sQZthw0pUG/edit?usp=sharing&ouid=116050988128963817360&rtpof=true&sd=true" target="_blank" class="text-blue-600 hover:underline dark:text-blue-400">View SOP</a></li>
+                        <li>Sourced profitable wholesale products for Amazon FBA/FBM, contributing to a 25% increase in overall revenue.</li>
+                        <li>Developed an SOP for Amazon Wholesale Buyers to streamline the sourcing and negotiation process. <a href="https://docs.google.com/document/d/143PWwLDuCBMsXHWcmdAS83sQZthw0pUG/edit?usp=sharing&ouid=116050988128963817360&rtpof=true&sd=true" target="_blank" class="text-blue-600 hover:underline dark:text-blue-400">View SOP</a></li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Skills & Expertise -->
-        <section aria-labelledby="skills-heading" class="animate-fadeIn [animation-delay:800ms]">
-            <h2 id="skills-heading" class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b-2 border-blue-200 dark:border-gray-700 pb-2">Skills & Expertise</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="shopping-cart"></i>Amazon & E-commerce</h3>
-                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
-                        <li>Marketplace Management & SEO</li>
-                        <li>PPC & Advertising (Amazon Ads)</li>
-                        <li>FBA Inventory & Logistics</li>
-                        <li>Competitor & Market Analysis</li>
+        <!-- My Unique Edge Section -->
+        <section aria-labelledby="edge-heading" class="animate-fadeIn [animation-delay:800ms]">
+            <h2 id="edge-heading" class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b-2 border-blue-200 dark:border-gray-700 pb-2">My Unique Edge: Deep Process Mastery & Hands-On Execution</h2>
+             <p class="text-gray-700 dark:text-gray-300 mb-4">
+                My value lies in untangling the most complex, labor-intensive Amazon tasks through deep platform knowledge and the development of <strong>repeatable, high-quality operational procedures.</strong> For an in-depth guide, refer to my <a href="https://wescode.vercel.app/blog/flat-file" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline dark:text-blue-400">Flat File Playbook</a>.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="p-4 border rounded-lg bg-white dark:bg-gray-800/50 dark:border-gray-700">
+                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="file-spreadsheet"></i>Mastery of Complex Amazon Workflows</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                         <li>Expert in <strong>advanced flat file manipulation</strong> for large-scale product data operations, bulk updates, and resolving persistent listing errors.</li>
+                         <li>Systematic approach to <strong>account health monitoring and case log management,</strong> ensuring swift, effective resolutions with Amazon support.</li>
+                         <li>Proficient in using advanced spreadsheet functions (VLOOKUP, INDEX/MATCH, Pivot Tables) for data validation, preparation, and analysis.</li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="bar-chart-3"></i>Data & Analytics</h3>
-                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
-                        <li>Data Visualization (Tableau, Power BI)</li>
-                        <li>Seller Central Reporting</li>
-                        <li>Business Intelligence & Insights</li>
-                        <li>Advanced Excel (VLOOKUP, Pivots)</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="code-2"></i>Automation & Development</h3>
-                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
-                        <li>SP-API Development & Integration</li>
-                        <li>Custom E-commerce Tooling (Node.js)</li>
-                        <li>AI/ML Implementation Concepts</li>
-                        <li>Workflow Automation</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="terminal-square"></i>Technical Stack</h3>
-                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
-                        <li>Node.js, React, Next.js</li>
-                        <li>MongoDB, PostgreSQL, SQL</li>
-                        <li>AWS (Lambda, S3, API Gateway)</li>
-                        <li>Git, Docker, CI/CD</li>
+                <div class="p-4 border rounded-lg bg-white dark:bg-gray-800/50 dark:border-gray-700">
+                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="database-zap"></i>Strategic Data Interpretation</h3>
+                     <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                        <li>Applying <strong>data-driven insights</strong> from raw reports to guide e-commerce strategy, including demand forecasting and inventory optimization.</li>
+                        <li>Leveraging a deep understanding of Amazon's data structure to maintain data quality, optimize listings, and improve performance.</li>
+                        <li>Skilled at manually auditing large datasets to identify hidden opportunities and critical issues that automated tools often miss.</li>
                     </ul>
                 </div>
             </div>
         </section>
-        
-        <!-- GitHub Projects & Links -->
+
+        <!-- A Specialist's Daily Rhythm -->
+        <section aria-labelledby="routine-heading" class="animate-fadeIn [animation-delay:850ms]">
+            <h2 id="routine-heading" class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b-2 border-blue-200 dark:border-gray-700 pb-2">A Specialist's Daily Rhythm: Proactive & Hands-On</h2>
+            <div class="p-4 bg-white dark:bg-gray-800/50 rounded-lg shadow-inner">
+                <p class="text-gray-700 dark:text-gray-300 mb-3 text-sm italic">To directly answer the common question, "What does your typical day involve?", here is my daily operational rhythm focused on proactive account management and problem-solving:</p>
+                <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-2">
+                    <li><strong>Morning Triage & Health Check:</strong> Systematically review <strong>Account Health</strong> for new performance notifications, A-to-Z claims, and Voice of the Customer issues. Check for <strong>Stranded Inventory</strong> and FBA shipment discrepancies.</li>
+                    <li><strong>Catalog & Listing Management:</strong> Proactively scan for and resolve all forms of <strong>listing suppressions</strong>, image compliance issues, and detail page errors. Perform manual checks for catalog accuracy and contribution conflicts.</li>
+                    <li><strong>Case Log & Support Management:</strong> Conduct a meticulous follow-up on all open <strong>Amazon support cases</strong>, providing additional information and escalating as necessary to drive resolutions.</li>
+                    <li><strong>PPC & Advertising Monitoring:</strong> Perform daily budget and performance checks on all active ad campaigns. Identify and act on major fluctuations in ACoS, spend, or sales velocity.</li>
+                    <li><strong>Manual Data Analysis & Reporting:</strong> Utilize advanced Excel/Google Sheets skills to update performance trackers, reconcile reports, and conduct <strong>FBA reimbursement audits</strong> by cross-referencing multiple data sources.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects & Initiatives -->
         <section aria-labelledby="projects-heading" class="animate-fadeIn [animation-delay:900ms]">
-            <h2 id="projects-heading" class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b-2 border-blue-200 dark:border-gray-700 pb-2">Projects & Portfolio</h2>
-            <div class="mb-8">
-                <h3 class="font-semibold text-lg mb-2 flex items-center gap-2 text-blue-600 dark:text-blue-400"><i data-lucide="monitor"></i>Live Demo</h3>
-                <p class="text-gray-700 dark:text-gray-300 mb-2">Explore a live demonstration of my work:</p>
-                <a href="https://wescode.vercel.app/" target="_blank" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-blue-500 dark:hover:bg-blue-600">
-                    <i data-lucide="external-link" class="icon mr-2"></i>
-                    View Live Demo
-                </a>
-            </div>
-            <div id="github-projects" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- GitHub projects will be loaded here by JavaScript -->
-                <div class="text-gray-500">Loading GitHub projects...</div>
+            <h2 id="projects-heading" class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b-2 border-blue-200 dark:border-gray-700 pb-2">Beyond the Job Description: Analytical Initiatives</h2>
+             <p class="text-gray-700 dark:text-gray-300 mb-4">
+                My passion for problem-solving extends to personal initiatives that explore new ways to analyze complex e-commerce and data challenges.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all dark:border-gray-700 dark:bg-gray-800/50 flex flex-col">
+                    <h3 class="font-semibold text-blue-600 dark:text-blue-400">Advanced PPC Analysis Framework</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 flex-grow">An analytical framework to provide advanced insights and streamline campaign optimization for Amazon Advertising, built to support PPC managers.</p>
+                    <a href="https://alerion.netlify.app/" target="_blank" class="mt-3 inline-flex items-center justify-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">View Proof of Concept</a>
+                </div>
+                <div class="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all dark:border-gray-700 dark:bg-gray-800/50 flex flex-col">
+                    <h3 class="font-semibold text-blue-600 dark:text-blue-400">AI-Assisted Research Analysis</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 flex-grow">An initiative exploring how AI can assist with research and content analysis, aimed at improving the efficiency of manual research tasks.</p>
+                    <a href="https://wesai-pa.netlify.app/" target="_blank" class="mt-3 inline-flex items-center justify-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">View Proof of Concept</a>
+                </div>
+                 <div class="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all dark:border-gray-700 dark:bg-gray-800/50 flex flex-col">
+                    <h3 class="font-semibold text-blue-600 dark:text-blue-400">Case Study: SpeedTalk Mobile</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 flex-grow">A strategic analysis and growth plan focusing on market expansion and operational improvements for the brand <a href="https://speedtalkmobile.com/" target="_blank" class="underline">SpeedTalk Mobile</a>.</p>
+                    <a href="https://case-study-speedtalk-mobile.netlify.app/" target="_blank" class="mt-3 inline-flex items-center justify-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">Read Case Study</a>
+                </div>
+                <div class="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-all dark:border-gray-700 dark:bg-gray-800/50 flex flex-col">
+                    <h3 class="font-semibold text-blue-600 dark:text-blue-400">Case Study: SecuLife</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 flex-grow">A strategic analysis and growth plan focusing on product positioning and customer acquisition for the brand <a href="https://seculife.us/" target="_blank" class="underline">SecuLife</a>.</p>
+                    <a href="https://case-study-seculife.netlify.app/" target="_blank" class="mt-3 inline-flex items-center justify-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">Read Case Study</a>
+                </div>
             </div>
         </section>
 
-        <!-- Tools Section -->
-        <section aria-labelledby="tools-heading" class="animate-fadeIn [animation-delay:950ms]">
-            <h2 id="tools-heading" class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b-2 border-blue-200 dark:border-gray-700 pb-2">Tools & Platforms</h2>
+        <!-- Skillset Toolkit -->
+        <section aria-labelledby="skills-heading" class="animate-fadeIn [animation-delay:800ms]">
+            <h2 id="skills-heading" class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b-2 border-blue-200 dark:border-gray-700 pb-2">My Skillset: A Comprehensive Toolkit</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div>
-                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="cloud"></i>Cloud & DevOps</h3>
-                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
-                        <li>AWS (Lambda, S3, API Gateway)</li>
-                        <li>Docker</li>
-                        <li>Git & GitHub</li>
-                        <li>Netlify</li>
-                        <li>Vercel</li>
+                 <div class="p-4 border rounded-lg bg-white dark:bg-gray-800/50 dark:border-gray-700">
+                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="settings-2"></i>Process & Systems</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                        <li class="font-bold">SOP Development & Implementation</li>
+                        <li class="font-bold">Advanced Flat File Manipulation</li>
+                        <li>Systematic Case & Issue Tracking</li>
+                        <li>Workflow Auditing & Improvement</li>
+                        <li>Quality Assurance Checklists</li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="database"></i>Databases & Data</h3>
-                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
-                        <li>MongoDB</li>
-                        <li>PostgreSQL</li>
-                        <li>Supabase</li>
-                        <li>SQL</li>
-                        <li>Tableau, Power BI, LookerStudio</li>
-                        <li>Advanced Excel</li>
-                         <li>Power Query</li>
+                <div class="p-4 border rounded-lg bg-white dark:bg-gray-800/50 dark:border-gray-700">
+                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="shopping-cart"></i>Amazon & E-commerce Ops</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                        <li class="font-bold">Account Health Management</li>
+                        <li class="font-bold">Flat File Troubleshooting</li>
+                        <li>Marketplace Management & SEO</li>
+                        <li>PPC (SP/SB/SD, Bid Optimization)</li>
+                        <li>FBA Inventory & Logistics</li>
+                        <li>Vendor / Seller Central</li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="layout-dashboard"></i>Project Management & CRM</h3>
-                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
-                        <li>Jira Software</li>
-                        <li>Notion</li>
-                        <li>Asana</li>
-                        <li>ClickUp</li>
-                        <li>Hubspot</li>
-                        <li>Salesforce (basic)</li>
+                 <div class="p-4 border rounded-lg bg-white dark:bg-gray-800/50 dark:border-gray-700">
+                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="bar-chart-3"></i>Data & Analytics</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                         <li class="font-bold">Advanced Excel & Google Sheets</li>
+                        <li>Advanced Seller Central Reporting</li>
+                        <li>Data Visualization (Looker, Power BI)</li>
+                        <li>Profitability & KPI Tracking</li>
+                        <li>Data Reconciliation & Validation</li>
+                        <li>Translating Data into Strategy</li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="code"></i>Development Tools</h3>
-                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
-                        <li>VS Code</li>
-                        <li>Postman</li>
-                        <li>Insomnia</li>
-                        <li>Chrome DevTools</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="shopping-bag"></i>E-commerce & Marketing</h3>
-                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
-                        <li>Amazon Seller Central</li>
-                        <li>Amazon Ads Console</li>
-                        <li>Helium 10</li>
-                        <li>Jungle Scout</li>
-                        <li>Smartscout</li>
-                        <li>Analyzer Tools</li>
-                        <li>SellerAmp SAS</li>
-                        <li>Repricer Tools</li>
-                        <li>Keepa</li>
-                        <li>Sellerise</li>
-                        <li>Price Checker 2</li>
-                        <li>Google Analytics</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="settings-2"></i>Automation & Scripting</h3>
-                    <ul class="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
-                        <li>Custom Node.js Scripts</li>
-                        <li>Python (basic scripting)</li>
-                        <li>Zapier</li>
-                        <li>Make.com (Integromat), WesAI</li>
-                        <li>Selenium (web automation)</li>
-                        <li>Airtable</li>
-                        <li>Gsuite</li>
-                        <li>MS 365</li>
-                        <li>AS400</li>
-                        <li>Canva</li>
-                        <li>ChatGPT</li>
-                        <li>Slack</li>
-                        <li>Apollo</li>
+                <div class="p-4 border rounded-lg bg-white dark:bg-gray-800/50 dark:border-gray-700">
+                    <h3 class="font-semibold text-lg mb-2 flex items-center gap-2"><i data-lucide="wrench"></i>Tools & Platforms</h3>
+                    <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                        <li>Helium 10, Jungle Scout</li>
+                        <li>Smartscout, SellerAmp, Keepa</li>
+                        <li>Jira, Asana, Notion, ClickUp</li>
+                        <li>Zapier, Make.com</li>
+                        <li>Postman (for API exploration)</li>
+                        <li>Git/GitHub (for version control)</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <!-- Education & Certifications -->
-        <section aria-labelledby="education-heading" class="animate-fadeIn [animation-delay:1000ms]">
+        <section aria-labelledby="education-heading" class="animate-fadeIn [animation-delay:1050ms]">
              <h2 id="education-heading" class="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b-2 border-blue-200 dark:border-gray-700 pb-2">Education & Certifications</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
@@ -355,14 +316,6 @@
                         <div>
                             <p class="font-medium">University of Southeastern Philippines</p>
                             <p class="text-sm text-gray-700 dark:text-gray-300">Bachelor's degree, Elementary Education (2015 - 2019)</p>
-                        </div>
-                        <div>
-                            <p class="font-medium">Iowa State University</p>
-                            <p class="text-sm text-gray-700 dark:text-gray-300">Coursework, Educational Technology (May 2018)</p>
-                        </div>
-                        <div>
-                            <p class="font-medium">Magugpo Institute of Technology</p>
-                            <p class="text-sm text-gray-700 dark:text-gray-300">Coursework, Information Technology (2014)</p>
                         </div>
                     </div>
                 </div>
@@ -385,13 +338,12 @@
             <a href="https://github.com/johnwesleyquintero" target="_blank" class="text-blue-600 hover:underline dark:text-blue-400">GitHub</a> |
             <a href="https://www.linkedin.com/in/johnwesleyquintero/" target="_blank" class="text-blue-600 hover:underline dark:text-blue-400">LinkedIn</a> |
             <a href="mailto:wesley.ecomva@gmail.com" target="_blank" class="text-blue-600 hover:underline dark:text-blue-400">Email</a> |
-            <a href="https://wescode.vercel.app/" target="_blank" class="text-blue-600 hover:underline dark:text-blue-400">ScaleSmart</a> |
-            <a href="https://johnwesleyquintero.netlify.app/" target="_blank" class="text-blue-600 hover:underline dark:text-blue-400">Resume</a> |
-            <a href="https://johnwesleyquintero-article.netlify.app/" target="_blank" class="text-blue-600 hover:underline dark:text-blue-400">Article</a>
+            <a href="https://wescode.vercel.app/" target="_blank" class="text-blue-600 hover:underline dark:text-blue-400">Portfolio</a> |
+             <a href="https://wescode.vercel.app/blog" target="_blank" class="text-blue-600 hover:underline dark:text-blue-400">Blog & Playbooks</a>
             <br>
-            &copy; <span id="current-year"></span> John Wesley Quintero. All rights reserved.
+            © <span id="current-year"></span> John Wesley Quintero. All rights reserved.
             <br>
-            Last Updated: June 2025
+            Last Updated: July 2025
         </p>
     </footer>
 
@@ -403,150 +355,30 @@
     
     <!-- Consolidated Scripts -->
     <script>
-        // --- TAILWIND CONFIGURATION ---
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
                     animation: {
-                        'accordion-down': 'accordion-down 0.2s ease-out',
-                        'accordion-up': 'accordion-up 0.2s ease-out',
                         'gradient': 'gradient 8s linear infinite alternate',
                         'fadeIn': 'fadeIn 0.7s ease-out forwards',
                         'float': 'float 3s ease-in-out infinite',
                     },
                     keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0', transform: 'translateY(10px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-8px)' },
-                        },
-                        gradient: {
-                            '0%': { backgroundPosition: '0% 50%' },
-                            '100%': { backgroundPosition: '100% 50%' },
-                        },
-                        'accordion-down': {
-                            from: { height: 0 },
-                            to: { height: 'var(--radix-accordion-content-height)' },
-                        },
-                        'accordion-up': {
-                            from: { height: 'var(--radix-accordion-content-height)' },
-                            to: { height: 0 },
-                        },
+                        fadeIn: { '0%': { opacity: '0', transform: 'translateY(10px)' }, '100%': { opacity: '1', transform: 'translateY(0)' }, },
+                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-8px)' }, },
+                        gradient: { '0%': { backgroundPosition: '0% 50%' }, '100%': { backgroundPosition: '100% 50%' }, },
                     },
                 },
             },
         };
+        
+        document.getElementById('print-button').addEventListener('click', () => { window.print(); });
 
-        // --- HELPER FUNCTIONS ---
-            // Helper function to download all documents as a zip file
-            async function downloadAllDocuments() {
-                const documents = [
-                    { path: './public/documents/Application-Letter-WQ-Quintero.pdf', name: 'Application-Letter-WQ-Quintero.pdf' },
-                    { path: './public/documents/Cover-Note-WQ-Quintero.pdf', name: 'Cover-Note-WQ-Quintero.pdf' },
-                    { path: './public/documents/John Wesley Quintero - Resume.pdf', name: 'John Wesley Quintero - Resume.pdf' },
-                    { path: './public/documents/JOHN WESLEY QUINTERO RESUME AMAZON VA.pdf', name: 'JOHN WESLEY QUINTERO RESUME AMAZON VA.pdf' }
-                ];
-
-                const zip = new JSZip();
-                const downloadPromises = documents.map(async (doc) => {
-                    try {
-                        const response = await fetch(doc.path);
-                        if (!response.ok) {
-                            throw new Error(`Failed to fetch ${doc.name}: ${response.statusText}`);
-                        }
-                        const blob = await response.blob();
-                        zip.file(doc.name, blob);
-                    } catch (error) {
-                        console.error(`Error adding ${doc.name} to zip:`, error);
-                    }
-                });
-
-                await Promise.all(downloadPromises);
-
-                if (Object.keys(zip.files).length > 0) {
-                    zip.generateAsync({ type: 'blob' }).then(function(content) {
-                        saveAs(content, 'John Wesley Quintero - Documents.zip');
-                    }).catch(e => console.error('Error generating zip:', e));
-                } else {
-                    alert('No documents were successfully prepared for download.');
-                }
-            }
-
-            // Event Listeners
-            document.getElementById('print-button').addEventListener('click', () => {
-                window.print();
-            });
-
-            document.getElementById('download-button').addEventListener('click', () => {
-                downloadAllDocuments();
-            });
-
-        async function fetchGitHubProjects() {
-            const username = 'johnwesleyquintero';
-            const githubProjectsDiv = document.getElementById('github-projects');
-            const languageColorMapping = {
-                'JavaScript': 'bg-yellow-400', 'TypeScript': 'bg-blue-500', 'Python': 'bg-green-500',
-                'HTML': 'bg-orange-500', 'CSS': 'bg-purple-500', 'Java': 'bg-red-500',
-                'Shell': 'bg-green-300', 'Go': 'bg-cyan-400', 'default': 'bg-gray-400'
-            };
-            
-            try {
-                const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=100`); // Fetch more to allow for filtering
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                let projects = await response.json();
-
-                // Filter projects: must have at least 1 star and a description of at least 20 characters
-                projects = projects.filter(project => 
-                    project.stargazers_count > 0 && 
-                    project.description && 
-                    project.description.length >= 20
-                );
-
-                // Sort by stars in descending order and take the top 10
-                projects.sort((a, b) => b.stargazers_count - a.stargazers_count);
-                projects = projects.slice(0, 10);
-
-                if (projects.length === 0) {
-                    githubProjectsDiv.innerHTML = '<p class="text-gray-600 dark:text-gray-400">No public GitHub projects found.</p>';
-                    return;
-                }
-
-                githubProjectsDiv.innerHTML = projects.map(project => `
-                    <a href="${project.html_url}" target="_blank" rel="noopener noreferrer"
-                        class="block p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition-all dark:border-gray-700 dark:bg-gray-800/50 dark:hover:bg-gray-700/60 group">
-                        <div class="flex justify-between items-start">
-                             <h3 class="font-semibold text-blue-600 dark:text-blue-400 group-hover:underline">${project.name}</h3>
-                             <div class="flex items-center text-xs text-gray-500 dark:text-gray-400 gap-2">
-                                <i data-lucide="star" class="h-3 w-3"></i> ${project.stargazers_count}
-                             </div>
-                        </div>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1 h-10 overflow-hidden">${project.description || 'No description provided.'}</p>
-                        ${project.language ? `<div class="flex items-center text-xs text-gray-500 dark:text-gray-400 mt-3">
-                            <span class="inline-block w-3 h-3 rounded-full mr-1.5 ${languageColorMapping[project.language] || languageColorMapping['default']}"></span>
-                            ${project.language}
-                        </div>` : ''}
-                    </a>
-                `).join('');
-                lucide.createIcons(); // Re-render icons after adding new content
-            } catch (error) {
-                console.error('Error fetching GitHub projects:', error);
-                githubProjectsDiv.innerHTML = '<p class="text-red-500">Failed to load GitHub projects. Please check the console for details.</p>';
-            }
-        }
-
-        // --- SCRIPT INITIALIZATION ON DOM LOAD ---
         document.addEventListener('DOMContentLoaded', () => {
-            // Initialize Lucide Icons
             lucide.createIcons();
-            
-            // Set current year in footer
             document.getElementById('current-year').textContent = new Date().getFullYear();
 
-            // Dark Mode Functionality
             const darkModeToggle = document.getElementById('darkModeToggle');
             const htmlElement = document.documentElement;
             const moonIcon = document.getElementById('moonIcon');
@@ -574,9 +406,6 @@
                 localStorage.setItem('theme', newTheme);
                 applyTheme(newTheme);
             });
-
-            // Fetch GitHub Projects
-            fetchGitHubProjects();
         });
     </script>
 </body>
