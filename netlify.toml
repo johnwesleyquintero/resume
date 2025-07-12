@@ -1,0 +1,28 @@
+# ===================================================================
+# Netlify Configuration for John Wesley Quintero's Resume
+# Author: John Wesley Quintero
+# Version: 1.0 (MVP)
+# ===================================================================
+
+# [1] Build Settings
+# Tell Netlify where our finished site is. The root directory contains our index.html.
+[build]
+  publish = "."
+
+# [2] HTTP Security Headers
+# Professional security headers to protect the asset and show expertise.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    # Updated CSP to be self-contained except for the Amazon image
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com;  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;  font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;  img-src 'self' data: https://m.media-amazon.com https://avatars.githubusercontent.com https://api.qrserver.com;  frame-ancestors 'none';"
+    Referrer-Policy = "no-referrer-when-downgrade"
+
+# [3] Redirects & Rewrites
+# This now points to our clean index.html file for any "Not Found" pages.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
