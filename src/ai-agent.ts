@@ -115,7 +115,7 @@ export const WES_JOB_AI_KNOWLEDGE_BASE = `
 - **Education:** Bachelor in Elementary Education (LPT) from the [University of Southeastern Philippines](https://www.usep.edu.ph/)
 - **Certifications:** [LinkedIn Profile Certifications](https://www.linkedin.com/in/johnwesleyquintero/details/certifications/)
 - **Languages:** English, Tagalog, Cebuano
-- **Resume:** johnwesleyquintero.netlify.app
+- **Resume:** johnwesleyquintero.vercel.app
 
 #### **Professional Profile**
 - **Title:** Hands-On Amazon & E-commerce Specialist | Educator
@@ -159,7 +159,7 @@ export const WES_JOB_AI_KNOWLEDGE_BASE = `
 5.  **Amazon Wholesale SOP:** [View Document](https://docs.google.com/document/d/143PWwLDuCBMsXHWcmdAS83sQZthw0pUG/edit?usp=sharing) - A streamlined sourcing and negotiation playbook for wholesale buyers.
 6.  **Flat File Playbook:** [wescode.vercel.app/blog/flat-file](https://wescode.vercel.app/blog/flat-file) - A technical guide on mastering complex Amazon catalog updates.
 7.  **Full Portfolio:** [wescode.vercel.app](https://wescode.vercel.app/) - My central hub for technical projects and blog posts.
-8.  **Digital Resume:** [johnwesleyquintero.netlify.app](https://johnwesleyquintero.netlify.app/) - The living system you are currently interacting with.
+8.  **Digital Resume:** [johnwesleyquintero.vercel.app](https://johnwesleyquintero.vercel.app/) - The living system you are currently interacting with.
 9.  **Professional Certifications:** [LinkedIn Details](https://www.linkedin.com/in/johnwesleyquintero/details/certifications/) - Verified Amazon SEO, PPC, and Data Analytics credentials.
 ---
 ## **9. FAQs & Talking Points (Interview Prep Models)**

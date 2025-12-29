@@ -29,7 +29,7 @@ We tailor the presentation based on the complexity of the target's needs.
 
 *   **Tier 1: The Operations Lead (The System Builder)**
     *   **Audience:** Operations Managers, Brand Owners, HR for established agencies.
-    *   **Asset:** The primary resume (`johnwesleyquintero.netlify.app`).
+    *   **Asset:** The primary resume (`johnwesleyquintero.vercel.app`).
     *   **Narrative:** "I build the repeatable SOPs and data dashboards that make your operations frictionless and scalable."
     *   **Goal:** Secure the role by proving you can stabilize and grow their core business.
 
@@ -88,7 +88,7 @@ We tailor the presentation based on the complexity of the target's needs.
 > I am writing to express my strong interest in the Amazon VA position... I have built personal playbooks to master them... The prospect of working under an experienced Amazon Manager... is exactly the kind of long-term opportunity I am seeking. I am eager to learn your systems and contribute to your team's success...
 >
 > **Additional Resources:**
-> *   **My Online Resume & Portfolio:** [https://johnwesleyquintero.netlify.app/](https://johnwesleyquintero.netlify.app/)
+> *   **My Online Resume & Portfolio:** [https://johnwesleyquintero.vercel.app/](https://johnwesleyquintero.vercel.app/)
 > *   **My Professional Pitch Deck:** [https://johnwesleyquintero-pitchdeck.netlify.app/](https://johnwesleyquintero-pitchdeck.netlify.app/)
 >
 > ...Sincerely,
@@ -102,7 +102,7 @@ We tailor the presentation based on the complexity of the target's needs.
 - **Location:** Tagum City, Philippines (Global Remote)
 - **Experience:** 6+ Years
 - **Portfolio:** [wescode.vercel.app](https://wescode.vercel.app)
-- **Resume:** [johnwesleyquintero.netlify.app](https://johnwesleyquintero.netlify.app)
+- **Resume:** [johnwesleyquintero.vercel.app](https://johnwesleyquintero.vercel.app)
 
 #### **Professional Profile**
 - **Title:** Hands-On Amazon & E-commerce Specialist | Systems Architect
@@ -144,7 +144,7 @@ We tailor the presentation based on the complexity of the target's needs.
 5.  **Amazon Wholesale SOP:** [View Document](https://docs.google.com/document/d/143PWwLDuCBMsXHWcmdAS83sQZthw0pUG/edit?usp=sharing) - A streamlined sourcing and negotiation playbook for wholesale buyers.
 6.  **Flat File Playbook:** [wescode.vercel.app/blog/flat-file](https://wescode.vercel.app/blog/flat-file) - A technical guide on mastering complex Amazon catalog updates.
 7.  **Full Portfolio:** [wescode.vercel.app](https://wescode.vercel.app/) - My central hub for technical projects and blog posts.
-8.  **Digital Resume:** [johnwesleyquintero.netlify.app](https://johnwesleyquintero.netlify.app/) - The living system you are currently interacting with.
+8.  **Digital Resume:** [johnwesleyquintero.vercel.app](https://johnwesleyquintero.vercel.app/) - The living system you are currently interacting with.
 9.  **The "Generalist Codex":** A comprehensive set of internal playbooks for account health, listing optimization, and case log management.
 ---
 ## **9. FAQs & Talking Points (Interview Prep Models)**
