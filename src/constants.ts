@@ -50,6 +50,8 @@ export interface ResumeData {
   }[];
 }
 
+export const GEMINI_MODEL = "models/gemini-flash-lite-latest";
+
 export const RESUME_DATA: ResumeData = {
   name: "John Wesley Quintero",
   title: "Hands-On Amazon & E-commerce Specialist",

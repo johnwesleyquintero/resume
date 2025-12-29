@@ -29,6 +29,7 @@ import { DownloadHub } from './components/DownloadHub';
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import WesJobAI from './pages/WesJobAI';
+import { Toaster } from 'react-hot-toast';
 
 const Resume = () => {
   const [emailCopied, setEmailCopied] = useState(false);
@@ -346,6 +347,7 @@ const Resume = () => {
 const App = () => {
   return (
     <Router>
+      <Toaster position="top-right" />
       <Routes>
         <Route path="/" element={<Resume />} />
         <Route path="/wesjobai" element={<WesJobAI />} />

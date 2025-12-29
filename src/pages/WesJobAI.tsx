@@ -1,15 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { WES_JOB_AI_SYSTEM_INSTRUCTION } from '../ai-agent';
+import { GEMINI_MODEL } from '../constants';
 import { cn } from '../utils/cn';
-import { Send, Bot, User, Loader2, ArrowLeft, Trash2, Sparkles, Copy, Check } from 'lucide-react';
+import { Send, Bot, User, Loader2, ArrowLeft, Trash2, Sparkles, Copy, Check, Image as ImageIcon, X, RefreshCw } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import toast from 'react-hot-toast';
 
 interface Message {
   role: 'user' | 'model';
   content: string;
+  image?: string; // base64 string
 }
 
 const CopyButton = ({ text }: { text: string }) => {
@@ -42,7 +45,32 @@ const WesJobAI = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [apiKey, setApiKey] = useState(localStorage.getItem('GEMINI_API_KEY') || '');
   const [showApiKeyInput, setShowApiKeyInput] = useState(!apiKey);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [retryCount, setRetryCount] = useState(0);
+  const MAX_RETRIES = 3;
+
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  const handleImageSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      if (file.size > 4 * 1024 * 1024) {
+        alert("Image too large. Please select an image under 4MB.");
+        return;
+      }
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setSelectedImage(reader.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const removeImage = () => {
+    setSelectedImage(null);
+    if (fileInputRef.current) fileInputRef.current.value = '';
+  };
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -50,41 +78,110 @@ const WesJobAI = () => {
     }
   }, [messages, isLoading]);
 
-  const handleSendMessage = async (e?: React.FormEvent) => {
-    e?.preventDefault();
-    if (!input.trim() || isLoading || !apiKey) return;
+  const handleSendMessage = async (e?: React.FormEvent, isRetry = false) => {
+    if (e) e.preventDefault();
+    if ((!input.trim() && !selectedImage && !isRetry) || isLoading || !apiKey) return;
 
-    const userMessage: Message = { role: 'user', content: input };
-    setMessages(prev => [...prev, userMessage]);
-    setInput('');
+    let currentInput = input;
+    let currentImage = selectedImage;
+
+    if (!isRetry) {
+      const userMessage: Message = { 
+        role: 'user', 
+        content: input,
+        image: selectedImage || undefined 
+      };
+      setMessages(prev => [...prev, userMessage]);
+      setInput('');
+      setSelectedImage(null);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+    } else {
+      // If it's a retry, we use the last user message
+      const lastUserMessage = [...messages].reverse().find(m => m.role === 'user');
+      if (lastUserMessage) {
+        currentInput = lastUserMessage.content;
+        currentImage = lastUserMessage.image || null;
+      }
+    }
+
     setIsLoading(true);
+    
+    const attemptCall = async (retryAttempt = 0): Promise<string> => {
+        try {
+          const genAI = new GoogleGenerativeAI(apiKey);
+          const model = genAI.getGenerativeModel({ 
+            model: GEMINI_MODEL, 
+            systemInstruction: WES_JOB_AI_SYSTEM_INSTRUCTION
+          });
+
+        let promptParts: any[] = [{ text: currentInput }];
+        
+        if (currentImage) {
+          const base64Data = currentImage.split(',')[1];
+          const mimeType = currentImage.split(';')[0].split(':')[1];
+          promptParts.push({
+            inlineData: {
+              data: base64Data,
+              mimeType: mimeType
+            }
+          });
+        }
+
+        let text = '';
+        if (currentImage) {
+          const result = await model.generateContent([WES_JOB_AI_SYSTEM_INSTRUCTION, ...promptParts]);
+          const response = await result.response;
+          text = response.text();
+        } else {
+          // For text-only, we include history for context
+          const chat = model.startChat({
+            history: messages
+              .filter(m => !m.content.startsWith('Error:')) // Filter out previous error messages
+              .map(m => ({
+                role: m.role,
+                parts: [{ text: m.content }],
+              })),
+          });
+          const result = await chat.sendMessage(currentInput);
+          const response = await result.response;
+          text = response.text();
+        }
+        return text;
+      } catch (error: any) {
+        if (retryAttempt < MAX_RETRIES) {
+          const delay = Math.pow(2, retryAttempt) * 1000;
+          await new Promise(resolve => setTimeout(resolve, delay));
+          return attemptCall(retryAttempt + 1);
+        }
+        throw error;
+      }
+    };
 
     try {
-      const genAI = new GoogleGenerativeAI(apiKey);
-      // Using gemini-2.5-flash-lite: The most current stable free-tier model as of late 2025
-      const model = genAI.getGenerativeModel({ 
-        model: "gemini-2.5-flash-lite",
-        systemInstruction: WES_JOB_AI_SYSTEM_INSTRUCTION
-      });
-
-      const chat = model.startChat({
-        history: messages.map(m => ({
-          role: m.role,
-          parts: [{ text: m.content }],
-        })),
-      });
-
-      const result = await chat.sendMessage(input);
-      const response = await result.response;
-      const text = response.text();
-
+      const text = await attemptCall();
       setMessages(prev => [...prev, { role: 'model', content: text }]);
+      setRetryCount(0);
     } catch (error: any) {
       console.error('Error calling Gemini:', error);
+      let errorMessage = 'Something went wrong. Please check your API key.';
+      
+      if (error.message?.includes('401') || error.message?.includes('API_KEY_INVALID')) {
+        errorMessage = 'Invalid API Key. Please update it in settings.';
+        setShowApiKeyInput(true);
+      } else if (error.message?.includes('429')) {
+        errorMessage = 'Rate limit exceeded. Please wait a moment.';
+      } else if (error.message?.includes('404')) {
+        errorMessage = 'Model not found or API version mismatch.';
+      } else if (error.message?.includes('fetch')) {
+        errorMessage = 'Network error. Please check your internet connection.';
+      }
+
+      toast.error(errorMessage);
       setMessages(prev => [...prev, { 
         role: 'model', 
-        content: `Error: ${error.message || 'Something went wrong. Please check your API key.'}` 
+        content: `Error: ${errorMessage}` 
       }]);
+      setRetryCount(prev => prev + 1);
     } finally {
       setIsLoading(false);
     }
@@ -95,11 +192,15 @@ const WesJobAI = () => {
     if (apiKey.trim()) {
       localStorage.setItem('GEMINI_API_KEY', apiKey);
       setShowApiKeyInput(false);
+      toast.success('API Key saved successfully!');
+    } else {
+      toast.error('Please enter a valid API Key');
     }
   };
 
   const clearChat = () => {
     setMessages([]);
+    toast.success('Chat cleared');
   };
 
   return (
@@ -115,7 +216,7 @@ const WesJobAI = () => {
               <div className="flex items-center gap-2">
                 <h1 className="text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
                   <Bot className="w-6 h-6 text-blue-600" />
-                  Career AI <span className="text-xs font-normal px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full">v5.0</span>
+                  Career AI <span className="text-xs font-normal px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full">v5.1</span>
                 </h1>
                 <div className="hidden sm:flex items-center gap-1.5 px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold uppercase tracking-wider rounded border border-green-200 dark:border-green-800">
                   <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
@@ -289,7 +390,9 @@ const WesJobAI = () => {
                 "max-w-[85%] rounded-2xl p-4 relative transition-all",
                 msg.role === 'user' 
                   ? "bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-tr-none shadow-md shadow-blue-600/20 border border-blue-500/50" 
-                  : "bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-700 rounded-tl-none shadow-sm"
+                  : msg.content.startsWith('Error:')
+                    ? "bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 border border-red-100 dark:border-red-800 rounded-tl-none shadow-sm"
+                    : "bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-700 rounded-tl-none shadow-sm"
               )}>
                 <div className={cn(
                   "absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity",
@@ -298,12 +401,26 @@ const WesJobAI = () => {
                   <CopyButton text={msg.content} />
                 </div>
                 <div className="text-sm leading-relaxed prose dark:prose-invert max-w-none">
+                  {msg.image && (
+                    <div className="mb-3 rounded-lg overflow-hidden border border-white/20 shadow-sm">
+                      <img src={msg.image} alt="User uploaded" className="max-h-64 w-auto object-contain" />
+                    </div>
+                  )}
                   {msg.role === 'model' ? (
                     <ReactMarkdown remarkPlugins={[remarkGfm]}>
                       {msg.content}
                     </ReactMarkdown>
                   ) : (
                     <div className="whitespace-pre-wrap">{msg.content}</div>
+                  )}
+                  {msg.content.startsWith('Error:') && (
+                    <button 
+                      onClick={() => handleSendMessage(undefined, true)}
+                      className="mt-3 flex items-center gap-2 text-xs font-bold bg-red-100 dark:bg-red-900/40 hover:bg-red-200 dark:hover:bg-red-800/60 px-3 py-1.5 rounded-lg transition-colors"
+                    >
+                      <RefreshCw className={cn("w-3 h-3", isLoading && "animate-spin")} />
+                      Retry Request
+                    </button>
                   )}
                 </div>
               </div>
@@ -329,10 +446,40 @@ const WesJobAI = () => {
 
         {/* Input Area */}
         <div className="mt-6">
+          {selectedImage && (
+            <div className="mb-3 relative inline-block animate-scaleIn">
+              <img 
+                src={selectedImage} 
+                alt="Preview" 
+                className="h-20 w-20 object-cover rounded-xl border-2 border-blue-500 shadow-lg" 
+              />
+              <button 
+                onClick={removeImage}
+                className="absolute -top-2 -right-2 p-1 bg-red-500 text-white rounded-full shadow-md hover:bg-red-600 transition-colors"
+              >
+                <X className="w-3 h-3" />
+              </button>
+            </div>
+          )}
           <form 
             onSubmit={handleSendMessage}
             className="relative bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-lg focus-within:ring-2 focus-within:ring-blue-500 transition-all"
           >
+            <input 
+              type="file"
+              ref={fileInputRef}
+              onChange={handleImageSelect}
+              accept="image/*"
+              className="hidden"
+            />
+            <button 
+              type="button"
+              onClick={() => fileInputRef.current?.click()}
+              className="absolute left-2 bottom-2 p-2 text-gray-400 hover:text-blue-600 transition-colors"
+              title="Upload Image"
+            >
+              <ImageIcon className="w-6 h-6" />
+            </button>
             <textarea 
               rows={1}
               placeholder="Ask brother anything..."
@@ -344,14 +491,14 @@ const WesJobAI = () => {
                   handleSendMessage();
                 }
               }}
-              className="w-full p-4 pr-16 bg-transparent outline-none resize-none text-gray-900 dark:text-white placeholder-gray-400"
+              className="w-full p-4 pl-12 pr-16 bg-transparent outline-none resize-none text-gray-900 dark:text-white placeholder-gray-400"
             />
             <button 
               type="submit"
-              disabled={!input.trim() || isLoading || !apiKey}
+              disabled={(!input.trim() && !selectedImage) || isLoading || !apiKey}
               className={cn(
                 "absolute right-2 bottom-2 p-2 rounded-xl transition-all",
-                input.trim() && !isLoading && apiKey 
+                (input.trim() || selectedImage) && !isLoading && apiKey 
                   ? "bg-blue-600 text-white hover:bg-blue-700" 
                   : "bg-gray-100 dark:bg-gray-700 text-gray-400"
               )}
