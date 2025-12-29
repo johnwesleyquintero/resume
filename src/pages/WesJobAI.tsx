@@ -61,10 +61,9 @@ const WesJobAI = () => {
 
     try {
       const genAI = new GoogleGenerativeAI(apiKey);
-      // Using gemini-2.5-flash-lite: The current (Dec 2025) optimized free-tier standard
-      // 1000 requests/day, lowest latency, and replaces retired 1.5 models.
+      // Using gemini-1.5-flash: The most stable and widely available free-tier model
       const model = genAI.getGenerativeModel({ 
-        model: "gemini-2.5-flash-lite",
+        model: "gemini-1.5-flash",
         systemInstruction: WES_JOB_AI_SYSTEM_INSTRUCTION
       });
 
@@ -116,7 +115,7 @@ const WesJobAI = () => {
               <div className="flex items-center gap-2">
                 <h1 className="text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
                   <Bot className="w-6 h-6 text-blue-600" />
-                  WesJobAI <span className="text-xs font-normal px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full">v5.0</span>
+                  Career AI <span className="text-xs font-normal px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full">v5.0</span>
                 </h1>
                 <div className="hidden sm:flex items-center gap-1.5 px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold uppercase tracking-wider rounded border border-green-200 dark:border-green-800">
                   <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
@@ -153,7 +152,7 @@ const WesJobAI = () => {
               Configure Gemini API
             </h2>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-              To talk to WesJobAI, you need a Gemini API Key. You can get one for free at <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Google AI Studio</a>.
+              To talk to Career AI, you need a Gemini API Key. You can get one for free at <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Google AI Studio</a>.
             </p>
             <form onSubmit={saveApiKey} className="space-y-4">
               <input 
@@ -198,7 +197,7 @@ const WesJobAI = () => {
                   <Bot className="w-10 h-10 text-blue-600" />
                 </div>
                 <div className="max-w-md mx-auto">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Hello Brother! I'm WesJobAI.</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Hello Brother! I'm Career AI.</h3>
                   <p className="text-gray-600 dark:text-gray-400 mt-2">
                     I'm the strategic extension of John Wesley. I'm trained on his "Build the System" philosophy and technical architecture.
                   </p>
@@ -316,7 +315,7 @@ const WesJobAI = () => {
               </div>
               <div className="bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl rounded-tl-none p-4 shadow-sm flex items-center gap-2">
                 <Loader2 className="w-4 h-4 animate-spin text-blue-600" />
-                <span className="text-sm text-gray-500">WesJobAI is thinking...</span>
+                <span className="text-sm text-gray-500">Career AI is thinking...</span>
               </div>
             </div>
           )}
@@ -355,7 +354,7 @@ const WesJobAI = () => {
             </button>
           </form>
           <p className="text-[10px] text-center text-gray-400 mt-2">
-            WesJobAI v5.0 | Powered by Gemini 2.5 Flash-Lite | Built for Strategic Autonomy
+            Career AI v5.0 | Powered by Gemini 1.5 Flash | Built for Strategic Autonomy
           </p>
         </div>
       </main>

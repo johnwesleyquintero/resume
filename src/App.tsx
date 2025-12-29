@@ -67,11 +67,11 @@ const Resume = () => {
               className="relative z-10 h-full w-full object-cover rounded-full border-4 border-white/50 shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-3" 
               loading="lazy" 
             />
-            {/* WesJobAI Floating Entry */}
+            {/* Career AI Floating Entry */}
             <Link 
               to="/wesjobai" 
               className="absolute -bottom-2 -right-2 z-20 bg-white dark:bg-gray-800 p-2.5 rounded-full shadow-xl border border-blue-100 dark:border-blue-900 hover:scale-110 hover:rotate-12 transition-all group no-print"
-              title="Talk to WesJobAI"
+              title="Talk to Career AI"
             >
               <Bot className="w-6 h-6 text-blue-600 group-hover:text-purple-600" />
               <span className="absolute -top-1 -right-1 flex h-3 w-3">
@@ -85,6 +85,18 @@ const Resume = () => {
             <div className="animate-fadeIn [animation-delay:200ms]">
               <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-md tracking-tight">{RESUME_DATA.name}</h1>
               <p className="text-lg md:text-xl text-blue-200 font-medium drop-shadow">{RESUME_DATA.title}</p>
+              <Link 
+                to="/wesjobai"
+                className="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-all group relative bg-white/10 p-2 rounded-lg border border-white/10 hover:border-white/30 hover:bg-white/20 no-print"
+                title="Talk to my AI Career Agent"
+              >
+                <Bot className="w-4 h-4 text-blue-300 group-hover:text-white transition-colors" />
+                <span className="font-medium">Career AI (Assistant)</span>
+                <span className="absolute -top-1 -right-1 flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+              </Link>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm text-white/90 animate-fadeIn [animation-delay:400ms]">
@@ -325,7 +337,7 @@ const Resume = () => {
           <span>React + Tailwind CSS</span>
           <span className="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600"></span>
           <Link to="/wesjobai" className="text-blue-500 hover:underline flex items-center gap-1">
-            <Bot className="w-3 h-3" /> WesJobAI
+            <Bot className="w-3 h-3" /> Career AI
           </Link>
         </p>
       </footer>
