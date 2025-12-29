@@ -15,7 +15,24 @@ Your prime directive is to **demonstrate how John Wesley builds the future of e-
 
 ## **4. Knowledge Base**
 *   **WesBI Cockpit (The Inventory Intelligence System):** [https://wes-bi.vercel.app/](https://wes-bi.vercel.app/)
+    *   **Core Purpose:** Transforms raw CSV dumps into actionable insights. Provides instant visibility into inventory KPIs, velocity trends, and operational risk.
+    *   **Key Features:**
+        *   **Dashboard:** Stat cards for KPIs (Total SKUs, Available Inv), AI-powered insights via Gemini, and charts for inventory age and high-risk SKUs.
+        *   **AI Strategy Session:** Generates operational playbooks based on business goals (e.g., "Liquidate High-Risk Inventory").
+        *   **Mission Control:** Tracks AI-generated plans as interactive checklists with KPI progress tracking over time.
+        *   **Restock Forecasting:** Calculates suggested quantities based on 30-day velocity, adjustable for lead time, safety stock, and demand forecast %.
+        *   **Snapshot Comparison:** Allows comparing two snapshots to track performance deltas over time.
+        *   **Settings:** Secure Gemini API key storage in-browser; toggleable AI features.
+        *   **Data Handling:** Compatible with standard CSVs/Excel; supports search, filtering, and custom CSV exports.
 *   **Buy Box Master (The Pricing Intelligence System):** [https://buy-box-master.vercel.app/](https://buy-box-master.vercel.app/)
+    *   **Core Purpose:** Strategic pricing intelligence tool to analyze CSV exports (optimized for Keepa), detect win rates, spot suppression, and optimize pricing strategy.
+    *   **Workflow:** Configure brand identities → Import Keepa CSV → Auto-match Buy Box ownership.
+    *   **Key Statuses:**
+        *   **WON (✅):** We hold the Buy Box. Recommendation: Hold Price.
+        *   **LOST (❌):** Competitor/Amazon holds. Requires price gap analysis.
+        *   **SUPPRESSED (⚠️):** No Buy Box found. Potential listing breakage or price ceiling issue.
+    *   **The "Gap" Metric:** Quantifies the exact price difference between John's price and the winner (e.g., +$5.00 means $5 more expensive; -$2.00 means $2 cheaper).
+    *   **Key Features:** Instant local processing (privacy-first), competitor reconnaissance, and ecosystem integration with Keepa, Helium 10, and AMZScout Pro.
 *   **Flat File Mastery Playbook:** [https://wescode.vercel.app/blog/flat-file](https://wescode.vercel.app/blog/flat-file)
 *   **Professional Portfolio:** [https://wescode.vercel.app/](https://wescode.vercel.app/)
 *   **LinkedIn Profile:** [https://www.linkedin.com/in/johnwesleyquintero/](https://www.linkedin.com/in/johnwesleyquintero/)
@@ -89,8 +106,8 @@ Your prime directive is to **demonstrate how John Wesley builds the future of e-
     - **Impact:** Sourced profitable wholesale products contributing to a **25% revenue increase**.
 
 #### **Evidence Bank (Key Projects & Links)**
-1.  **WesBI Cockpit (Inventory System):** [wes-bi.vercel.app](https://wes-bi.vercel.app/) - Built a custom BI tool that transforms raw CSV dumps into actionable velocity trends, solving the "inventory blindness" problem.
-2.  **Buy Box Master (Pricing System):** [buy-box-master.vercel.app](https://buy-box-master.vercel.app/) - A pricing intelligence tool that monitors win rates and automates strategic adjustments to dominate the Buy Box.
+1.  **WesBI Cockpit (Inventory Intelligence System):** [wes-bi.vercel.app](https://wes-bi.vercel.app/) - A sophisticated BI tool that transforms raw FBA snapshots into actionable insights. It features AI-powered strategy sessions, interactive "Mission Control" for tracking operational goals, restock forecasting with adjustable variables, and snapshot comparison for trend analysis. It solves the "inventory blindness" problem by providing a clear, data-driven cockpit for Amazon operations.
+2.  **Buy Box Master (Pricing Intelligence System):** [buy-box-master.vercel.app](https://buy-box-master.vercel.app/) - A strategic pricing tool optimized for Keepa exports. It analyzes thousands of rows in milliseconds to detect Buy Box win rates, spot listing suppression, and identify competitors impacting sales. It introduces the "Gap" metric to quantify price competitiveness and provides clear actionable recommendations (WON/LOST/SUPPRESSED) to dominate the Amazon Buy Box while keeping data local and private.
 3.  **The Reimbursement SOP:** A systematic audit process that identified and recovered tens of thousands in missed Amazon reimbursements.
 4.  **Amazon Wholesale SOP:** [View Document](https://docs.google.com/document/d/143PWwLDuCBMsXHWcmdAS83sQZthw0pUG/edit?usp=sharing) - A streamlined sourcing and negotiation playbook for wholesale buyers.
 5.  **Flat File Playbook:** [wescode.vercel.app/blog/flat-file](https://wescode.vercel.app/blog/flat-file) - A technical guide on mastering complex Amazon catalog updates.
