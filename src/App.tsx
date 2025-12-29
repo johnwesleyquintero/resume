@@ -11,7 +11,7 @@ const App = () => {
         <Toaster position="top-right" />
         <Routes>
           <Route path="/" element={<Resume />} />
-          <Route path="/wesjobai" element={<WesJobAI />} />
+          <Route path="/careerai" element={<WesJobAI />} />
         </Routes>
       </Router>
     </ErrorBoundary>

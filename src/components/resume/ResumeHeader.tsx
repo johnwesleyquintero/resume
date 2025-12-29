@@ -29,7 +29,7 @@ export const ResumeHeader = () => {
             loading="lazy" 
           />
           <Link 
-            to="/wesjobai" 
+            to="/careerai" 
             className="absolute -bottom-1 -right-1 md:-bottom-2 md:-right-2 z-20 bg-white dark:bg-gray-800 p-2 md:p-2.5 rounded-full shadow-xl border border-blue-100 dark:border-blue-900 hover:scale-110 hover:rotate-12 transition-all group no-print"
             title="Talk to Career AI"
           >
@@ -48,7 +48,7 @@ export const ResumeHeader = () => {
             
             <div className="flex justify-center md:justify-start pt-2">
               <Link 
-                to="/wesjobai"
+                to="/careerai"
                 className="flex items-center gap-2 hover:text-white transition-all group relative bg-white/10 px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30 hover:bg-white/20 no-print text-sm sm:text-base"
                 title="Talk to my AI Career Agent"
               >

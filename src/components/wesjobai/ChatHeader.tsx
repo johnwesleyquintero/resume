@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Bot, Trash2 } from 'lucide-react';
+import { ArrowLeft, Bot, Trash2, Sun, Moon } from 'lucide-react';
+import { useTheme } from '../../hooks/useTheme';
 
 interface ChatHeaderProps {
   onSettingsClick: () => void;
@@ -8,6 +9,8 @@ interface ChatHeaderProps {
 }
 
 const ChatHeader: React.FC<ChatHeaderProps> = ({ onSettingsClick, onClearChat }) => {
+  const { isDarkMode, toggleDarkMode } = useTheme();
+
   return (
     <header className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 p-4 sticky top-0 z-10 shadow-sm">
       <div className="max-w-4xl mx-auto flex items-center justify-between">
@@ -33,12 +36,20 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({ onSettingsClick, onClearChat })
             <p className="text-xs text-gray-500 dark:text-gray-400">Strategic Partner to John Wesley Quintero</p>
           </div>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 sm:gap-2">
+          <button
+            onClick={toggleDarkMode}
+            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full transition-colors"
+            title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+          >
+            {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+          </button>
           <button 
             onClick={onSettingsClick}
-            className="text-xs text-gray-500 hover:text-blue-600 transition-colors"
+            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full transition-colors"
+            title="Settings"
           >
-            Settings
+            <Bot className="w-5 h-5" />
           </button>
           <button 
             onClick={onClearChat}

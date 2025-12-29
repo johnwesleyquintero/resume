@@ -46,7 +46,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ onSuggestionClick }) => {
         <div className="max-w-md mx-auto">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Hello Brother! I'm Career AI.</h3>
           <p className="text-gray-600 dark:text-gray-400 mt-2">
-            I'm the strategic extension of John Wesley. I'm trained on his "Build the System" philosophy and operational workflows.
+            I'm the strategic extension of Wesley. I'm trained on his "Build the System" philosophy and operational workflows.
           </p>
         </div>
       </div>
