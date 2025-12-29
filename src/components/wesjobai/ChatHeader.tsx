@@ -27,7 +27,7 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({ onSettingsClick, onClearChat })
               </Link>
               <div className="hidden sm:flex items-center gap-1.5 px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold uppercase tracking-widest rounded border border-green-200 dark:border-green-800 ml-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-                2nd Brain Mode
+                Copilot Mode
               </div>
             </div>
             <p className="text-xs text-gray-500 dark:text-gray-400 flex items-center gap-1.5">
