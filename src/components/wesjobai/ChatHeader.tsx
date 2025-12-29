@@ -22,17 +22,18 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({ onSettingsClick, onClearChat })
           <div>
             <div className="flex items-center gap-2">
               <Link to="/wesai" className="flex items-center group">
-                <WesAILogo width={100} height={32} className="drop-shadow-[0_1px_2px_rgba(0,0,0,0.1)] dark:drop-shadow-none transition-transform group-hover:scale-105" />
-                <span className="text-xs font-normal px-2 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full ml-2">v6.0</span>
+                <WesAILogo width={100} height={32} className="drop-shadow-sm dark:drop-shadow-none transition-transform group-hover:scale-105" />
+                <span className="text-[10px] font-bold px-2 py-0.5 bg-wes-secondary text-wes-muted rounded-full ml-2 border border-wes-border">v6.0</span>
               </Link>
-              <div className="hidden sm:flex items-center gap-1.5 px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold uppercase tracking-widest rounded border border-green-200 dark:border-green-800 ml-2">
+              <div className="hidden sm:flex items-center gap-1.5 px-2 py-0.5 bg-wes-secondary text-wes-muted text-[10px] font-bold uppercase tracking-widest rounded border border-wes-border ml-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-                Copilot Mode
+                Copilot
               </div>
             </div>
-            <p className="text-xs text-wes-muted flex items-center gap-1.5">
-              Operation Copilot              <span className="inline-block w-1 h-1 rounded-full bg-wes-border"></span>
-              <span className="opacity-70">Powered by Gemini AI</span>
+            <p className="text-[11px] text-wes-muted/80 flex items-center gap-1.5">
+              WesAI Copilot
+              <span className="inline-block w-0.5 h-0.5 rounded-full bg-wes-muted/40"></span>
+              <span>Powered by Gemini</span>
             </p>
           </div>
         </div>

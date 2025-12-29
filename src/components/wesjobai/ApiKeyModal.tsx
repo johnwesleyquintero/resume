@@ -37,12 +37,12 @@ const ApiKeyModal: React.FC<ApiKeyModalProps> = ({
             placeholder="Enter your Gemini API Key"
             value={apiKey}
             onChange={(e) => setApiKey(e.target.value)}
-            className="w-full p-3 border border-wes-border rounded-xl bg-wes-main text-wes-text focus:ring-2 focus:ring-blue-500 outline-none placeholder-wes-muted transition-all"
+            className="w-full p-3 border border-wes-border rounded-xl bg-wes-main text-wes-text focus:border-wes-muted outline-none placeholder-wes-muted transition-all"
           />
           <div className="flex gap-3">
             <button 
               type="submit"
-              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all shadow-lg shadow-blue-600/20 active:scale-[0.98]"
+              className="flex-1 bg-wes-text text-wes-main font-bold py-3 rounded-xl hover:opacity-90 transition-all shadow-sm active:scale-[0.98]"
             >
               Save Key
             </button>

@@ -26,40 +26,40 @@ const EmptyState: React.FC<EmptyStateProps> = ({ onSuggestionClick }) => {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-full py-10 text-center space-y-10 animate-fadeIn">
-      <div className="space-y-4">
-        <div className="w-20 h-20 bg-wes-secondary rounded-full flex items-center justify-center mx-auto shadow-xl border border-wes-border group hover:scale-110 transition-transform duration-500">
-          <WesAILogo variant="icon" width={48} height={48} className="drop-shadow-sm" />
+    <div className="flex flex-col items-center justify-center min-h-[60vh] py-10 text-center space-y-12 animate-fadeIn">
+      <div className="space-y-6">
+        <div className="w-16 h-16 bg-wes-main rounded-full flex items-center justify-center mx-auto shadow-sm border border-wes-border group hover:scale-105 transition-all duration-500">
+          <WesAILogo variant="icon" width={36} height={36} />
         </div>
-        <div className="max-w-md mx-auto">
-          <h3 className="text-2xl font-bold text-wes-text">Hello! I'm WesAI.</h3>
-          <p className="text-wes-muted mt-2 text-base leading-relaxed">
-            How can I help you today?
+        <div className="max-w-md mx-auto space-y-2">
+          <h3 className="text-2xl font-semibold text-wes-text tracking-tight">How can I help you today?</h3>
+          <p className="text-wes-muted text-[15px] leading-relaxed opacity-80">
+            WesAI is your strategic partner for building systems and optimizing operations.
           </p>
         </div>
       </div>
 
-      <div className="w-full max-w-lg space-y-4">
+      <div className="w-full max-w-2xl px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {recruiterToolbox.map((item, i) => (
             <button 
               key={i}
               onClick={() => onSuggestionClick(item.prompt)}
-              className="group p-4 text-left bg-wes-secondary border border-wes-border rounded-2xl hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all flex flex-col gap-1"
+              className="group p-4 text-left bg-wes-main border border-wes-border rounded-xl hover:bg-wes-secondary transition-all flex flex-col gap-1.5 shadow-sm"
             >
-              <span className="text-xs font-bold text-wes-text group-hover:text-blue-600 transition-colors uppercase tracking-tight">{item.label}</span>
-              <span className="text-[11px] text-wes-muted">{item.desc}</span>
+              <span className="text-xs font-bold text-wes-text uppercase tracking-tight opacity-70 group-hover:opacity-100">{item.label}</span>
+              <span className="text-[13px] text-wes-muted leading-snug">{item.desc}</span>
             </button>
           ))}
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-2 max-w-md">
+      <div className="flex flex-wrap justify-center gap-2 max-w-xl px-4">
         {suggestions.map((suggestion, i) => (
           <button 
             key={i}
             onClick={() => onSuggestionClick(suggestion)}
-            className="px-3 py-1.5 text-[11px] font-medium bg-wes-secondary text-wes-muted rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:text-blue-600 transition-all border border-wes-border hover:border-blue-200"
+            className="px-4 py-2 text-[13px] bg-wes-main text-wes-muted rounded-full hover:bg-wes-secondary transition-all border border-wes-border hover:border-wes-muted/30"
           >
             {suggestion}
           </button>
