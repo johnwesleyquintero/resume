@@ -80,7 +80,7 @@ export const RESUME_DATA: ResumeData = {
     certifications: "https://www.linkedin.com/in/johnwesleyquintero/details/certifications/",
   },
   contact: {
-    phone: "+63 (9xx) xxx-xxxx", // Placeholder for security, user can update
+    phone: "+63 (9xx) xxx-xxxx", // Placeholder for security
     email: "wesley.ecomva@gmail.com",
     address: "Tagum City, Davao del Norte, Philippines",
   },
@@ -297,7 +297,7 @@ export const RESUME_DATA: ResumeData = {
     {
       title: "Old Version Standard Resume",
       label: "John Wesley Quintero - Resume Old Version.pdf",
-      url: "/documents/John Wesley Quintero -  Resume Old Version.pdf",
+      url: "/documents/John Wesley Quintero - Resume Old Version.pdf",
       icon: "file-spreadsheet",
     },
   ],
