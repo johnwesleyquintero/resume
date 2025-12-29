@@ -47,7 +47,11 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message, isLoading, onRetry }
             <CopyButton text={message.content} />
           </div>
         )}
-        <div className="text-sm leading-relaxed prose dark:prose-invert max-w-none">
+        <div className={cn(
+          "text-sm leading-relaxed max-w-none",
+          message.role === 'model' && !isError ? "prose dark:prose-invert" : "",
+          isUser && "text-white"
+        )}>
           {message.image && (
             <div className="mb-3 rounded-lg overflow-hidden border border-white/20 shadow-sm">
               <img src={message.image} alt="User uploaded" className="max-h-64 w-auto object-contain" />
