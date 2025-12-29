@@ -1,24 +1,27 @@
 # John Wesley Quintero — The Generalist Codex 🚀
 
-Welcome to the digital architecture of my professional journey. This isn't just a resume; it's a high-performance, responsive system designed to showcase the intersection of strategic operations and technical execution.
+Welcome to the digital architecture of my professional journey. This repository isn't just a resume; it's a high-performance, responsive system designed to showcase the intersection of strategic e-commerce operations and technical automation.
 
 ## 📝 Project Overview
-This repository hosts my modern professional resume, built as a sovereign digital asset. It highlights my dual expertise as an **Operations Manager** (VAXPH: Speedtalk Mobile & SecuLife) and a **Full-Stack Developer**, focusing on building scalable digital systems and independent solutions.
+This is my sovereign digital asset, built to demonstrate my dual expertise as a **Hands-On Amazon & E-commerce Specialist** and a **Systems Architect**. It serves as the central hub for my professional identity, featuring real-time interactive components and a built-in strategic AI advisor.
 
 ## ✨ Key Features
+- **WesJobAI Integration**: A built-in, context-aware AI agent (powered by Gemini 2.0) that acts as my "2nd Brain," capable of answering strategic operational questions and assisting with job applications.
+- **Dynamic Skill Intelligence**: Interactive and scannable technical skillset layout reflecting 6+ years of marketplace experience.
+- **Project Showcases**: Integrated links to my custom-built BI tools:
+  - **WesBI Cockpit**: Inventory intelligence and forecasting system.
+  - **Buy Box Master**: Pricing strategy and win-rate analysis tool.
+  - **Operation Citadel**: Definitive listing documentation system.
 - **Modern Tech Stack**: Built with React 18, Vite, and Tailwind CSS for lightning-fast performance.
-- **WesAI Integration**: Reflects the "Generalist Codex" persona—insightful, pragmatic, and system-oriented.
-- **Dynamic Skill Pills**: Interactive and scannable technical skillset layout.
-- **One-Click Actions**: Integrated "Copy Email" functionality and a centralized Download Hub for multiple resume versions.
 - **Dark Mode Support**: Fully responsive design with native dark/light mode toggling.
-- **Print Optimized**: Custom CSS ensures the digital experience translates perfectly to a clean, professional PDF.
+- **Print Optimized**: Custom CSS ensures the digital experience translates perfectly to a clean, professional PDF for traditional applications.
 
 ## 🛠️ Built With
 - **Framework**: [React.js](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+- **AI Engine**: [Google Gemini 2.0 Flash](https://ai.google.dev/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Deployment**: [Netlify](https://www.netlify.com/)
-- **State Management**: React Hooks
 
 ## 🚀 Quick Start
 
@@ -36,18 +39,24 @@ This repository hosts my modern professional resume, built as a sovereign digita
    ```bash
    npm install
    ```
-3. Start the development server:
+3. Set up environment variables (Optional for AI features):
+   Create a `.env` file in the root:
+   ```env
+   VITE_GEMINI_API_KEY=your_api_key_here
+   ```
+4. Start the development server:
    ```bash
    npm run dev
    ```
 
-## 🎯 Live Demo
-- **Main Site**: [johnwesleyquintero-resume.netlify.app](https://johnwesleyquintero.vercel.app)
-- **Portfolio**: [johnwesleyquintero.vercel.app](https://johnwesleyquintero.vercel.app/)
-- **Educational Platform**: [wescode.vercel.app](https://wescode.vercel.app/)
+## 🎯 Strategic Assets
+- **Main Resume**: [johnwesleyquintero.netlify.app](https://johnwesleyquintero.netlify.app)
+- **Portfolio & Blog**: [wescode.vercel.app](https://wescode.vercel.app/)
+- **WesBI Cockpit**: [wes-bi.vercel.app](https://wes-bi.vercel.app/)
+- **Buy Box Master**: [buy-box-master.vercel.app](https://buy-box-master.vercel.app/)
 
 ## 📜 Philosophy
-> "Leveraging challenges into opportunities, prioritizing competence over conventional approaches, and building robust systems to achieve long-term strategic independence."
+> "Build the system that prevents the problem. I don't just solve issues; I build the playbooks and tools that ensure they never happen again."
 
 ## 📞 Connect with the Founder
 - 📧 **Email**: [wesley.ecomva@gmail.com](mailto:wesley.ecomva@gmail.com)
@@ -55,4 +64,4 @@ This repository hosts my modern professional resume, built as a sovereign digita
 - 🐙 **GitHub**: [@johnwesleyquintero](https://github.com/johnwesleyquintero)
 
 ---
-*Built with precision and purpose by John Wesley Quintero.*
+*Built with precision and purpose by John Wesley Quintero. v2.5*
