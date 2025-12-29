@@ -122,7 +122,7 @@ const WesJobAI = () => {
         {showScrollButton && (
           <button
             onClick={() => scrollToBottom()}
-            className="absolute bottom-24 right-8 bg-blue-600 text-white p-2 rounded-full shadow-lg hover:bg-blue-700 transition-all animate-bounce z-10"
+            className="absolute bottom-24 left-1/2 -translate-x-1/2 bg-blue-600/90 backdrop-blur-sm text-white p-2 rounded-full shadow-lg hover:bg-blue-700 transition-all animate-bounce z-10 border border-blue-400/30"
             title="Scroll to bottom"
           >
             <ArrowDown className="w-5 h-5" />
