@@ -46,7 +46,7 @@ This repository hosts my modern professional resume, built as a sovereign digita
    ```
 
 ## 🎯 Live Demo
-- **Main Site**: [johnwesleyquintero-resume.netlify.app](https://johnwesleyquintero-resume.netlify.app)
+- **Main Site**: [johnwesleyquintero-resume.netlify.app](https://johnwesleyquintero.netlify.app)
 - **Portfolio**: [johnwesleyquintero.vercel.app](https://johnwesleyquintero.vercel.app/)
 - **Educational Platform**: [wescode.vercel.app](https://wescode.vercel.app/)
 
