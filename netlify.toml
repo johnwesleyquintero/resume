@@ -5,9 +5,10 @@
 # ===================================================================
 
 # [1] Build Settings
-# Tell Netlify where our finished site is. The root directory contains our index.html.
+# Tell Netlify to build the project and serve the "dist" folder.
 [build]
-  publish = "."
+  command = "npm run build"
+  publish = "dist"
 
 # [2] HTTP Security Headers
 # Professional security headers to protect the asset and show expertise.
@@ -21,8 +22,8 @@
     Referrer-Policy = "no-referrer-when-downgrade"
 
 # [3] Redirects & Rewrites
-# This now points to our clean index.html file for any "Not Found" pages.
+# SPA redirect: All paths should point to index.html to allow React to handle routing.
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 404
+  status = 200
