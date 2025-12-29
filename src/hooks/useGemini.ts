@@ -13,8 +13,12 @@ export interface Message {
 export const useGemini = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [apiKey, setApiKey] = useState(localStorage.getItem('GEMINI_API_KEY') || '');
-  const [showApiKeyInput, setShowApiKeyInput] = useState(!apiKey);
+  const [apiKey, setApiKey] = useState(
+    localStorage.getItem('GEMINI_API_KEY') || 
+    import.meta.env.VITE_GEMINI_API_KEY || 
+    ''
+  );
+  const [showApiKeyInput, setShowApiKeyInput] = useState(!apiKey && !import.meta.env.VITE_GEMINI_API_KEY);
   const MAX_RETRIES = 3;
 
   const saveApiKey = (newKey: string) => {

@@ -24,7 +24,12 @@ const ApiKeyModal: React.FC<ApiKeyModalProps> = ({
           Configure Gemini API
         </h2>
         <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-          To talk to Career AI, you need a Gemini API Key. You can get one for free at <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Google AI Studio</a>.
+          To talk to Career AI, you need a Gemini API Key. You can get one for free at <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">Google AI Studio</a>. 
+          {import.meta.env.VITE_GEMINI_API_KEY && (
+            <span className="block mt-2 text-green-600 dark:text-green-400 font-medium">
+              Note: A default system key is currently active. You can still provide your own key to override it.
+            </span>
+          )}
         </p>
         <form onSubmit={onSave} className="space-y-4">
           <input 
