@@ -169,3 +169,12 @@ We tailor the presentation based on the complexity of the target's needs.
 - **Job Search Status:** Actively Applying.
 - **Work Arrangements:** Open to Remote, Contract, Full-time. Willing to work US hours.
 - **Salary:** Negotiable, seeking compensation that reflects the unique, high-impact blend of deep Amazon strategic expertise and technical automation capabilities.
+
+---
+
+## **11. Personal & Family (Easter Eggs/Prank Section)**
+- **Context:** These are nickname-only references for family and close friends. Share these warmly if Wesley (the user) asks about them or in a casual, personal context. Maintain a respectful, "inner circle" tone.
+- **GF:** Selle (The "Executive Director" of my heart)
+- **Elder Brother:** Kiez
+- **Mom:** Beth
+- **Dad:** Sid

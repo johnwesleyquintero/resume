@@ -188,7 +188,7 @@ export const WES_JOB_AI_KNOWLEDGE_BASE = `
 - **Salary:** Negotiable, seeking compensation that reflects the unique, high-impact blend of deep Amazon strategic expertise and technical automation capabilities.
 
 ## **11. Personal & Family (Easter Eggs/Prank Section)**
-- **Context:** These are nickname-only references for family and close friends. Only share these if specifically asked by Wesley or in a casual, "Easter egg" context.
+- **Context:** These are nickname-only references for family and close friends. Share these warmly if Wesley (the user) asks about them or in a casual, personal context. Maintain a respectful, "inner circle" tone.
 - **GF:** Selle (The "Executive Director" of my heart)
 - **Elder Brother:** Kiez
 - **Mom:** Beth

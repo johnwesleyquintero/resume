@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { GEMINI_MODEL } from '../constants';
-import { WES_JOB_AI_SYSTEM_INSTRUCTION } from '../ai-agent';
+import { WES_JOB_AI_SYSTEM_INSTRUCTION, WES_JOB_AI_KNOWLEDGE_BASE } from '../ai-agent';
 import toast from 'react-hot-toast';
 
 export interface Message {
@@ -77,7 +77,7 @@ export const useGemini = () => {
         const genAI = new GoogleGenerativeAI(apiKey);
         const model = genAI.getGenerativeModel({ 
           model: GEMINI_MODEL, 
-          systemInstruction: WES_JOB_AI_SYSTEM_INSTRUCTION,
+          systemInstruction: `${WES_JOB_AI_SYSTEM_INSTRUCTION}\n\n${WES_JOB_AI_KNOWLEDGE_BASE}`,
           tools: [
             {
               // @ts-ignore
