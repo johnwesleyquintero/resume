@@ -9,7 +9,7 @@ import {
   Sun,
   Moon
 } from 'lucide-react';
-import { RESUME_DATA } from '../constants';
+import { RESUME_DATA } from '../data/resumeData';
 import { cn } from '../utils/cn';
 import { copyToClipboard } from '../utils/clipboard';
 
