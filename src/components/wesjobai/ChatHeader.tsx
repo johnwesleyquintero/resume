@@ -31,7 +31,7 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({ onSettingsClick, onClearChat })
               </div>
             </div>
             <p className="text-xs text-gray-500 dark:text-gray-400 flex items-center gap-1.5">
-              Strategic Partner to John Wesley Quintero
+              Wesley's Strategic Extension
               <span className="inline-block w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600"></span>
               <span className="opacity-70">Powered by Gemini AI</span>
             </p>
