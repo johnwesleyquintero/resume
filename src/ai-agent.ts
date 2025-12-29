@@ -110,11 +110,14 @@ We tailor the presentation based on the complexity of the target's needs.
 - **Amazon Wholesale Buyer | Sales.support | Oct 2018 - Jul 2022:**
     - **Impact:** Sourced profitable wholesale products contributing to a **25% revenue increase**.
 
-#### **Evidence Bank (Key Projects)**
-1.  **WesBI Cockpit (Inventory System):** Built a custom BI tool that transforms raw CSV dumps into actionable velocity trends, solving the "inventory blindness" problem.
-2.  **Buy Box Master (Pricing System):** A pricing intelligence tool that monitors win rates and automates strategic adjustments to dominate the Buy Box.
+#### **Evidence Bank (Key Projects & Links)**
+1.  **WesBI Cockpit (Inventory System):** [wes-bi.vercel.app](https://wes-bi.vercel.app/) - Built a custom BI tool that transforms raw CSV dumps into actionable velocity trends, solving the "inventory blindness" problem.
+2.  **Buy Box Master (Pricing System):** [buy-box-master.vercel.app](https://buy-box-master.vercel.app/) - A pricing intelligence tool that monitors win rates and automates strategic adjustments to dominate the Buy Box.
 3.  **The Reimbursement SOP:** A systematic audit process that identified and recovered tens of thousands in missed Amazon reimbursements.
-4.  **The "Generalist Codex":** A comprehensive set of internal playbooks for account health, listing optimization, and case log management.
+4.  **Amazon Wholesale SOP:** [View Document](https://docs.google.com/document/d/143PWwLDuCBMsXHWcmdAS83sQZthw0pUG/edit?usp=sharing) - A streamlined sourcing and negotiation playbook for wholesale buyers.
+5.  **Flat File Playbook:** [wescode.vercel.app/blog/flat-file](https://wescode.vercel.app/blog/flat-file) - A technical guide on mastering complex Amazon catalog updates.
+6.  **Full Portfolio:** [wescode.vercel.app](https://wescode.vercel.app/) - My central hub for technical projects and blog posts.
+7.  **Digital Resume:** [johnwesleyquintero.netlify.app](https://johnwesleyquintero.netlify.app/) - The living system you are currently interacting with.
 ---
 ## **9. FAQs & Talking Points (Interview Prep Models)**
 
