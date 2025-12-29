@@ -9,6 +9,7 @@ export interface ResumeData {
     portfolio: string;
     blog: string;
     github: string;
+    certifications?: string;
   };
   contact: {
     phone: string;
@@ -20,6 +21,7 @@ export interface ResumeData {
     school: string;
     period: string;
     details?: string;
+    url?: string;
   }[];
   certifications: string[];
   languages: string[];
@@ -75,6 +77,7 @@ export const RESUME_DATA: ResumeData = {
     portfolio: "https://wescode.vercel.app/",
     blog: "https://wescode.vercel.app/blog",
     github: "https://github.com/johnwesleyquintero",
+    certifications: "https://www.linkedin.com/in/johnwesleyquintero/details/certifications/",
   },
   contact: {
     phone: "+63 (9xx) xxx-xxxx", // Placeholder for security, user can update
@@ -83,10 +86,11 @@ export const RESUME_DATA: ResumeData = {
   },
   education: [
     {
-      degree: "Bachelor of Secondary Education",
-      school: "University of Southeastern Philippines (Assumed)", // Based on location/license
-      period: "2014 - 2018",
+      degree: "Bachelor in Elementary Education",
+      school: "University of Southeastern Philippines",
+      period: "2015 - 2019",
       details: "Major in General Education, Licensed Professional Teacher (LPT)",
+      url: "https://www.usep.edu.ph/",
     }
   ],
   certifications: [

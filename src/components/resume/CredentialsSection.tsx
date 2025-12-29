@@ -1,4 +1,4 @@
-import { GraduationCap, Award, Languages } from 'lucide-react';
+import { GraduationCap, Award, Languages, ExternalLink } from 'lucide-react';
 import { RESUME_DATA } from '../../data/resumeData';
 
 export const CredentialsSection = () => {
@@ -20,7 +20,19 @@ export const CredentialsSection = () => {
             {RESUME_DATA.education.map((edu, idx) => (
               <div key={idx} className="border-l-2 border-gray-100 dark:border-gray-800 pl-4 py-1">
                 <h4 className="font-bold text-gray-900 dark:text-white text-sm">{edu.degree}</h4>
-                <p className="text-xs text-blue-600 dark:text-blue-400 font-medium">{edu.school}</p>
+                {edu.url ? (
+                  <a 
+                    href={edu.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-xs text-blue-600 dark:text-blue-400 font-medium hover:underline flex items-center gap-1 w-fit"
+                  >
+                    {edu.school}
+                    <ExternalLink className="w-2.5 h-2.5" />
+                  </a>
+                ) : (
+                  <p className="text-xs text-blue-600 dark:text-blue-400 font-medium">{edu.school}</p>
+                )}
                 <p className="text-[10px] text-gray-500 dark:text-gray-500 mt-0.5">{edu.period}</p>
                 {edu.details && (
                   <p className="text-xs text-gray-600 dark:text-gray-400 mt-2 italic">{edu.details}</p>
@@ -41,6 +53,17 @@ export const CredentialsSection = () => {
                   <span>{cert}</span>
                 </div>
               ))}
+              {RESUME_DATA.links.certifications && (
+                <a 
+                  href={RESUME_DATA.links.certifications}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 flex items-center gap-1.5 text-xs text-blue-600 dark:text-blue-400 hover:underline font-medium group w-fit"
+                >
+                  <span>View All LinkedIn Certifications</span>
+                  <Award className="w-3 h-3 transition-transform group-hover:scale-110" />
+                </a>
+              )}
             </div>
           </div>
         </div>
