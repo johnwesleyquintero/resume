@@ -15,7 +15,12 @@ import {
   Clock,
   Zap,
   Check,
-  Copy
+  Copy,
+  Activity,
+  BarChart3,
+  Settings,
+  TrendingUp,
+  Search
 } from 'lucide-react';
 import { RESUME_DATA, type ResumeData } from './constants';
 import { cn } from './utils/cn';
@@ -56,10 +61,10 @@ const App = () => {
               <p className="text-lg md:text-xl text-blue-200 font-medium drop-shadow">{RESUME_DATA.title}</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-white/90 animate-fadeIn [animation-delay:400ms]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm text-white/90 animate-fadeIn [animation-delay:400ms]">
               <button 
                 onClick={handleCopyEmail}
-                className="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-all group relative"
+                className="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-all group relative bg-white/5 md:bg-transparent p-2 md:p-0 rounded-lg md:rounded-none"
                 title="Click to copy email"
               >
                 <div className="relative">
@@ -74,27 +79,27 @@ const App = () => {
                 </span>
                 {!emailCopied && <Copy className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity ml-1" />}
               </button>
-              <a href={RESUME_DATA.links.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group">
+              <a href={RESUME_DATA.links.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group bg-white/5 md:bg-transparent p-2 md:p-0 rounded-lg md:rounded-none">
                 <Linkedin className="w-4 h-4 transition-transform group-hover:scale-110" />
-                <span>LinkedIn Profile</span>
+                <span>LinkedIn</span>
               </a>
-              <a href={RESUME_DATA.links.portfolio} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group">
+              <a href={RESUME_DATA.links.portfolio} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group bg-white/5 md:bg-transparent p-2 md:p-0 rounded-lg md:rounded-none">
                 <Globe className="w-4 h-4 transition-transform group-hover:scale-110" />
                 <span>Portfolio</span>
               </a>
-              <a href={RESUME_DATA.links.blog} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group">
+              <a href={RESUME_DATA.links.blog} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group bg-white/5 md:bg-transparent p-2 md:p-0 rounded-lg md:rounded-none">
                 <BookOpen className="w-4 h-4 transition-transform group-hover:scale-110" />
-                <span>Blog & Playbooks</span>
+                <span className="truncate">Blog & Playbooks</span>
               </a>
               <button 
                 onClick={() => window.print()}
-                className="no-print flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group cursor-pointer" 
+                className="no-print flex items-center justify-center md:justify-start gap-2 hover:text-white transition-colors group cursor-pointer bg-white/5 md:bg-transparent p-2 md:p-0 rounded-lg md:rounded-none" 
                 aria-label="Print resume"
               >
                 <Printer className="w-4 h-4 transition-transform group-hover:scale-110" />
                 <span>Print Resume</span>
               </button>
-              <div className="flex items-center justify-center md:justify-start gap-2">
+              <div className="flex items-center justify-center md:justify-start gap-2 bg-white/5 md:bg-transparent p-2 md:p-0 rounded-lg md:rounded-none">
                 <MapPin className="w-4 h-4" />
                 <span>{RESUME_DATA.location}</span>
               </div>
@@ -253,30 +258,36 @@ const App = () => {
         <div className="p-6 bg-white dark:bg-gray-800/50 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
           <p className="text-gray-600 dark:text-gray-400 mb-6 text-sm italic border-l-2 border-gray-200 dark:border-gray-600 pl-4">{RESUME_DATA.dailyRhythm.description}</p>
           <div className="grid grid-cols-1 gap-4">
-            {RESUME_DATA.dailyRhythm.items.map((item: string | { text: string; link: { text: string; url: string } }, idx: number) => (
-              <div key={idx} className="flex gap-4 group">
-                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xs font-bold border border-blue-100 dark:border-blue-800/30 group-hover:scale-110 transition-transform">
-                  {idx + 1}
+            {RESUME_DATA.dailyRhythm.items.map((item: string | { text: string; link: { text: string; url: string } }, idx: number) => {
+              const icons = [<Activity className="w-3 h-3" />, <Settings className="w-3 h-3" />, <Search className="w-3 h-3" />, <TrendingUp className="w-3 h-3" />, <BarChart3 className="w-3 h-3" />, <BookOpen className="w-3 h-3" />];
+              return (
+                <div key={idx} className="flex gap-4 group">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xs font-bold border border-blue-100 dark:border-blue-800/30 group-hover:scale-110 transition-transform relative">
+                    <span className="group-hover:opacity-0 transition-opacity">{idx + 1}</span>
+                    <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      {icons[idx] || <Zap className="w-3 h-3" />}
+                    </span>
+                  </div>
+                  <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed pt-1">
+                    {typeof item === 'string' ? (
+                      item
+                    ) : (
+                      <>
+                        {item.text}{' '}
+                        <a 
+                          href={item.link.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:underline dark:text-blue-400 font-medium"
+                        >
+                          {item.link.text}
+                        </a>
+                      </>
+                    )}
+                  </div>
                 </div>
-                <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed pt-1">
-                  {typeof item === 'string' ? (
-                    item
-                  ) : (
-                    <>
-                      {item.text}{' '}
-                      <a 
-                        href={item.link.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:underline dark:text-blue-400 font-medium"
-                      >
-                        {item.link.text}
-                      </a>
-                    </>
-                  )}
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

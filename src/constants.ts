@@ -106,8 +106,8 @@ export const RESUME_DATA: ResumeData = {
       company: "Bulk Buy America",
       period: "March 2024 - September 2024",
       responsibilities: [
-        "Managed and maintained extensive Amazon product catalogs, ensuring precise data accuracy and optimizing product listings for enhanced discoverability and sales.",
-        "Developed custom Excel-based price checking tools and utilized advanced VLOOKUP functions to streamline inventory management and procurement processes, improving efficiency by 25%.",
+        "Optimized Amazon catalogs for discoverability and data accuracy.",
+        "Built custom Excel tools with VLOOKUP, boosting procurement efficiency by 25%.",
       ],
     },
     {
@@ -173,18 +173,18 @@ export const RESUME_DATA: ResumeData = {
         title: "Mastery of Complex Amazon Workflows",
         icon: "file-spreadsheet",
         points: [
-          "Expert in advanced flat file manipulation for large-scale product data operations, bulk updates, and resolving persistent listing errors.",
-          "Systematic approach to account health monitoring and case log management, ensuring swift, effective resolutions with Amazon support.",
-          "Proficient in using advanced spreadsheet functions (VLOOKUP, INDEX/MATCH, Pivot Tables) for data validation, preparation, and analysis.",
+          "**Expert** in advanced flat file manipulation for bulk updates and listing errors.",
+          "**Systematic** approach to account health and case logs for swift resolutions.",
+          "**Proficient** in VLOOKUP, INDEX/MATCH, and Pivot Tables for data validation.",
         ],
       },
       {
         title: "Strategic Data Interpretation",
         icon: "database-zap",
         points: [
-          "Applying data-driven insights from raw reports to guide e-commerce strategy, including demand forecasting and inventory optimization.",
-          "Leveraging a deep understanding of Amazon's data structure to maintain data quality, optimize listings, and improve performance.",
-          "Skilled at manually auditing large datasets to identify hidden opportunities and critical issues that automated tools often miss.",
+          "**Data-driven** insights from raw reports for demand and inventory strategy.",
+          "**Optimized** listing quality and performance via deep Amazon data structure knowledge.",
+          "**Skilled** at manual dataset audits to uncover hidden growth opportunities.",
         ],
       },
     ],
