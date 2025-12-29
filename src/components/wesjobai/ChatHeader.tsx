@@ -19,11 +19,15 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({ onSettingsClick, onClearChat })
             <div className="flex items-center gap-2">
               <h1 className="text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
                 <Bot className="w-6 h-6 text-blue-600" />
-                Career AI <span className="text-xs font-normal px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full">v5.1</span>
+                Career AI <span className="text-xs font-normal px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full">v5.2</span>
               </h1>
               <div className="hidden sm:flex items-center gap-1.5 px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold uppercase tracking-wider rounded border border-green-200 dark:border-green-800">
                 <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-                Systems Architect Mode
+                Operations Mode
+              </div>
+              <div className="hidden sm:flex items-center gap-1.5 px-2 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-[10px] font-bold uppercase tracking-wider rounded border border-blue-200 dark:border-blue-800">
+                <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
+                Search Grounding Active
               </div>
             </div>
             <p className="text-xs text-gray-500 dark:text-gray-400">Strategic Partner to John Wesley Quintero</p>

@@ -63,7 +63,13 @@ export const useGemini = () => {
         const genAI = new GoogleGenerativeAI(apiKey);
         const model = genAI.getGenerativeModel({ 
           model: GEMINI_MODEL, 
-          systemInstruction: WES_JOB_AI_SYSTEM_INSTRUCTION
+          systemInstruction: WES_JOB_AI_SYSTEM_INSTRUCTION,
+          tools: [
+            {
+              // @ts-ignore - googleSearch is a valid tool but might not be in the current type definitions for some SDK versions
+              googleSearch: {},
+            },
+          ],
         });
 
         let promptParts: any[] = [{ text: currentInput }];

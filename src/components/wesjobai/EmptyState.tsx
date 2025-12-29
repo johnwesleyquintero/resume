@@ -15,7 +15,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ onSuggestionClick }) => {
     {
       label: "Ask about WesBI",
       desc: "The Inventory Intelligence Cockpit",
-      prompt: "Tell me about WesBI. How did it improve inventory planning by 30%?"
+      prompt: "Tell me about WesBI. How did it significantly improve inventory planning efficiency?"
     },
     {
       label: "Buy Box Master",
@@ -46,7 +46,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ onSuggestionClick }) => {
         <div className="max-w-md mx-auto">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Hello Brother! I'm Career AI.</h3>
           <p className="text-gray-600 dark:text-gray-400 mt-2">
-            I'm the strategic extension of John Wesley. I'm trained on his "Build the System" philosophy and technical architecture.
+            I'm the strategic extension of John Wesley. I'm trained on his "Build the System" philosophy and operational workflows.
           </p>
         </div>
       </div>

@@ -96,8 +96,8 @@ export const RESUME_DATA: ResumeData = {
   ],
   languages: ["English (Professional)", "Tagalog (Native)", "Cebuano (Native)"],
   summary: {
-    quote: "I don't just identify problems; I architect the robust processes and SOPs that empower teams to solve them consistently and efficiently.",
-    content: "I am a Hands-On E-commerce & Amazon Specialist with 6+ years driving quantifiable profitability and operational excellence by transforming complex data and chaotic workflows into robust, scalable systems and SOPs. I bridge high-level strategy with meticulous, in-the-trenches execution, excelling at the core challenges of flat file management, bulk data processing, and systematic error correction. I am a dedicated problem-solver who architects and implements reliable solutions that empower teams, ensure catalog integrity, and unlock sustainable growth.",
+    quote: "I don't just identify problems; I develop the robust operational processes and SOPs that empower teams to solve them consistently and efficiently.",
+    content: "I am a Hands-On E-commerce & Amazon Specialist with 6+ years driving sustainable profitability and operational excellence by transforming complex data and chaotic workflows into robust, scalable operational systems and SOPs. I bridge high-level strategy with meticulous, in-the-trenches execution, excelling at the core challenges of flat file management, bulk data processing, and systematic error correction. I am a dedicated problem-solver who develops and implements reliable solutions that empower teams, ensure catalog integrity, and unlock consistent growth.",
   },
   experience: [
     {
@@ -105,26 +105,26 @@ export const RESUME_DATA: ResumeData = {
       company: "VAXPH - Seculife | Speedtalk",
       period: "July 2025 - January 2026",
       responsibilities: [
-        "Driving quantifiable sales growth and enhancing brand presence across Amazon, eBay, and Walmart.",
-        "Managing the end-to-end lifecycle of product listings while maintaining 99%+ account health standards.",
-        "Developing critical operational playbooks that reduced team onboarding time and operational friction.",
-        "Monitoring daily account health proactively, reducing incident rates and ensuring 100% compliance.",
+        "Driving consistent sales growth and enhancing brand presence across Amazon, eBay, and Walmart.",
+        "Managing the end-to-end lifecycle of product listings while maintaining high account health standards.",
+        "Developing critical operational playbooks that streamlined team onboarding and reduced operational friction.",
+        "Monitoring daily account health proactively, minimizing incident rates and ensuring full compliance.",
         {
-          text: "Architected Operation Citadel: A definitive GitHub documentation repository serving as the single source of truth for all VAXPH product listings and operational playbooks.",
+          text: "Developed Operation Citadel: A definitive GitHub documentation repository serving as the single source of truth for all VAXPH product listings and operational playbooks.",
           link: {
             text: "View Documentation",
             url: "https://github.com/johnwesleyquintero/listing-documentation",
           },
         },
         {
-          text: "Developed WesBI Cockpit: Transforms raw CSV dumps into actionable insights, improving inventory planning efficiency by 30%.",
+          text: "Developed WesBI Cockpit: Transforms raw CSV dumps into actionable insights, significantly improving inventory planning efficiency.",
           link: {
             text: "View WesBI",
             url: "https://wes-bi.vercel.app/",
           },
         },
         {
-          text: "Created Buy Box Master: A pricing intelligence tool that boosted Buy Box win rates by 15% through strategic automation.",
+          text: "Created Buy Box Master: A pricing intelligence tool that improved Buy Box win rates through systematic price monitoring.",
           link: {
             text: "View Buy Box Master",
             url: "https://buy-box-master.vercel.app/",
@@ -137,9 +137,9 @@ export const RESUME_DATA: ResumeData = {
       company: "My Amazon Guy",
       period: "October 2024 - March 2025",
       responsibilities: [
-        "Spearheaded data-driven Amazon SEO and PPC strategies, resulting in a 35% average increase in client sales.",
+        "Implemented data-driven Amazon SEO and PPC strategies, resulting in consistent month-over-month growth in client sales.",
         "Designed advanced reporting frameworks that improved client retention and strategic clarity.",
-        "Developed custom analytics solutions for monitoring advertising performance and driving 20% ACoS reduction.",
+        "Developed custom analytics solutions for monitoring advertising performance and optimizing ACoS.",
       ],
     },
     {
@@ -148,7 +148,7 @@ export const RESUME_DATA: ResumeData = {
       period: "March 2024 - September 2024",
       responsibilities: [
         "Optimized Amazon catalogs for discoverability and data accuracy.",
-        "Built custom Excel tools with VLOOKUP, boosting procurement efficiency by 25%.",
+        "Built custom Excel tools with VLOOKUP, improving procurement efficiency and data reliability.",
       ],
     },
     {
@@ -156,9 +156,9 @@ export const RESUME_DATA: ResumeData = {
       company: "Adorama",
       period: "May 2023 - September 2023",
       responsibilities: [
-        "Provided technical support for B2B clients, resolving 95% of Seller Central integration issues within 24 hours.",
+        "Provided technical support for B2B clients, resolving the majority of Seller Central integration issues within standard SLAs.",
         {
-          text: "Developed the Amazon Catalog Management/Listing Management_SOP, recovering $50k+ in lost revenue through systematic catalog audits.",
+          text: "Developed the Amazon Catalog Management/Listing Management_SOP, recovering thousands in lost revenue through systematic catalog audits.",
           link: {
             text: "View SOP",
             url: "https://docs.google.com/spreadsheets/d/1e9Z5XJ1P0x8PR8T5pSqWJ1zCs6W4nBUO/edit?gid=1206805883#gid=1206805883",
@@ -179,7 +179,7 @@ export const RESUME_DATA: ResumeData = {
       period: "October 2022 - September 2023",
       responsibilities: [
         "Managed account health, performance metrics, and compliance for multiple B2B clients, driving sustainable growth.",
-        "Implemented strategic SEO and PPC campaigns, leading to a 20% increase in sales within six months.",
+        "Implemented strategic SEO and PPC campaigns, leading to a steady increase in sales within the first six months.",
         {
           text: "Developed a comprehensive SOP for FBA Department Operations.",
           link: {
@@ -194,7 +194,7 @@ export const RESUME_DATA: ResumeData = {
       company: "Sales.support",
       period: "October 2018 - July 2022",
       responsibilities: [
-        "Sourced profitable wholesale products for Amazon FBA/FBM, contributing to a 25% increase in overall revenue.",
+        "Sourced profitable wholesale products for Amazon FBA/FBM, contributing to sustainable revenue growth.",
         {
           text: "Developed an SOP for Amazon Wholesale Buyers to streamline the sourcing and negotiation process.",
           link: {
@@ -224,7 +224,7 @@ export const RESUME_DATA: ResumeData = {
         icon: "database-zap",
         points: [
           "**Data-driven** insights from raw reports to optimize demand and inventory strategy.",
-          "**Architected** listing performance improvements via deep Amazon data structure knowledge.",
+          "**Developed** listing performance improvements via deep Amazon data structure knowledge.",
           "**Skilled** at manual dataset audits to uncover hidden growth opportunities.",
         ],
       },

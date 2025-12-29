@@ -94,7 +94,7 @@ const WesJobAI = () => {
                       <span className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
                       <span className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-bounce"></span>
                     </div>
-                    <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Career AI is architecting...</span>
+                    <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Career AI is processing...</span>
                   </div>
                 </div>
               )}
