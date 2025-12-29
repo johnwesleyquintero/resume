@@ -1,12 +1,29 @@
 {
-  "name": "resume",
+  "name": "resume-react",
+  "private": true,
   "version": "1.0.0",
-  "description": "John Wesley Quintero's Resume Site",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "build": "if exist dist (rmdir /s /q dist) && mkdir dist && copy index.html dist\\index.html && xcopy public dist\\public /E /I /Y"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "John Wesley Quintero",
-  "license": "ISC"
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.446.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.5.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1"
+  }
 }

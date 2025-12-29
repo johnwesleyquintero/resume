@@ -1,76 +1,58 @@
-# Wesley Quintero - Professional Resume
+# John Wesley Quintero — The Generalist Codex 🚀
+
+Welcome to the digital architecture of my professional journey. This isn't just a resume; it's a high-performance, responsive system designed to showcase the intersection of strategic operations and technical execution.
 
 ## 📝 Project Overview
-This repository hosts my professional resume and portfolio materials, designed to showcase my expertise as an Amazon Specialist with SEO, PPC, Inventory Management, and Account Health skills.
+This repository hosts my modern professional resume, built as a sovereign digital asset. It highlights my dual expertise as an **Operations Manager** (VAXPH: Speedtalk Mobile & SecuLife) and a **Full-Stack Developer**, focusing on building scalable digital systems and independent solutions.
 
 ## ✨ Key Features
-- **Fully Responsive** - Adapts seamlessly to all device sizes
-- **Professional Design** - Clean layout optimized for recruiters and hiring managers
-- **Specialized Sections** - Highlights Amazon-specific expertise areas
-- **Easy Customization** - Simple to update with your personal information
-- **PDF Export** - Built-in functionality to generate printable versions
+- **Modern Tech Stack**: Built with React 18, Vite, and Tailwind CSS for lightning-fast performance.
+- **WesAI Integration**: Reflects the "Generalist Codex" persona—insightful, pragmatic, and system-oriented.
+- **Dynamic Skill Pills**: Interactive and scannable technical skillset layout.
+- **One-Click Actions**: Integrated "Copy Email" functionality and a centralized Download Hub for multiple resume versions.
+- **Dark Mode Support**: Fully responsive design with native dark/light mode toggling.
+- **Print Optimized**: Custom CSS ensures the digital experience translates perfectly to a clean, professional PDF.
+
+## 🛠️ Built With
+- **Framework**: [React.js](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Deployment**: [Netlify](https://www.netlify.com/)
+- **State Management**: React Hooks
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Web browser (Chrome, Firefox, or Edge recommended)
-- [Git](https://git-scm.com/) (for version control)
-- GitHub account (optional for forking)
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-### Installation
-```bash
-git clone https://github.com/johnwesleyquintero/resume/resume.git
-cd resume
-```
+### Installation & Local Development
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/johnwesleyquintero/resume.git
+   cd resume
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-## 💻 Development
-To run locally:
-```
-python -m http.server
-```
+## 🎯 Live Demo
+- **Main Site**: [johnwesleyquintero-resume.netlify.app](https://johnwesleyquintero-resume.netlify.app)
+- **Portfolio**: [johnwesleyquintero.vercel.app](https://johnwesleyquintero.vercel.app/)
+- **Educational Platform**: [wescode.vercel.app](https://wescode.vercel.app/)
 
+## 📜 Philosophy
+> "Leveraging challenges into opportunities, prioritizing competence over conventional approaches, and building robust systems to achieve long-term strategic independence."
 
-## 🎯 Demo
-[![Live Demo](https://img.shields.io/badge/View-Live_Demo-blue?style=for-the-badge)](https://johnwesleyquintero-resume.netlify.app)  
-[![GitHub Repo](https://img.shields.io/badge/View-Source_Code-black?style=for-the-badge&logo=github)](https://github.com/johnwesleyquintero/resume/)
+## 📞 Connect with the Founder
+- 📧 **Email**: [wesley.ecomva@gmail.com](mailto:wesley.ecomva@gmail.com)
+- 🔗 **LinkedIn**: [John Wesley Quintero](https://www.linkedin.com/in/johnwesleyquintero/)
+- 🐙 **GitHub**: [@johnwesleyquintero](https://github.com/johnwesleyquintero)
 
-## 🛠 Customization
-To personalize this resume template:
-
-1. Edit `index.html` - Update content and structure
-2. Modify CSS - Adjust styling in `styles.css`
-3. Add documents - Place PDFs in the `docs/` folder
-
-## 🌐 Deployment
-This template comes pre-configured for:
-- [Netlify](https://www.netlify.com/) - Connect your GitHub repository for automatic deploys
-- GitHub Pages - Simple static hosting via GitHub
-
-## 🤝 Contributing
-While this is primarily a personal resume, constructive feedback is welcome:
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/improvement`)
-3. Commit your changes (`git commit -m 'Add some improvement'`)
-4. Push to the branch (`git push origin feature/improvement`)
-5. Open a Pull Request
-
-## 📜 License
-Distributed under the MIT License. See [LICENSE.md](LICENSE.md) for more information.
-
-## 📞 Contact
-For professional inquiries:  
-## 🛠️ Built With
-- HTML5 & CSS3
-- JavaScript (for interactive elements)
-- [Lucide Icons](https://lucide.dev/)
-- Netlify (for deployment)
-
-For professional inquiries:  
-📧 wesley.ecomva@gmail.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/johnwesleyquintero/)  
-🐦 [Portfolio](https://johnwesleyquintero.vercel.app/)  
-💡 [ScaleSmart](https://wescode.vercel.app/)  
-🐙 [GitHub](https://github.com/johnwesleyquintero)  
-## 📸 Screenshot
-![Resume Preview](public/screenshot.png)
-
+---
+*Built with precision and purpose by John Wesley Quintero.*

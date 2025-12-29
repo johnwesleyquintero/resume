@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .icon {
+    @apply inline-block h-4 w-4 stroke-current;
+    stroke-width: 1.5;
+  }
+}
+
+@media print {
+  @page {
+    margin: 0.5in;
+    size: letter portrait;
+  }
+  body {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .no-print {
+    display: none !important;
+  }
+  a[href^="http"]::after {
+    content: '';
+  }
+  a[href^="mailto"]::after {
+    content: '';
+  }
+}
