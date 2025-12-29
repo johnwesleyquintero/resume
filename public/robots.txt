@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://johnwesleyquintero.netlify.app/sitemap.xml
+Sitemap: https://johnwesleyquintero.vercel.app/sitemap.xml
