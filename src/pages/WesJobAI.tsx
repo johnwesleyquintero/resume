@@ -278,16 +278,18 @@ const WesJobAI = () => {
               )}
             >
               <div className={cn(
-                "w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1",
-                msg.role === 'user' ? "bg-blue-600 text-white" : "bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300"
+                "w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1 shadow-sm",
+                msg.role === 'user' 
+                  ? "bg-gradient-to-br from-blue-600 to-blue-700 text-white ring-2 ring-blue-100 dark:ring-blue-900/30" 
+                  : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-100 dark:border-gray-700"
               )}>
                 {msg.role === 'user' ? <User className="w-5 h-5" /> : <Bot className="w-5 h-5" />}
               </div>
               <div className={cn(
-                "max-w-[85%] rounded-2xl p-4 shadow-sm relative",
+                "max-w-[85%] rounded-2xl p-4 relative transition-all",
                 msg.role === 'user' 
-                  ? "bg-blue-600 text-white rounded-tr-none" 
-                  : "bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-700 rounded-tl-none"
+                  ? "bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-tr-none shadow-md shadow-blue-600/20 border border-blue-500/50" 
+                  : "bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 border border-gray-100 dark:border-gray-700 rounded-tl-none shadow-sm"
               )}>
                 <div className={cn(
                   "absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity",
@@ -310,12 +312,16 @@ const WesJobAI = () => {
 
           {isLoading && (
             <div className="flex gap-3 animate-pulse">
-              <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                <Bot className="w-5 h-5 text-gray-400" />
+              <div className="w-8 h-8 rounded-full bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex items-center justify-center shadow-sm">
+                <Bot className="w-5 h-5 text-blue-600" />
               </div>
-              <div className="bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl rounded-tl-none p-4 shadow-sm flex items-center gap-2">
-                <Loader2 className="w-4 h-4 animate-spin text-blue-600" />
-                <span className="text-sm text-gray-500">Career AI is thinking...</span>
+              <div className="bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl rounded-tl-none p-4 shadow-sm flex items-center gap-3">
+                <div className="flex gap-1">
+                  <span className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
+                  <span className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
+                  <span className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-bounce"></span>
+                </div>
+                <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Career AI is architecting...</span>
               </div>
             </div>
           )}
