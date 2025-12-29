@@ -82,63 +82,70 @@ const WesJobAI = () => {
         />
       )}
 
-      <main className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 py-4 md:py-6 overflow-hidden flex flex-col relative">
+      <main className="flex-1 overflow-hidden flex flex-col relative">
         <div 
           ref={scrollRef}
           onScroll={handleScroll}
-          className="flex-1 overflow-y-auto space-y-6 pr-2 scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700"
+          className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700"
         >
-          {messages.length === 0 ? (
-            <EmptyState onSuggestionClick={handleSuggestionClick} />
-          ) : (
-            <>
-              {messages.map((msg, i) => (
-                <ChatMessage 
-                  key={i} 
-                  message={msg} 
-                  isLoading={isLoading} 
-                  onRetry={() => handleSendMessage(undefined, true)} 
-                />
-              ))}
-              
-              {isLoading && (
-                <div className="flex gap-3 animate-pulse">
-                  <div className="w-8 h-8 rounded-full bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex items-center justify-center shadow-sm overflow-hidden">
-                    <WesAILogo variant="icon" width={24} height={24} />
-                  </div>
-                  <div className="bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl rounded-tl-none p-4 shadow-sm flex items-center gap-3">
-                    <div className="flex gap-1">
-                      <span className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
-                      <span className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
-                      <span className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-bounce"></span>
+          <div className="max-w-4xl w-full mx-auto px-4 sm:px-6 py-4 md:py-6 space-y-6">
+            {messages.length === 0 ? (
+              <EmptyState onSuggestionClick={handleSuggestionClick} />
+            ) : (
+              <>
+                {messages.map((msg, i) => (
+                  <ChatMessage 
+                    key={i} 
+                    message={msg} 
+                    isLoading={isLoading} 
+                    onRetry={() => handleSendMessage(undefined, true)} 
+                  />
+                ))}
+                {isLoading && (
+                  <div className="flex gap-3 animate-pulse">
+                    <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                      <WesAILogo variant="icon" width={24} height={24} className="opacity-50" />
                     </div>
-                    <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">WesAI is processing...</span>
+                    <div className="bg-gray-100 dark:bg-gray-800 rounded-2xl p-4 rounded-tl-none border border-gray-100 dark:border-gray-700">
+                      <div className="flex gap-1">
+                        <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce [animation-delay:-0.3s]"></span>
+                        <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
+                        <span className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              )}
-            </>
-          )}
+                )}
+              </>
+            )}
+          </div>
+        </div>
+
+        <div className="w-full bg-gradient-to-t from-gray-50 via-gray-50/95 to-transparent dark:from-gray-900 dark:via-gray-900/95 pb-4 md:pb-8 pt-6">
+          <div className="max-w-4xl w-full mx-auto px-4 sm:px-6">
+            <ChatInput 
+              input={input}
+              setInput={setInput}
+              selectedImage={selectedImage}
+              setSelectedImage={setSelectedImage}
+              isLoading={isLoading}
+              onSend={handleSendMessage}
+              apiKey={apiKey}
+            />
+            <p className="text-[10px] text-center text-gray-400 mt-3 uppercase tracking-widest font-medium">
+              WesAI can make mistakes. Check important info.
+            </p>
+          </div>
         </div>
 
         {showScrollButton && (
           <button
             onClick={() => scrollToBottom()}
-            className="absolute bottom-24 left-1/2 -translate-x-1/2 bg-blue-600/90 backdrop-blur-sm text-white p-2 rounded-full shadow-lg hover:bg-blue-700 transition-all animate-bounce z-10 border border-blue-400/30"
+            className="absolute bottom-32 right-8 p-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full shadow-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-all animate-bounce"
             title="Scroll to bottom"
           >
-            <ArrowDown className="w-5 h-5" />
+            <ArrowDown className="w-5 h-5 text-gray-600 dark:text-gray-300" />
           </button>
         )}
-
-        <ChatInput 
-          input={input}
-          setInput={setInput}
-          selectedImage={selectedImage}
-          setSelectedImage={setSelectedImage}
-          isLoading={isLoading}
-          onSend={handleSendMessage}
-          apiKey={apiKey}
-        />
       </main>
     </div>
   );

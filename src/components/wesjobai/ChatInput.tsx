@@ -143,7 +143,6 @@ const ChatInput: React.FC<ChatInputProps> = ({
         </div>
       </form>
       <p className="text-[10px] text-center text-gray-400 mt-3 uppercase tracking-widest font-bold">
-        Sovereign Intelligence • Built with Gemini 1.5 Pro
       </p>
     </div>
   );
