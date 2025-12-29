@@ -46,7 +46,6 @@ const WesJobAI = () => {
   const [apiKey, setApiKey] = useState(localStorage.getItem('GEMINI_API_KEY') || '');
   const [showApiKeyInput, setShowApiKeyInput] = useState(!apiKey);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [retryCount, setRetryCount] = useState(0);
   const MAX_RETRIES = 3;
 
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -160,7 +159,6 @@ const WesJobAI = () => {
     try {
       const text = await attemptCall();
       setMessages(prev => [...prev, { role: 'model', content: text }]);
-      setRetryCount(0);
     } catch (error: any) {
       console.error('Error calling Gemini:', error);
       let errorMessage = 'Something went wrong. Please check your API key.';
@@ -181,7 +179,6 @@ const WesJobAI = () => {
         role: 'model', 
         content: `Error: ${errorMessage}` 
       }]);
-      setRetryCount(prev => prev + 1);
     } finally {
       setIsLoading(false);
     }
