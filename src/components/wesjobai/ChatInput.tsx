@@ -88,7 +88,7 @@ const ChatInput: React.FC<ChatInputProps> = ({
       <form 
         onSubmit={onSend}
         onPaste={handlePaste}
-        className="relative flex items-end gap-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-2 shadow-lg focus-within:ring-2 focus-within:ring-blue-500/50 transition-all"
+        className="relative flex items-end gap-2 bg-wes-secondary border border-wes-border rounded-2xl p-2 shadow-lg focus-within:ring-2 focus-within:ring-blue-500/50 transition-all"
       >
         <div className="flex-1 flex flex-col">
           <textarea
@@ -101,7 +101,7 @@ const ChatInput: React.FC<ChatInputProps> = ({
               }
             }}
             placeholder={apiKey ? "Ask WesAI..." : "Configure API Key to start..."}
-            className="w-full bg-transparent border-none focus:ring-0 text-gray-900 dark:text-white placeholder-gray-500 p-3 min-h-[50px] max-h-[200px] resize-none text-sm"
+            className="w-full bg-transparent border-none focus:ring-0 text-wes-text placeholder-wes-muted p-3 min-h-[50px] max-h-[200px] resize-none text-sm"
             disabled={!apiKey || isLoading}
           />
         </div>
@@ -117,7 +117,7 @@ const ChatInput: React.FC<ChatInputProps> = ({
           <button
             type="button"
             onClick={() => fileInputRef.current?.click()}
-            className="p-2.5 text-gray-500 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl transition-all"
+            className="p-2.5 text-wes-muted hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded-xl transition-all"
             disabled={!apiKey || isLoading}
             title="Upload image"
           >
@@ -130,7 +130,7 @@ const ChatInput: React.FC<ChatInputProps> = ({
             className={cn(
               "p-2.5 rounded-xl transition-all shadow-sm",
               (!input.trim() && !selectedImage) || isLoading || !apiKey
-                ? "bg-gray-100 dark:bg-gray-700 text-gray-400 cursor-not-allowed"
+                ? "bg-wes-main text-wes-muted cursor-not-allowed border border-wes-border"
                 : "bg-blue-600 text-white hover:bg-blue-700 hover:shadow-blue-600/20 active:scale-95"
             )}
           >

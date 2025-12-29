@@ -7,6 +7,15 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      colors: {
+        wes: {
+          main: 'var(--bg-main)',
+          secondary: 'var(--bg-secondary)',
+          text: 'var(--text-main)',
+          muted: 'var(--text-muted)',
+          border: 'var(--border-main)',
+        }
+      },
       animation: {
         fadeIn: 'fadeIn 0.5s ease-out forwards',
         float: 'float 3s ease-in-out infinite',

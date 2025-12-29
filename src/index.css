@@ -3,8 +3,34 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --bg-main: #fdfdfc;
+    --bg-secondary: #f5f5f4;
+    --text-main: #1c1917;
+    --text-muted: #57534e;
+    --border-main: #e7e5e4;
+    --logo-start: #2563eb;
+    --logo-mid: #7c3aed;
+    --logo-end: #db2777;
+  }
+
+  .dark {
+    --bg-main: #09090b;
+    --bg-secondary: #18181b;
+    --text-main: #f4f4f5;
+    --text-muted: #a1a1aa;
+    --border-main: #27272a;
+    --logo-start: #60a5fa;
+    --logo-mid: #a78bfa;
+    --logo-end: #f472b6;
+  }
+
+  body {
+    @apply bg-[var(--bg-main)] text-[var(--text-main)];
+  }
+
   * {
-    @apply transition-colors duration-300;
+    @apply transition-colors duration-300 border-[var(--border-main)];
   }
 }
 

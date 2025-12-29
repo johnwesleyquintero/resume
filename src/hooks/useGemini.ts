@@ -9,6 +9,7 @@ export interface Message {
   content: string;
   image?: string; // base64 string
   isError?: boolean;
+  groundingMetadata?: any;
 }
 
 export const useGemini = () => {
@@ -71,7 +72,7 @@ export const useGemini = () => {
 
     setIsLoading(true);
     
-    const attemptCall = async (retryAttempt = 0): Promise<string> => {
+    const attemptCall = async (retryAttempt = 0): Promise<{ text: string; metadata?: any }> => {
       try {
         const genAI = new GoogleGenerativeAI(apiKey);
         const model = genAI.getGenerativeModel({ 
@@ -93,13 +94,13 @@ export const useGemini = () => {
             parts: [{ text: m.content }],
           }));
 
+        let result;
         if (currentImage) {
           const base64Data = currentImage.split(',')[1];
           const mimeType = currentImage.split(';')[0].split(':')[1] || 'image/jpeg';
           
-          // For multimodal, we can still use startChat if we send the image as a part
           const chat = model.startChat({ history });
-          const result = await chat.sendMessage([
+          result = await chat.sendMessage([
             { text: currentInput },
             {
               inlineData: {
@@ -108,14 +109,16 @@ export const useGemini = () => {
               }
             }
           ]);
-          const response = await result.response;
-          return response.text();
         } else {
           const chat = model.startChat({ history });
-          const result = await chat.sendMessage(currentInput);
-          const response = await result.response;
-          return response.text();
+          result = await chat.sendMessage(currentInput);
         }
+
+        const response = await result.response;
+        return {
+          text: response.text(),
+          metadata: response.candidates?.[0]?.groundingMetadata
+        };
       } catch (error: any) {
         if (retryAttempt < MAX_RETRIES && !error.message?.includes('401') && !error.message?.includes('API_KEY_INVALID')) {
           const delay = Math.pow(2, retryAttempt) * 1000;
@@ -127,8 +130,8 @@ export const useGemini = () => {
     };
 
     try {
-      const text = await attemptCall();
-      setMessages(prev => [...prev, { role: 'model', content: text }]);
+      const { text, metadata } = await attemptCall();
+      setMessages(prev => [...prev, { role: 'model', content: text, groundingMetadata: metadata }]);
     } catch (error: any) {
       console.error('Error calling Gemini:', error);
       let errorMessage = 'Something went wrong. Please check your API key.';

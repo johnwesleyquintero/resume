@@ -28,12 +28,13 @@ const EmptyState: React.FC<EmptyStateProps> = ({ onSuggestionClick }) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-full py-10 text-center space-y-10 animate-fadeIn">
       <div className="space-y-4">
-        <div className="w-20 h-20 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto shadow-xl border border-gray-100 dark:border-gray-700 group hover:scale-110 transition-transform duration-500">
-          <WesAILogo variant="icon" width={48} height={48} />
+        <div className="w-20 h-20 bg-wes-secondary rounded-full flex items-center justify-center mx-auto shadow-xl border border-wes-border group hover:scale-110 transition-transform duration-500">
+          <WesAILogo variant="icon" width={48} height={48} className="drop-shadow-sm" />
         </div>
         <div className="max-w-md mx-auto">
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Hello! I'm WesAI.</h3>
-          <p className="text-gray-500 dark:text-gray-400 mt-2 text-base leading-relaxed">
+          <h3 className="text-2xl font-bold text-wes-text">Hello! I'm WesAI.</h3>
+          <p className="text-wes-muted mt-2 text-base leading-relaxed">
+            How can I help you today?
           </p>
         </div>
       </div>
@@ -44,10 +45,10 @@ const EmptyState: React.FC<EmptyStateProps> = ({ onSuggestionClick }) => {
             <button 
               key={i}
               onClick={() => onSuggestionClick(item.prompt)}
-              className="group p-4 text-left bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all flex flex-col gap-1"
+              className="group p-4 text-left bg-wes-secondary border border-wes-border rounded-2xl hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all flex flex-col gap-1"
             >
-              <span className="text-xs font-bold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors uppercase tracking-tight">{item.label}</span>
-              <span className="text-[11px] text-gray-500 dark:text-gray-400">{item.desc}</span>
+              <span className="text-xs font-bold text-wes-text group-hover:text-blue-600 transition-colors uppercase tracking-tight">{item.label}</span>
+              <span className="text-[11px] text-wes-muted">{item.desc}</span>
             </button>
           ))}
         </div>
@@ -58,7 +59,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ onSuggestionClick }) => {
           <button 
             key={i}
             onClick={() => onSuggestionClick(suggestion)}
-            className="px-3 py-1.5 text-[11px] font-medium bg-gray-100/50 dark:bg-gray-800/50 text-gray-500 dark:text-gray-400 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:text-blue-600 transition-all border border-transparent hover:border-blue-200"
+            className="px-3 py-1.5 text-[11px] font-medium bg-wes-secondary text-wes-muted rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:text-blue-600 transition-all border border-wes-border hover:border-blue-200"
           >
             {suggestion}
           </button>
