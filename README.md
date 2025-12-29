@@ -2,6 +2,8 @@
 
 Welcome to the digital architecture of my professional journey. This isn't just a resume; it's a high-performance, responsive system designed to showcase the intersection of strategic operations and technical execution.
 
+<img width="600" height="3530" alt="image" src="https://github.com/user-attachments/assets/f5acef07-d524-437a-b2a4-7da6bcc0acf7" />
+
 ## 📝 Project Overview
 This repository hosts my modern professional resume, built as a sovereign digital asset. It highlights my dual expertise as an **Operations Manager** (VAXPH: Speedtalk Mobile & SecuLife) and a **Full-Stack Developer**, focusing on building scalable digital systems and independent solutions.
 
