@@ -21,7 +21,7 @@ export const DailyRhythm = () => {
         <p className="text-gray-600 dark:text-gray-400 mb-6 text-sm italic border-l-2 border-gray-200 dark:border-gray-600 pl-4">
           {RESUME_DATA.dailyRhythm.description}
         </p>
-        <div className="grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
           {RESUME_DATA.dailyRhythm.items.map((item: string | { text: string; link: { text: string; url: string } }, idx: number) => (
             <div key={idx} className="flex gap-4 group">
               <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xs font-bold border border-blue-100 dark:border-blue-800/30 group-hover:scale-110 transition-transform relative">

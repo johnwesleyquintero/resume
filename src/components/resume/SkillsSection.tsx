@@ -8,7 +8,7 @@ export const SkillsSection = () => {
         <Wrench className="w-5 h-5" />
         Technical Skillset
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {RESUME_DATA.skills.map((skillGroup: { category: string; items: string[] }, idx: number) => (
           <div key={idx} className="space-y-4">
             <h3 className="font-bold text-gray-900 dark:text-white text-sm uppercase tracking-wider flex items-center gap-2">

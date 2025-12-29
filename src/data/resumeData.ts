@@ -107,7 +107,7 @@ export const RESUME_DATA: ResumeData = {
     {
       title: "eCommerce Account Manager",
       company: "VAXPH - Seculife | Speedtalk",
-      period: "July 2025 - January 2026",
+      period: "July 2025 - Present",
       responsibilities: [
         "Driving consistent sales growth and enhancing brand presence across Amazon, eBay, and Walmart.",
         "Managing the end-to-end lifecycle of product listings while maintaining high account health standards.",

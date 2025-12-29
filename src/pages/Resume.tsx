@@ -12,7 +12,7 @@ import { ResumeFooter } from '../components/resume/ResumeFooter';
 
 const Resume = () => {
   return (
-    <main className={cn("space-y-12 pb-12 relative")}>
+    <main className={cn("max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-12 space-y-12 pb-12 relative")}>
       <DownloadHub />
       <ResumeHeader />
       <ProfessionalSummary />

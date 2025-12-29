@@ -8,14 +8,14 @@ export const ExperienceSection = () => {
         <Briefcase className="w-5 h-5" />
         Professional Experience
       </h2>
-      <div className="space-y-6">
+      <div className="space-y-12">
         {RESUME_DATA.experience.map((exp: ResumeData['experience'][number], idx: number) => (
-          <div key={idx} className="relative pl-8 pb-2 group">
-            <div className="absolute left-[11px] top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-700 group-last:bottom-full" />
+          <div key={idx} className="relative pl-6 sm:pl-8 pb-2 group">
+            <div className="absolute left-[11px] sm:left-[11px] top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-700 group-last:bottom-full" />
             <div className="absolute left-0 top-2 w-6 h-6 rounded-full border-4 border-slate-50 dark:border-gray-900 bg-gray-300 dark:bg-gray-600 group-hover:bg-blue-500 dark:group-hover:bg-blue-400 transition-colors z-10" />
             
             <div className="transition-all">
-              <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-1 mb-2">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-4">
                 <h3 className="font-bold text-lg text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{exp.title}</h3>
                 <span className="text-xs font-bold px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded uppercase tracking-wider">{exp.period}</span>
               </div>

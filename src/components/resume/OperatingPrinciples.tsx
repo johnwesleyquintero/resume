@@ -8,7 +8,7 @@ export const OperatingPrinciples = () => {
         <ShieldCheck className="w-5 h-5" />
         Operating Principles
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {RESUME_DATA.operatingPrinciples.map((principle, idx) => (
           <div key={idx} className="space-y-2 group p-4 rounded-xl hover:bg-white dark:hover:bg-gray-800 transition-all hover:shadow-md border border-transparent hover:border-gray-100 dark:hover:border-gray-700">
             <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{principle.title}</h3>

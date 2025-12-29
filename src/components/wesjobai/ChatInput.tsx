@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Send, ImageIcon, X, Loader2 } from 'lucide-react';
 import { cn } from '../../utils/cn';
+import toast from 'react-hot-toast';
 
 interface ChatInputProps {
   input: string;
@@ -26,15 +27,38 @@ const ChatInput: React.FC<ChatInputProps> = ({
   const handleImageSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      if (file.size > 4 * 1024 * 1024) {
-        alert("Image too large. Please select an image under 4MB.");
-        return;
+      processFile(file);
+    }
+  };
+
+  const processFile = (file: File) => {
+    if (!file.type.startsWith('image/')) {
+      toast.error("Please select an image file.");
+      return;
+    }
+    if (file.size > 4 * 1024 * 1024) {
+      toast.error("Image too large. Max 4MB allowed.");
+      return;
+    }
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setSelectedImage(reader.result as string);
+      toast.success("Image attached!");
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handlePaste = (e: React.ClipboardEvent) => {
+    const items = e.clipboardData?.items;
+    if (items) {
+      for (let i = 0; i < items.length; i++) {
+        if (items[i].type.indexOf('image') !== -1) {
+          const file = items[i].getAsFile();
+          if (file) {
+            processFile(file);
+          }
+        }
       }
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setSelectedImage(reader.result as string);
-      };
-      reader.readAsDataURL(file);
     }
   };
 
@@ -63,6 +87,7 @@ const ChatInput: React.FC<ChatInputProps> = ({
 
       <form 
         onSubmit={onSend}
+        onPaste={handlePaste}
         className="relative flex items-end gap-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-2 shadow-lg focus-within:ring-2 focus-within:ring-blue-500/50 transition-all"
       >
         <div className="flex-1 flex flex-col">

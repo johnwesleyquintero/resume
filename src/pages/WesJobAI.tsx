@@ -1,11 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useGemini } from '../hooks/useGemini';
 import ChatHeader from '../components/wesjobai/ChatHeader';
 import ApiKeyModal from '../components/wesjobai/ApiKeyModal';
 import EmptyState from '../components/wesjobai/EmptyState';
 import ChatMessage from '../components/wesjobai/ChatMessage';
 import ChatInput from '../components/wesjobai/ChatInput';
-import { Bot } from 'lucide-react';
+import { Bot, ArrowDown } from 'lucide-react';
 
 const WesJobAI = () => {
   const {
@@ -22,13 +22,29 @@ const WesJobAI = () => {
 
   const [input, setInput] = useState('');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [showScrollButton, setShowScrollButton] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  const scrollToBottom = useCallback((behavior: ScrollBehavior = 'smooth') => {
     if (scrollRef.current) {
-      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+      scrollRef.current.scrollTo({
+        top: scrollRef.current.scrollHeight,
+        behavior
+      });
     }
-  }, [messages, isLoading]);
+  }, []);
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages, isLoading, scrollToBottom]);
+
+  const handleScroll = () => {
+    if (scrollRef.current) {
+      const { scrollTop, scrollHeight, clientHeight } = scrollRef.current;
+      const isNearBottom = scrollHeight - scrollTop - clientHeight < 100;
+      setShowScrollButton(!isNearBottom);
+    }
+  };
 
   const handleSendMessage = (e?: React.FormEvent, isRetry = false) => {
     if (e) e.preventDefault();
@@ -49,7 +65,7 @@ const WesJobAI = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex flex-col">
+    <div className="h-screen bg-gray-50 dark:bg-gray-900 flex flex-col overflow-hidden">
       <ChatHeader 
         onSettingsClick={() => setShowApiKeyInput(true)} 
         onClearChat={clearChat} 
@@ -65,9 +81,10 @@ const WesJobAI = () => {
         />
       )}
 
-      <main className="flex-1 max-w-4xl w-full mx-auto p-4 md:p-6 overflow-hidden flex flex-col">
+      <main className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 py-4 md:py-6 overflow-hidden flex flex-col relative">
         <div 
           ref={scrollRef}
+          onScroll={handleScroll}
           className="flex-1 overflow-y-auto space-y-6 pr-2 scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700"
         >
           {messages.length === 0 ? (
@@ -101,6 +118,16 @@ const WesJobAI = () => {
             </>
           )}
         </div>
+
+        {showScrollButton && (
+          <button
+            onClick={() => scrollToBottom()}
+            className="absolute bottom-24 right-8 bg-blue-600 text-white p-2 rounded-full shadow-lg hover:bg-blue-700 transition-all animate-bounce z-10"
+            title="Scroll to bottom"
+          >
+            <ArrowDown className="w-5 h-5" />
+          </button>
+        )}
 
         <ChatInput 
           input={input}

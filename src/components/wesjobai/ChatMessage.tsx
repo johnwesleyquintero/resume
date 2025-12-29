@@ -9,6 +9,7 @@ interface Message {
   role: 'user' | 'model';
   content: string;
   image?: string;
+  isError?: boolean;
 }
 
 interface ChatMessageProps {
@@ -19,7 +20,7 @@ interface ChatMessageProps {
 
 const ChatMessage: React.FC<ChatMessageProps> = ({ message, isLoading, onRetry }) => {
   const isUser = message.role === 'user';
-  const isError = message.content.startsWith('Error:');
+  const isError = message.isError;
 
   return (
     <div className={cn(

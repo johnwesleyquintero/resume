@@ -8,6 +8,7 @@ export interface Message {
   role: 'user' | 'model';
   content: string;
   image?: string; // base64 string
+  isError?: boolean;
 }
 
 export const useGemini = () => {
@@ -19,7 +20,7 @@ export const useGemini = () => {
     ''
   );
   const [showApiKeyInput, setShowApiKeyInput] = useState(!apiKey && !import.meta.env.VITE_GEMINI_API_KEY);
-  const MAX_RETRIES = 3;
+  const MAX_RETRIES = 2;
 
   const saveApiKey = (newKey: string) => {
     if (newKey.trim()) {
@@ -58,6 +59,14 @@ export const useGemini = () => {
         currentInput = lastUserMessage.content;
         currentImage = lastUserMessage.image || null;
       }
+      // Remove the previous error message if retrying
+      setMessages(prev => {
+        const newMessages = [...prev];
+        if (newMessages.length > 0 && newMessages[newMessages.length - 1].isError) {
+          newMessages.pop();
+        }
+        return newMessages;
+      });
     }
 
     setIsLoading(true);
@@ -70,46 +79,45 @@ export const useGemini = () => {
           systemInstruction: WES_JOB_AI_SYSTEM_INSTRUCTION,
           tools: [
             {
-              // @ts-ignore - googleSearch is a valid tool but might not be in the current type definitions for some SDK versions
+              // @ts-ignore
               googleSearch: {},
             },
           ],
         });
 
-        let promptParts: any[] = [{ text: currentInput }];
-        
+        // Prepare history for chat
+        const history = messages
+          .filter(m => !m.isError)
+          .map(m => ({
+            role: m.role,
+            parts: [{ text: m.content }],
+          }));
+
         if (currentImage) {
           const base64Data = currentImage.split(',')[1];
-          const mimeType = currentImage.split(';')[0].split(':')[1];
-          promptParts.push({
-            inlineData: {
-              data: base64Data,
-              mimeType: mimeType
+          const mimeType = currentImage.split(';')[0].split(':')[1] || 'image/jpeg';
+          
+          // For multimodal, we can still use startChat if we send the image as a part
+          const chat = model.startChat({ history });
+          const result = await chat.sendMessage([
+            { text: currentInput },
+            {
+              inlineData: {
+                data: base64Data,
+                mimeType: mimeType
+              }
             }
-          });
-        }
-
-        let text = '';
-        if (currentImage) {
-          const result = await model.generateContent([WES_JOB_AI_SYSTEM_INSTRUCTION, ...promptParts]);
+          ]);
           const response = await result.response;
-          text = response.text();
+          return response.text();
         } else {
-          const chat = model.startChat({
-            history: messages
-              .filter(m => !m.content.startsWith('Error:'))
-              .map(m => ({
-                role: m.role,
-                parts: [{ text: m.content }],
-              })),
-          });
+          const chat = model.startChat({ history });
           const result = await chat.sendMessage(currentInput);
           const response = await result.response;
-          text = response.text();
+          return response.text();
         }
-        return text;
       } catch (error: any) {
-        if (retryAttempt < MAX_RETRIES) {
+        if (retryAttempt < MAX_RETRIES && !error.message?.includes('401') && !error.message?.includes('API_KEY_INVALID')) {
           const delay = Math.pow(2, retryAttempt) * 1000;
           await new Promise(resolve => setTimeout(resolve, delay));
           return attemptCall(retryAttempt + 1);
@@ -139,7 +147,8 @@ export const useGemini = () => {
       toast.error(errorMessage);
       setMessages(prev => [...prev, { 
         role: 'model', 
-        content: `Error: ${errorMessage}` 
+        content: errorMessage,
+        isError: true
       }]);
     } finally {
       setIsLoading(false);
