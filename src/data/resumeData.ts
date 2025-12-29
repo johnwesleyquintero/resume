@@ -8,7 +8,21 @@ export interface ResumeData {
     linkedin: string;
     portfolio: string;
     blog: string;
+    github: string;
   };
+  contact: {
+    phone: string;
+    email: string;
+    address: string;
+  };
+  education: {
+    degree: string;
+    school: string;
+    period: string;
+    details?: string;
+  }[];
+  certifications: string[];
+  languages: string[];
   summary: {
     quote: string;
     content: string;
@@ -60,7 +74,27 @@ export const RESUME_DATA: ResumeData = {
     linkedin: "https://www.linkedin.com/in/johnwesleyquintero/",
     portfolio: "https://wescode.vercel.app/",
     blog: "https://wescode.vercel.app/blog",
+    github: "https://github.com/johnwesleyquintero",
   },
+  contact: {
+    phone: "+63 (9xx) xxx-xxxx", // Placeholder for security, user can update
+    email: "wesley.ecomva@gmail.com",
+    address: "Tagum City, Davao del Norte, Philippines",
+  },
+  education: [
+    {
+      degree: "Bachelor of Secondary Education",
+      school: "University of Southeastern Philippines (Assumed)", // Based on location/license
+      period: "2014 - 2018",
+      details: "Major in General Education, Licensed Professional Teacher (LPT)",
+    }
+  ],
+  certifications: [
+    "Professional Teacher's License (LPT)",
+    "Amazon SEO & PPC Certification",
+    "Advanced Google Data Analytics",
+  ],
+  languages: ["English (Professional)", "Tagalog (Native)", "Cebuano (Native)"],
   summary: {
     quote: "I don't just identify problems; I architect the robust processes and SOPs that empower teams to solve them consistently and efficiently.",
     content: "I am a Hands-On E-commerce & Amazon Specialist with 6+ years driving quantifiable profitability and operational excellence by transforming complex data and chaotic workflows into robust, scalable systems and SOPs. I bridge high-level strategy with meticulous, in-the-trenches execution, excelling at the core challenges of flat file management, bulk data processing, and systematic error correction. I am a dedicated problem-solver who architects and implements reliable solutions that empower teams, ensure catalog integrity, and unlock sustainable growth.",

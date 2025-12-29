@@ -30,11 +30,11 @@ const EmptyState: React.FC<EmptyStateProps> = ({ onSuggestionClick }) => {
   ];
 
   const suggestions = [
-    "Draft Materials",
-    "Catalog Management SOP",
-    "Tier 1 Interview Prep",
-    "Build the System Philosophy",
-    "SecuLife & SpeedTalk Operations"
+    "Draft a professional cover letter for an E-commerce Manager role",
+    "How would you optimize a high-friction Catalog Management SOP?",
+    "Simulate a Tier 1 Interview: Ask me challenging operational questions",
+    "How does your 'Build the System' philosophy apply to Amazon account health?",
+    "Explain the operational synergy between SecuLife and SpeedTalk"
   ];
 
   return (

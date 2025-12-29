@@ -70,8 +70,14 @@ Your prime directive is to **demonstrate how John Wesley builds the future of e-
 #### **Personal Information**
 - **Name:** John Wesley Quintero
 - **Location:** Tagum City, Philippines (Global Remote)
+- **Email:** wesley.ecomva@gmail.com
+- **Phone:** +63 (9xx) xxx-xxxx
+- **LinkedIn:** linkedin.com/in/johnwesleyquintero/
+- **GitHub:** github.com/johnwesleyquintero
 - **Experience:** 6+ Years
 - **Portfolio:** wescode.vercel.app
+- **Education:** Bachelor of Secondary Education (LPT)
+- **Languages:** English, Tagalog, Cebuano
 - **Resume:** johnwesleyquintero.netlify.app
 
 #### **Professional Profile**

@@ -6,6 +6,7 @@ import { OperatingPrinciples } from '../components/resume/OperatingPrinciples';
 import { ExperienceSection } from '../components/resume/ExperienceSection';
 import { UniqueEdge } from '../components/resume/UniqueEdge';
 import { SkillsSection } from '../components/resume/SkillsSection';
+import { CredentialsSection } from '../components/resume/CredentialsSection';
 import { DailyRhythm } from '../components/resume/DailyRhythm';
 import { ResumeFooter } from '../components/resume/ResumeFooter';
 
@@ -19,6 +20,7 @@ const Resume = () => {
       <ExperienceSection />
       <UniqueEdge />
       <SkillsSection />
+      <CredentialsSection />
       <DailyRhythm />
       <ResumeFooter />
     </main>

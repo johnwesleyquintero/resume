@@ -18,7 +18,7 @@ export const ResumeFooter = () => {
           </a>
         </span>
         <span className="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600"></span>
-        <Link to="/wesjobai" className="text-blue-500 hover:underline flex items-center gap-1">
+        <Link to="/wesjobai" className="text-blue-500 hover:underline flex items-center gap-1 font-medium">
           <Bot className="w-3 h-3" /> Career AI
         </Link>
       </p>
