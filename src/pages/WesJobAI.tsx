@@ -313,6 +313,11 @@ const WesJobAI = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
                     {
+                      label: "Operation Citadel",
+                      desc: "The VAXPH Listing Documentation Hub",
+                      prompt: "Tell me about Operation Citadel. How does this GitHub repository serve as a single source of truth for VAXPH?"
+                    },
+                    {
                       label: "Ask about WesBI",
                       desc: "The Inventory Intelligence Cockpit",
                       prompt: "Tell me about WesBI. How did it improve inventory planning by 30%?"
@@ -326,11 +331,6 @@ const WesJobAI = () => {
                       label: "Systems Philosophy",
                       desc: "The 'Build the System' approach",
                       prompt: "Explain your 'Build the System' philosophy and how it prevents recurring problems."
-                    },
-                    {
-                      label: "Draft Materials",
-                      desc: "Create a tailored asset",
-                      prompt: "Help me draft a cover letter based on John's 6+ years of Amazon experience."
                     }
                   ].map((item, i) => (
                     <button 
@@ -350,10 +350,11 @@ const WesJobAI = () => {
 
               <div className="flex flex-wrap justify-center gap-2">
                 {[
+                  "Draft Materials",
+                  "Catalog Management SOP",
                   "Tier 1 Interview Prep",
-                  "Analyze Systemic Gaps",
-                  "Recovering $50k+ Revenue",
-                  "Amazon SP-API Integration"
+                  "Build the System Philosophy",
+                  "SecuLife & SpeedTalk Operations"
                 ].map((suggestion, i) => (
                   <button 
                     key={i}

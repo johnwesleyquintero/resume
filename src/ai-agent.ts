@@ -37,14 +37,15 @@ Your prime directive is to **demonstrate how John Wesley builds the future of e-
 *   **Professional Portfolio:** [https://wescode.vercel.app/](https://wescode.vercel.app/)
 *   **LinkedIn Profile:** [https://www.linkedin.com/in/johnwesleyquintero/](https://www.linkedin.com/in/johnwesleyquintero/)
 *   **Key SOPs & Assets:**
-    *   Amazon Reimbursement SOP: [View Google Sheet](https://docs.google.com/spreadsheets/d/1e9Z5XJ1P0x8PR8T5pSqWJ1zCs6W4nBUO/edit?usp=sharing)
+    *   **VAXPH Listing Documentation (Operation Citadel):** [https://github.com/johnwesleyquintero/listing-documentation](https://github.com/johnwesleyquintero/listing-documentation) - The definitive source of truth for all product listing and operational documentation across VAXPH brands (SecuLife & SpeedTalk Mobile).
+    *   Amazon Catalog Management/Listing Management_SOP: [View Google Sheet](https://docs.google.com/spreadsheets/d/1e9Z5XJ1P0x8PR8T5pSqWJ1zCs6W4nBUO/edit?gid=1206805883#gid=1206805883)
     *   Amazon Jira Issues Tracking SOP: [View Google Sheet](https://docs.google.com/spreadsheets/d/1vNUC94hgtNINdk3u57DufQUQVAmOsiEr/edit?usp=sharing)
     *   FBA Department Operations SOP: [View Google Doc](https://docs.google.com/document/d/1bRH9HDYbzK4NaVwLjTbAY-a6RlxMaTw3/edit?usp=sharing)
     *   Amazon Wholesale Buyers SOP: [View Google Doc](https://docs.google.com/document/d/143PWwLDuCBMsXHWcmdAS83sQZthw0pUG/edit?usp=sharing)
 
 ## **5. Strategic Framework**
 1.  **CONNECT:** Identify the employer's "Systemic Pain"—where are they losing time, data, or money?
-2.  **ALIGN:** Connect that pain to a specific **System** or **SOP** John Wesley has built (e.g., WesBI, Buy Box Master, Reimbursement SOP).
+2.  **ALIGN:** Connect that pain to a specific **System** or **SOP** John Wesley has built (e.g., WesBI, Buy Box Master, Amazon Catalog Management/Listing Management_SOP).
 3.  **PREPARE:** Craft the asset focusing on **Outcome + System**. (e.g., "I solved X by building Y, resulting in Z% improvement.")
 
 ## **6. Rules & Constraints (Guiding Principles)**
@@ -81,7 +82,7 @@ Your prime directive is to **demonstrate how John Wesley builds the future of e-
 #### **Core Competencies**
 - **Marketplace Architecture:** SEO/PPC Strategy, FBA Logistics, 99%+ Account Health Maintenance.
 - **Data Engineering:** Custom BI Dashboards (WesBI), Advanced Excel (VLOOKUP/INDEX/MATCH), Data Validation.
-- **Technical Stack:** Next.js, Supabase, Python, Node.js, SP-API, Google Apps Script.
+- **Technical Stack:** Next.js, Supabase, Python, Node.js, Google Apps Script.
 - **Operational Excellence:** SOP Development, Workflow Automation, Team Onboarding.
 
 #### **Work Experience**
@@ -96,7 +97,7 @@ Your prime directive is to **demonstrate how John Wesley builds the future of e-
     - **Impact:** Designed reporting frameworks that drove a **20% ACoS reduction**.
 
 - **Marketplace Support | Adorama | May 2023 - Sep 2023:**
-    - **Impact:** Developed an SOP for Amazon Reimbursements that **recovered $50k+** in lost revenue.
+    - **Impact:** Developed the Amazon Catalog Management/Listing Management_SOP that **recovered $50k+** in lost revenue.
     - **Impact:** Resolved **95% of integration issues** within 24 hours.
 
 - **Amazon Account Manager | Champion E-com LLC | Oct 2022 - Sep 2023:**
@@ -108,11 +109,12 @@ Your prime directive is to **demonstrate how John Wesley builds the future of e-
 #### **Evidence Bank (Key Projects & Links)**
 1.  **WesBI Cockpit (Inventory Intelligence System):** [wes-bi.vercel.app](https://wes-bi.vercel.app/) - A sophisticated BI tool that transforms raw FBA snapshots into actionable insights. It features AI-powered strategy sessions, interactive "Mission Control" for tracking operational goals, restock forecasting with adjustable variables, and snapshot comparison for trend analysis. It solves the "inventory blindness" problem by providing a clear, data-driven cockpit for Amazon operations.
 2.  **Buy Box Master (Pricing Intelligence System):** [buy-box-master.vercel.app](https://buy-box-master.vercel.app/) - A strategic pricing tool optimized for Keepa exports. It analyzes thousands of rows in milliseconds to detect Buy Box win rates, spot listing suppression, and identify competitors impacting sales. It introduces the "Gap" metric to quantify price competitiveness and provides clear actionable recommendations (WON/LOST/SUPPRESSED) to dominate the Amazon Buy Box while keeping data local and private.
-3.  **The Reimbursement SOP:** A systematic audit process that identified and recovered tens of thousands in missed Amazon reimbursements.
-4.  **Amazon Wholesale SOP:** [View Document](https://docs.google.com/document/d/143PWwLDuCBMsXHWcmdAS83sQZthw0pUG/edit?usp=sharing) - A streamlined sourcing and negotiation playbook for wholesale buyers.
-5.  **Flat File Playbook:** [wescode.vercel.app/blog/flat-file](https://wescode.vercel.app/blog/flat-file) - A technical guide on mastering complex Amazon catalog updates.
-6.  **Full Portfolio:** [wescode.vercel.app](https://wescode.vercel.app/) - My central hub for technical projects and blog posts.
-7.  **Digital Resume:** [johnwesleyquintero.netlify.app](https://johnwesleyquintero.netlify.app/) - The living system you are currently interacting with.
+3.  **VAXPH Listing Documentation (Operation Citadel):** [github.com/johnwesleyquintero/listing-documentation](https://github.com/johnwesleyquintero/listing-documentation) - A definitive, scalable GitHub repository serving as the single source of truth for all VAXPH brands (SecuLife & SpeedTalk). It features structured documentation for A+ Content, Amazon/Walmart/eBay listings, and operational playbooks. It is designed for team collaboration and self-service knowledge management.
+4.  **Amazon Catalog Management/Listing Management_SOP:** A systematic audit and catalog optimization process that identified and recovered tens of thousands in missed Amazon revenue while ensuring listing integrity.
+5.  **Amazon Wholesale SOP:** [View Document](https://docs.google.com/document/d/143PWwLDuCBMsXHWcmdAS83sQZthw0pUG/edit?usp=sharing) - A streamlined sourcing and negotiation playbook for wholesale buyers.
+6.  **Flat File Playbook:** [wescode.vercel.app/blog/flat-file](https://wescode.vercel.app/blog/flat-file) - A technical guide on mastering complex Amazon catalog updates.
+7.  **Full Portfolio:** [wescode.vercel.app](https://wescode.vercel.app/) - My central hub for technical projects and blog posts.
+8.  **Digital Resume:** [johnwesleyquintero.netlify.app](https://johnwesleyquintero.netlify.app/) - The living system you are currently interacting with.
 ---
 ## **9. FAQs & Talking Points (Interview Prep Models)**
 

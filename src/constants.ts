@@ -78,6 +78,13 @@ export const RESUME_DATA: ResumeData = {
         "Developing critical operational playbooks that reduced team onboarding time and operational friction.",
         "Monitoring daily account health proactively, reducing incident rates and ensuring 100% compliance.",
         {
+          text: "Architected Operation Citadel: A definitive GitHub documentation repository serving as the single source of truth for all VAXPH product listings and operational playbooks.",
+          link: {
+            text: "View Documentation",
+            url: "https://github.com/johnwesleyquintero/listing-documentation",
+          },
+        },
+        {
           text: "Developed WesBI Cockpit: Transforms raw CSV dumps into actionable insights, improving inventory planning efficiency by 30%.",
           link: {
             text: "View WesBI",
@@ -119,10 +126,10 @@ export const RESUME_DATA: ResumeData = {
       responsibilities: [
         "Provided technical support for B2B clients, resolving 95% of Seller Central integration issues within 24 hours.",
         {
-          text: "Developed and implemented an SOP for the Amazon Reimbursement Process, recovering $50k+ in lost revenue.",
+          text: "Developed the Amazon Catalog Management/Listing Management_SOP, recovering $50k+ in lost revenue through systematic catalog audits.",
           link: {
             text: "View SOP",
-            url: "https://docs.google.com/spreadsheets/d/1e9Z5XJ1P0x8PR8T5pSqWJ1zCs6W4nBUO/edit?usp=sharing&ouid=116050988128963817360&rtpof=true&sd=true",
+            url: "https://docs.google.com/spreadsheets/d/1e9Z5XJ1P0x8PR8T5pSqWJ1zCs6W4nBUO/edit?gid=1206805883#gid=1206805883",
           },
         },
         {
@@ -202,7 +209,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       category: "Automation & Development",
-      items: ["SP-API Development & Integration", "Custom E-commerce Tooling (Node.js)", "AI/ML Implementation Concepts", "Workflow Automation"]
+      items: ["Custom E-commerce Tooling (Node.js)", "AI/ML Implementation Concepts", "Workflow Automation", "Google Apps Script"]
     }
   ],
   operatingPrinciples: [
@@ -228,6 +235,13 @@ export const RESUME_DATA: ResumeData = {
       "Case Log & Support Management: Meticulously follow up and escalate Amazon support cases to drive swift resolutions and minimize operational downtime.",
       "PPC & Advertising Monitoring: Daily performance checks on active campaigns to identify fluctuations in ACoS and spend, ensuring optimal advertising ROI.",
       "Manual Data Analysis & Reporting: Reconcile performance trackers and FBA reimbursement audits to ensure financial accuracy and recover lost revenue.",
+      {
+        text: "Knowledge Base Management: Maintaining 'Operation Citadel', the definitive source of truth for VAXPH listing documentation and operational playbooks on GitHub.",
+        link: {
+          text: "View Operation Citadel",
+          url: "https://github.com/johnwesleyquintero/listing-documentation",
+        },
+      },
       {
         text: "Playbook Documentation: Access comprehensive playbooks and articles on Amazon strategies and e-commerce best practices.",
         link: {
