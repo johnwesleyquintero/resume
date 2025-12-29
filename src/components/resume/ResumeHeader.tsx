@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Linkedin, Globe, BookOpen, Printer, MapPin, Bot, Check, Copy } from 'lucide-react';
+import { Mail, Linkedin, Globe, BookOpen, Printer, MapPin, Check, Copy } from 'lucide-react';
+import { WesAILogo } from '../WesAILogo';
 import { RESUME_DATA } from '../../data/resumeData';
 import { cn } from '../../utils/cn';
 
@@ -29,11 +30,11 @@ export const ResumeHeader = () => {
             loading="lazy" 
           />
           <Link 
-            to="/careerai" 
+            to="/wesai" 
             className="absolute -bottom-1 -right-1 md:-bottom-2 md:-right-2 z-20 bg-white dark:bg-gray-800 p-2 md:p-2.5 rounded-full shadow-xl border border-blue-100 dark:border-blue-900 hover:scale-110 hover:rotate-12 transition-all group no-print"
-            title="Talk to Career AI"
+            title="Talk to WesAI"
           >
-            <Bot className="w-5 h-5 md:w-6 md:h-6 text-blue-600 group-hover:text-purple-600" />
+            <WesAILogo variant="icon" width={24} height={24} className="group-hover:scale-110 transition-transform" />
             <span className="absolute -top-1 -right-1 flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
@@ -45,21 +46,6 @@ export const ResumeHeader = () => {
           <div className="animate-fadeIn [animation-delay:200ms] space-y-2">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white drop-shadow-md tracking-tight">{RESUME_DATA.name}</h1>
             <p className="text-base sm:text-lg md:text-xl text-blue-200 font-medium drop-shadow">{RESUME_DATA.title}</p>
-            
-            <div className="flex justify-center md:justify-start pt-2">
-              <Link 
-                to="/careerai"
-                className="flex items-center gap-2 hover:text-white transition-all group relative bg-white/10 px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30 hover:bg-white/20 no-print text-sm sm:text-base"
-                title="Talk to my AI Career Agent"
-              >
-                <Bot className="w-4 h-4 text-blue-300 group-hover:text-white transition-colors" />
-                <span className="font-medium text-white/90 group-hover:text-white">Talk to AI Assistant</span>
-                <span className="absolute -top-1 -right-1 flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-                </span>
-              </Link>
-            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm text-white/90 animate-fadeIn [animation-delay:400ms]">

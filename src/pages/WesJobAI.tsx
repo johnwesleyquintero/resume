@@ -5,7 +5,8 @@ import ApiKeyModal from '../components/wesjobai/ApiKeyModal';
 import EmptyState from '../components/wesjobai/EmptyState';
 import ChatMessage from '../components/wesjobai/ChatMessage';
 import ChatInput from '../components/wesjobai/ChatInput';
-import { Bot, ArrowDown } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
+import { WesAILogo } from '../components/WesAILogo';
 
 const WesJobAI = () => {
   const {
@@ -102,8 +103,8 @@ const WesJobAI = () => {
               
               {isLoading && (
                 <div className="flex gap-3 animate-pulse">
-                  <div className="w-8 h-8 rounded-full bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex items-center justify-center shadow-sm">
-                    <Bot className="w-5 h-5 text-blue-600" />
+                  <div className="w-8 h-8 rounded-full bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 flex items-center justify-center shadow-sm overflow-hidden">
+                    <WesAILogo variant="icon" width={24} height={24} />
                   </div>
                   <div className="bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl rounded-tl-none p-4 shadow-sm flex items-center gap-3">
                     <div className="flex gap-1">
@@ -111,7 +112,7 @@ const WesJobAI = () => {
                       <span className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-bounce [animation-delay:-0.15s]"></span>
                       <span className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-bounce"></span>
                     </div>
-                    <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Career AI is processing...</span>
+                    <span className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">WesAI is processing...</span>
                   </div>
                 </div>
               )}

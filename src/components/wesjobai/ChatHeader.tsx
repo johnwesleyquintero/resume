@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Bot, Trash2, Sun, Moon } from 'lucide-react';
+import { WesAILogo } from '../WesAILogo';
 import { useTheme } from '../../hooks/useTheme';
 
 interface ChatHeaderProps {
@@ -20,17 +21,13 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({ onSettingsClick, onClearChat })
           </Link>
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
-                <Bot className="w-6 h-6 text-blue-600" />
-                Career AI <span className="text-xs font-normal px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full">v5.2</span>
-              </h1>
-              <div className="hidden sm:flex items-center gap-1.5 px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold uppercase tracking-wider rounded border border-green-200 dark:border-green-800">
+              <Link to="/wesai" className="flex items-center">
+                <WesAILogo width={100} height={32} />
+                <span className="text-xs font-normal px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full ml-2">v5.2</span>
+              </Link>
+              <div className="hidden sm:flex items-center gap-1.5 px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold uppercase tracking-widest rounded border border-green-200 dark:border-green-800 ml-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
                 Operations Mode
-              </div>
-              <div className="hidden sm:flex items-center gap-1.5 px-2 py-0.5 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-[10px] font-bold uppercase tracking-wider rounded border border-blue-200 dark:border-blue-800">
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-500"></div>
-                Search Grounding Active
               </div>
             </div>
             <p className="text-xs text-gray-500 dark:text-gray-400 flex items-center gap-1.5">
@@ -50,10 +47,10 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({ onSettingsClick, onClearChat })
           </button>
           <button 
             onClick={onSettingsClick}
-            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full transition-colors"
+            className="p-1.5 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full transition-colors flex items-center justify-center"
             title="Settings"
           >
-            <Bot className="w-5 h-5" />
+            <WesAILogo variant="icon" width={24} height={24} />
           </button>
           <button 
             onClick={onClearChat}

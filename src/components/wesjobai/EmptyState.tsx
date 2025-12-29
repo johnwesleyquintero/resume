@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bot } from 'lucide-react';
+import { WesAILogo } from '../WesAILogo';
 
 interface EmptyStateProps {
   onSuggestionClick: (prompt: string) => void;
@@ -40,12 +40,12 @@ const EmptyState: React.FC<EmptyStateProps> = ({ onSuggestionClick }) => {
   return (
     <div className="flex flex-col items-center justify-center min-h-full py-10 text-center space-y-8 animate-fadeIn">
       <div className="space-y-4">
-        <div className="w-20 h-20 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto">
-          <Bot className="w-10 h-10 text-blue-600" />
+        <div className="w-24 h-24 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center mx-auto shadow-xl border border-gray-100 dark:border-gray-700 group hover:scale-110 transition-transform duration-500">
+          <WesAILogo variant="icon" width={60} height={60} />
         </div>
         <div className="max-w-md mx-auto">
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Hello Brother! I'm Career AI.</h3>
-          <p className="text-gray-600 dark:text-gray-400 mt-2">
+          <h3 className="text-3xl font-bold text-gray-900 dark:text-white">Hello! I'm WesAI.</h3>
+          <p className="text-gray-600 dark:text-gray-400 mt-2 text-lg">
             I'm the strategic extension of Wesley. I'm trained on his "Build the System" philosophy and operational workflows.
           </p>
         </div>

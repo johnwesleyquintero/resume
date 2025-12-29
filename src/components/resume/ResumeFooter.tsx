@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Bot } from 'lucide-react';
+import { WesAILogo } from '../WesAILogo';
 import { RESUME_DATA } from '../../data/resumeData';
 
 export const ResumeFooter = () => {
@@ -18,8 +18,8 @@ export const ResumeFooter = () => {
           </a>
         </span>
         <span className="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600"></span>
-        <Link to="/careerai" className="text-blue-500 hover:underline flex items-center gap-1 font-medium">
-          <Bot className="w-3 h-3" /> Career AI
+        <Link to="/wesai" className="text-blue-500 hover:underline flex items-center gap-1 font-medium">
+          <WesAILogo variant="icon" width={16} height={16} /> WesAI
         </Link>
       </p>
     </footer>

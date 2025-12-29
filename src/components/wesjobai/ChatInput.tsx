@@ -100,7 +100,7 @@ const ChatInput: React.FC<ChatInputProps> = ({
                 onSend();
               }
             }}
-            placeholder={apiKey ? "Message Career AI..." : "Configure API Key to start..."}
+            placeholder={apiKey ? "Message WesAI..." : "Configure API Key to start..."}
             className="w-full bg-transparent border-none focus:ring-0 text-gray-900 dark:text-white placeholder-gray-500 p-3 min-h-[50px] max-h-[200px] resize-none text-sm"
             disabled={!apiKey || isLoading}
           />

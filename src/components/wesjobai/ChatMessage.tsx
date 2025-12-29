@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { User, Bot, RefreshCw } from 'lucide-react';
+import { User, RefreshCw } from 'lucide-react';
+import { WesAILogo } from '../WesAILogo';
 import { cn } from '../../utils/cn';
 import CopyButton from './CopyButton';
 
@@ -33,7 +34,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message, isLoading, onRetry }
           ? "bg-gradient-to-br from-blue-600 to-blue-700 text-white ring-2 ring-blue-100 dark:ring-blue-900/30" 
           : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 border border-gray-100 dark:border-gray-700"
       )}>
-        {isUser ? <User className="w-5 h-5" /> : <Bot className="w-5 h-5" />}
+        {isUser ? <User className="w-5 h-5" /> : <WesAILogo variant="icon" width={24} height={24} />}
       </div>
       <div className={cn(
         "max-w-[85%] rounded-2xl p-4 relative transition-all",
