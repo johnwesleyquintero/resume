@@ -334,8 +334,6 @@ const Resume = () => {
         <p className="text-sm text-gray-500 dark:text-gray-400 flex items-center justify-center gap-2">
           <span>Built by {RESUME_DATA.name}</span>
           <span className="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600"></span>
-          <span>React + Tailwind CSS</span>
-          <span className="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600"></span>
           <Link to="/wesjobai" className="text-blue-500 hover:underline flex items-center gap-1">
             <Bot className="w-3 h-3" /> Career AI
           </Link>

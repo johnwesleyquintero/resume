@@ -61,10 +61,9 @@ const WesJobAI = () => {
 
     try {
       const genAI = new GoogleGenerativeAI(apiKey);
-      // Using gemini-1.5-flash: The most stable and widely available free-tier model
-      // Using gemini-1.5-flash-latest to ensure we hit the most compatible endpoint
+      // Using gemini-2.5-flash-lite: The most current stable free-tier model as of late 2025
       const model = genAI.getGenerativeModel({ 
-        model: "gemini-1.5-flash-latest",
+        model: "gemini-2.5-flash-lite",
         systemInstruction: WES_JOB_AI_SYSTEM_INSTRUCTION
       });
 
