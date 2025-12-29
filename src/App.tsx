@@ -20,14 +20,17 @@ import {
   BarChart3,
   Settings,
   TrendingUp,
-  Search
+  Search,
+  Bot
 } from 'lucide-react';
 import { RESUME_DATA, type ResumeData } from './constants';
 import { cn } from './utils/cn';
 import { DownloadHub } from './components/DownloadHub';
 import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import WesJobAI from './pages/WesJobAI';
 
-const App = () => {
+const Resume = () => {
   const [emailCopied, setEmailCopied] = useState(false);
 
   const renderTextWithBold = (text: string) => {
@@ -46,6 +49,7 @@ const App = () => {
     setEmailCopied(true);
     setTimeout(() => setEmailCopied(false), 2000);
   };
+
   return (
     <main className={cn("space-y-12 pb-12 relative")}>
       <DownloadHub />
@@ -63,6 +67,18 @@ const App = () => {
               className="relative z-10 h-full w-full object-cover rounded-full border-4 border-white/50 shadow-2xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-3" 
               loading="lazy" 
             />
+            {/* WesJobAI Floating Entry */}
+            <Link 
+              to="/wesjobai" 
+              className="absolute -bottom-2 -right-2 z-20 bg-white dark:bg-gray-800 p-2.5 rounded-full shadow-xl border border-blue-100 dark:border-blue-900 hover:scale-110 hover:rotate-12 transition-all group no-print"
+              title="Talk to WesJobAI"
+            >
+              <Bot className="w-6 h-6 text-blue-600 group-hover:text-purple-600" />
+              <span className="absolute -top-1 -right-1 flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+              </span>
+            </Link>
           </div>
 
           <div className="flex-1 text-center md:text-left space-y-4">
@@ -307,9 +323,24 @@ const App = () => {
           <span>Built by {RESUME_DATA.name}</span>
           <span className="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600"></span>
           <span>React + Tailwind CSS</span>
+          <span className="w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+          <Link to="/wesjobai" className="text-blue-500 hover:underline flex items-center gap-1">
+            <Bot className="w-3 h-3" /> WesJobAI
+          </Link>
         </p>
       </footer>
     </main>
+  );
+};
+
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Resume />} />
+        <Route path="/wesjobai" element={<WesJobAI />} />
+      </Routes>
+    </Router>
   );
 };
 
