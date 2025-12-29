@@ -100,8 +100,8 @@ export const RESUME_DATA: ResumeData = {
   ],
   languages: ["English (Professional)", "Tagalog (Native)", "Cebuano (Native)"],
   summary: {
-    quote: "I don't just identify problems; I develop the robust operational processes and SOPs that empower teams to solve them consistently and efficiently.",
-    content: "I am a Hands-On E-commerce & Amazon Specialist with 6+ years driving sustainable profitability and operational excellence by transforming complex data and chaotic workflows into robust, scalable operational systems and SOPs. I bridge high-level strategy with meticulous, in-the-trenches execution, excelling at the core challenges of flat file management, bulk data processing, and systematic error correction. I am a dedicated problem-solver who develops and implements reliable solutions that empower teams, ensure catalog integrity, and unlock consistent growth.",
+    quote: "I don't just identify problems; I develop the robust operational processes and SOPs that empower teams to solve them consistently and efficiently, historically reducing manual task time by 15-25% through intelligent automation and system design.",
+    content: "I am a Hands-On Amazon & E-commerce Specialist with 6+ years of experience driving sustainable profitability by transforming chaotic workflows into robust, scalable operational systems. My unique edge is leveraging proprietary intelligence tools like WesBI for inventory autonomy and Buy Box Master for strategic pricing defense, which allows me to bridge high-level strategy with meticulous, in-the-trenches execution and systematic error correction. I focus on building solutions that empower teams and unlock consistent growth.",
   },
   experience: [
     {
@@ -121,14 +121,14 @@ export const RESUME_DATA: ResumeData = {
           },
         },
         {
-          text: "Developed WesBI Cockpit: Transforms raw CSV dumps into actionable insights, significantly improving inventory planning efficiency.",
+          text: "Architected WesBI Cockpit to solve inventory blindness, creating a proactive forecasting system that significantly reduced emergency stock-outs and optimized working capital.",
           link: {
             text: "View WesBI",
             url: "https://wes-bi.vercel.app/",
           },
         },
         {
-          text: "Created Buy Box Master: A pricing intelligence tool that improved Buy Box win rates through systematic price monitoring.",
+          text: "Engineered Buy Box Master for strategic pricing defense, enabling granular analysis of the price 'Gap' metric to systematically secure Buy Box dominance and prevent revenue leakage.",
           link: {
             text: "View Buy Box Master",
             url: "https://buy-box-master.vercel.app/",
@@ -162,7 +162,7 @@ export const RESUME_DATA: ResumeData = {
       responsibilities: [
         "Provided technical support for B2B clients, resolving the majority of Seller Central integration issues within standard SLAs.",
         {
-          text: "Developed the Amazon Catalog Management/Listing Management_SOP, recovering thousands in lost revenue through systematic catalog audits.",
+          text: "Developed the Amazon Catalog Management/Listing Management_SOP, leading to the systematic recovery of lost revenue and establishing a repeatable audit process to eliminate future catalog integrity risks.",
           link: {
             text: "View SOP",
             url: "https://docs.google.com/spreadsheets/d/1e9Z5XJ1P0x8PR8T5pSqWJ1zCs6W4nBUO/edit?gid=1206805883#gid=1206805883",
@@ -185,7 +185,7 @@ export const RESUME_DATA: ResumeData = {
         "Managed account health, performance metrics, and compliance for multiple B2B clients, driving sustainable growth.",
         "Implemented strategic SEO and PPC campaigns, leading to a steady increase in sales within the first six months.",
         {
-          text: "Developed a comprehensive SOP for FBA Department Operations.",
+          text: "Developed a comprehensive SOP for FBA Department Operations, establishing a systematic framework to prevent inventory discrepancies and ensure operational continuity.",
           link: {
             text: "View SOP",
             url: "https://docs.google.com/document/d/1bRH9HDYbzK4NaVwLjTbAY-a6RlxMaTw3/edit?usp=sharing&ouid=116050988128963817360&rtpof=true&sd=true",
@@ -228,7 +228,7 @@ export const RESUME_DATA: ResumeData = {
         icon: "database-zap",
         points: [
           "**Data-driven** insights from raw reports to optimize demand and inventory strategy.",
-          "**Developed** listing performance improvements via deep Amazon data structure knowledge.",
+          "**Developed** proprietary tools (**WesBI**, **Buy Box Master**) to transform raw data into actionable inventory and pricing strategy.",
           "**Skilled** at manual dataset audits to uncover hidden growth opportunities.",
         ],
       },
@@ -241,7 +241,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       category: "Data & Analytics",
-      items: ["Data Visualization (Tableau, Power BI)", "Seller Central Reporting", "Business Intelligence & Insights", "Advanced Excel (VLOOKUP, Pivots)"]
+      items: ["Data Visualization (Tableau, Power BI)", "Seller Central Reporting", "Business Intelligence & Insights (Including custom tool development like WesBI)", "Advanced Excel (VLOOKUP, Pivots)"]
     },
     {
       category: "Automation & Development",
@@ -255,7 +255,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       title: "Data Sovereignty",
-      description: "Own your data. I prioritize building independent tools and dashboards that give you a clear, unfiltered view of actionable business performance."
+      description: "Own your data. I prioritize building independent tools and dashboards (like WesBI) that bypass platform limitations, giving you a clear, unfiltered view of actionable business performance, ensuring data integrity and privacy."
     },
     {
       title: "Strategic Autonomy",
@@ -272,7 +272,7 @@ export const RESUME_DATA: ResumeData = {
       "PPC & Advertising Monitoring: Daily performance checks on active campaigns to identify fluctuations in ACoS and spend, ensuring optimal advertising ROI.",
       "Manual Data Analysis & Reporting: Reconcile performance trackers and FBA reimbursement audits to ensure financial accuracy and recover lost revenue.",
       {
-        text: "Knowledge Base Management: Maintaining 'Operation Citadel', the definitive source of truth for VAXPH listing documentation and operational playbooks on GitHub.",
+        text: "Knowledge Base Management: Maintaining Operation Citadel (GitHub documentation) and WesBI/Buy Box Master systems to ensure team knowledge is centralized, accessible, and evergreen.",
         link: {
           text: "View Operation Citadel",
           url: "https://github.com/johnwesleyquintero/listing-documentation",
