@@ -23,15 +23,15 @@ const ChatHeader: React.FC<ChatHeaderProps> = ({ onSettingsClick, onClearChat })
             <div className="flex items-center gap-2">
               <Link to="/wesai" className="flex items-center">
                 <WesAILogo width={100} height={32} />
-                <span className="text-xs font-normal px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full ml-2">v5.2</span>
+                <span className="text-xs font-normal px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full ml-2">v6.0</span>
               </Link>
               <div className="hidden sm:flex items-center gap-1.5 px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold uppercase tracking-widest rounded border border-green-200 dark:border-green-800 ml-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
-                Operations Mode
+                2nd Brain Mode
               </div>
             </div>
             <p className="text-xs text-gray-500 dark:text-gray-400 flex items-center gap-1.5">
-              Wesley's Strategic Extension
+              Wesley's Copilot
               <span className="inline-block w-1 h-1 rounded-full bg-gray-300 dark:bg-gray-600"></span>
               <span className="opacity-70">Powered by Gemini AI</span>
             </p>
