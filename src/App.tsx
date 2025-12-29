@@ -30,6 +30,16 @@ import { useState } from 'react';
 const App = () => {
   const [emailCopied, setEmailCopied] = useState(false);
 
+  const renderTextWithBold = (text: string) => {
+    const parts = text.split(/(\*\*.*?\*\*)/g);
+    return parts.map((part, i) => {
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return <strong key={i} className="font-bold text-gray-900 dark:text-white">{part.slice(2, -2)}</strong>;
+      }
+      return part;
+    });
+  };
+
   const handleCopyEmail = (e: React.MouseEvent) => {
     e.preventDefault();
     navigator.clipboard.writeText(RESUME_DATA.email);
@@ -215,7 +225,7 @@ const App = () => {
                 {card.points.map((point: string, pIdx: number) => (
                   <li key={pIdx} className="text-sm text-gray-600 dark:text-gray-300 flex gap-2">
                     <ChevronRight className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
-                    {point}
+                    <span>{renderTextWithBold(point)}</span>
                   </li>
                 ))}
               </ul>

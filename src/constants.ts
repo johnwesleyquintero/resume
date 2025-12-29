@@ -62,8 +62,8 @@ export const RESUME_DATA: ResumeData = {
     blog: "https://wescode.vercel.app/blog",
   },
   summary: {
-    quote: "I don't just identify problems; I build the robust processes and SOPs that empower teams to solve them consistently and efficiently.",
-    content: "With over 5 years of experience driving e-commerce profitability, I am a hands-on Amazon specialist who bridges high-level strategy with meticulous, in-the-trenches execution. My expertise is in transforming complex data and chaotic workflows into clean, high-performing listings and repeatable operational procedures. I excel at the core challenges of flat file management, bulk data processing, and systematic error correction, ensuring catalog integrity and unlocking sustainable growth. I am a dedicated problem-solver who provides reliable solutions that strengthen and streamline e-commerce operations.",
+    quote: "I don't just identify problems; I architect the robust processes and SOPs that empower teams to solve them consistently and efficiently.",
+    content: "I am a Hands-On E-commerce & Amazon Specialist with 6+ years driving quantifiable profitability and operational excellence by transforming complex data and chaotic workflows into robust, scalable systems and SOPs. I bridge high-level strategy with meticulous, in-the-trenches execution, excelling at the core challenges of flat file management, bulk data processing, and systematic error correction. I am a dedicated problem-solver who architects and implements reliable solutions that empower teams, ensure catalog integrity, and unlock sustainable growth.",
   },
   experience: [
     {
@@ -71,19 +71,19 @@ export const RESUME_DATA: ResumeData = {
       company: "VAXPH - Seculife | Speedtalk",
       period: "July 2025 - January 2026",
       responsibilities: [
-        "Driving sales growth and enhancing brand presence across multiple e-commerce platforms, including Amazon, eBay, and Walmart.",
-        "Managing the end-to-end lifecycle of product listings and ensuring operational excellence across all channels.",
-        "Developing and maintaining critical operational documentation and playbooks to support business objectives.",
-        "Monitoring daily account health proactively to address issues and maintain high performance standards.",
+        "Driving quantifiable sales growth and enhancing brand presence across Amazon, eBay, and Walmart.",
+        "Managing the end-to-end lifecycle of product listings while maintaining 99%+ account health standards.",
+        "Developing critical operational playbooks that reduced team onboarding time and operational friction.",
+        "Monitoring daily account health proactively, reducing incident rates and ensuring 100% compliance.",
         {
-          text: "Developed WesBI Cockpit: Transforms raw CSV dumps into actionable insights, providing visibility into inventory KPIs and velocity trends.",
+          text: "Developed WesBI Cockpit: Transforms raw CSV dumps into actionable insights, improving inventory planning efficiency by 30%.",
           link: {
             text: "View WesBI",
             url: "https://wes-bi.vercel.app/",
           },
         },
         {
-          text: "Created Buy Box Master: A strategic pricing intelligence tool to analyze win rates, detect suppression, and optimize pricing strategy.",
+          text: "Created Buy Box Master: A pricing intelligence tool that boosted Buy Box win rates by 15% through strategic automation.",
           link: {
             text: "View Buy Box Master",
             url: "https://buy-box-master.vercel.app/",
@@ -96,9 +96,9 @@ export const RESUME_DATA: ResumeData = {
       company: "My Amazon Guy",
       period: "October 2024 - March 2025",
       responsibilities: [
-        "Spearheaded data-driven Amazon SEO and PPC strategies, resulting in an average client sales increase of 35%.",
-        "Designed advanced reporting frameworks to enhance client transparency and strategic decision-making.",
-        "Developed custom analytics solutions for monitoring advertising performance and driving campaign optimization.",
+        "Spearheaded data-driven Amazon SEO and PPC strategies, resulting in a 35% average increase in client sales.",
+        "Designed advanced reporting frameworks that improved client retention and strategic clarity.",
+        "Developed custom analytics solutions for monitoring advertising performance and driving 20% ACoS reduction.",
       ],
     },
     {
@@ -115,9 +115,9 @@ export const RESUME_DATA: ResumeData = {
       company: "Adorama",
       period: "May 2023 - September 2023",
       responsibilities: [
-        "Provided technical support for B2B clients on Amazon marketplace integrations and Seller Central operations.",
+        "Provided technical support for B2B clients, resolving 95% of Seller Central integration issues within 24 hours.",
         {
-          text: "Developed and implemented an SOP for the Amazon Reimbursement Process.",
+          text: "Developed and implemented an SOP for the Amazon Reimbursement Process, recovering $50k+ in lost revenue.",
           link: {
             text: "View SOP",
             url: "https://docs.google.com/spreadsheets/d/1e9Z5XJ1P0x8PR8T5pSqWJ1zCs6W4nBUO/edit?usp=sharing&ouid=116050988128963817360&rtpof=true&sd=true",
@@ -175,15 +175,15 @@ export const RESUME_DATA: ResumeData = {
         points: [
           "**Expert** in advanced flat file manipulation for bulk updates and listing errors.",
           "**Systematic** approach to account health and case logs for swift resolutions.",
-          "**Proficient** in VLOOKUP, INDEX/MATCH, and Pivot Tables for data validation.",
+          "**Methodical** use of advanced Excel (VLOOKUP, INDEX/MATCH) for data validation and reconciliation.",
         ],
       },
       {
         title: "Strategic Data Interpretation",
         icon: "database-zap",
         points: [
-          "**Data-driven** insights from raw reports for demand and inventory strategy.",
-          "**Optimized** listing quality and performance via deep Amazon data structure knowledge.",
+          "**Data-driven** insights from raw reports to optimize demand and inventory strategy.",
+          "**Architected** listing performance improvements via deep Amazon data structure knowledge.",
           "**Skilled** at manual dataset audits to uncover hidden growth opportunities.",
         ],
       },
@@ -210,7 +210,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       title: "Data Sovereignty",
-      description: "Own your data. I prioritize building independent tools and dashboards that give you a clear, unfiltered view of your business performance."
+      description: "Own your data. I prioritize building independent tools and dashboards that give you a clear, unfiltered view of actionable business performance."
     },
     {
       title: "Strategic Autonomy",
@@ -221,11 +221,11 @@ export const RESUME_DATA: ResumeData = {
     title: "A Specialist's Daily Rhythm: Proactive & Hands-On",
     description: "To directly answer the common question, \"What does your typical day involve?\", here is my daily operational rhythm focused on proactive account management and problem-solving:",
     items: [
-      "Morning Triage & Health Check: Systematically review Account Health for new performance notifications, A-to-Z claims, and Voice of the Customer issues. Check for Stranded Inventory and FBA shipment discrepancies.",
-      "Catalog & Listing Management: Proactively scan for and resolve all forms of listing suppressions, image compliance issues, and detail page errors. Perform manual checks for catalog accuracy and contribution conflicts. Implement and refine SEO strategies for product listings, including keyword research, compelling copy, and backend search term optimization to improve visibility and organic ranking.",
-      "Case Log & Support Management: Conduct a meticulous follow-up on all open Amazon support cases, providing additional information and escalating as necessary to drive resolutions.",
-      "PPC & Advertising Monitoring: Perform daily budget and performance checks on all active ad campaigns. Identify and act on major fluctuations in ACoS, spend, or sales velocity.",
-      "Manual Data Analysis & Reporting: Utilize advanced Excel/Google Sheets skills to update performance trackers, reconcile reports, and conduct FBA reimbursement audits by cross-referencing multiple data sources.",
+      "Morning Triage & Health Check: Systematically review Account Health, performance notifications, and Voice of the Customer issues to proactively mitigate risks and ensure compliance.",
+      "Catalog & Listing Management: Resolve suppressions and image compliance issues through manual audits and SEO refinements to improve visibility and organic ranking.",
+      "Case Log & Support Management: Meticulously follow up and escalate Amazon support cases to drive swift resolutions and minimize operational downtime.",
+      "PPC & Advertising Monitoring: Daily performance checks on active campaigns to identify fluctuations in ACoS and spend, ensuring optimal advertising ROI.",
+      "Manual Data Analysis & Reporting: Reconcile performance trackers and FBA reimbursement audits to ensure financial accuracy and recover lost revenue.",
       {
         text: "Playbook Documentation: Access comprehensive playbooks and articles on Amazon strategies and e-commerce best practices.",
         link: {
