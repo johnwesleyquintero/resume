@@ -113,11 +113,17 @@ const WesJobAI = () => {
               <ArrowLeft className="w-5 h-5 text-gray-600 dark:text-gray-300" />
             </Link>
             <div>
-              <h1 className="text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
-                <Bot className="w-6 h-6 text-blue-600" />
-                WesJobAI <span className="text-xs font-normal px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full">v5.0</span>
-              </h1>
-              <p className="text-xs text-gray-500 dark:text-gray-400">The Generalist Codex AI Agent</p>
+              <div className="flex items-center gap-2">
+                <h1 className="text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                  <Bot className="w-6 h-6 text-blue-600" />
+                  WesJobAI <span className="text-xs font-normal px-2 py-0.5 bg-blue-100 text-blue-700 rounded-full">v5.0</span>
+                </h1>
+                <div className="hidden sm:flex items-center gap-1.5 px-2 py-0.5 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold uppercase tracking-wider rounded border border-green-200 dark:border-green-800">
+                  <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
+                  Systems Architect Mode
+                </div>
+              </div>
+              <p className="text-xs text-gray-500 dark:text-gray-400">Strategic Partner to John Wesley Quintero</p>
             </div>
           </div>
           <div className="flex items-center gap-2">
@@ -129,7 +135,7 @@ const WesJobAI = () => {
             </button>
             <button 
               onClick={clearChat}
-              className="p-2 hover:bg-red-50 text-red-500 rounded-full transition-colors"
+              className="p-2 hover:bg-red-50 dark:hover:bg-red-900/20 text-red-500 rounded-full transition-colors"
               title="Clear Chat"
             >
               <Trash2 className="w-5 h-5" />
@@ -166,7 +172,7 @@ const WesJobAI = () => {
                 </button>
                 {localStorage.getItem('GEMINI_API_KEY') && (
                   <button 
-                    type="button"
+                    type="button" 
                     onClick={() => setShowApiKeyInput(false)}
                     className="px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
@@ -186,27 +192,76 @@ const WesJobAI = () => {
           className="flex-1 overflow-y-auto space-y-6 pr-2 scrollbar-thin scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700"
         >
           {messages.length === 0 && (
-            <div className="flex flex-col items-center justify-center h-full text-center space-y-4 animate-fadeIn">
-              <div className="w-20 h-20 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
-                <Bot className="w-10 h-10 text-blue-600" />
+            <div className="flex flex-col items-center justify-center min-h-full py-10 text-center space-y-8 animate-fadeIn">
+              <div className="space-y-4">
+                <div className="w-20 h-20 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto">
+                  <Bot className="w-10 h-10 text-blue-600" />
+                </div>
+                <div className="max-w-md mx-auto">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Hello Brother! I'm WesJobAI.</h3>
+                  <p className="text-gray-600 dark:text-gray-400 mt-2">
+                    I'm the strategic extension of John Wesley. I'm trained on his "Build the System" philosophy and technical architecture.
+                  </p>
+                </div>
               </div>
-              <div className="max-w-md">
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white">Hello Brother! I'm WesJobAI.</h3>
-                <p className="text-gray-600 dark:text-gray-400 mt-2">
-                  I'm your personal career agent, built on the Generalist Codex. How can I help you with your applications or systems strategy today?
-                </p>
+
+              {/* Recruiter Toolbox */}
+              <div className="w-full max-w-2xl space-y-4">
+                <div className="flex items-center gap-2 px-4">
+                  <div className="h-px flex-1 bg-gray-200 dark:bg-gray-700"></div>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Recruiter Toolbox</span>
+                  <div className="h-px flex-1 bg-gray-200 dark:bg-gray-700"></div>
+                </div>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    {
+                      label: "Ask about WesBI",
+                      desc: "The Inventory Intelligence Cockpit",
+                      prompt: "Tell me about WesBI. How did it improve inventory planning by 30%?"
+                    },
+                    {
+                      label: "Buy Box Master",
+                      desc: "The Pricing Intelligence System",
+                      prompt: "How does the Buy Box Master tool help dominate Amazon sales?"
+                    },
+                    {
+                      label: "Systems Philosophy",
+                      desc: "The 'Build the System' approach",
+                      prompt: "Explain your 'Build the System' philosophy and how it prevents recurring problems."
+                    },
+                    {
+                      label: "Draft Materials",
+                      desc: "Create a tailored asset",
+                      prompt: "Help me draft a cover letter based on John's 6+ years of Amazon experience."
+                    }
+                  ].map((item, i) => (
+                    <button 
+                      key={i}
+                      onClick={() => {
+                        setInput(item.prompt);
+                        // Optional: trigger send immediately if we want
+                      }}
+                      className="group p-4 text-left bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-md transition-all flex flex-col gap-1"
+                    >
+                      <span className="text-sm font-bold text-gray-900 dark:text-white group-hover:text-blue-600 transition-colors">{item.label}</span>
+                      <span className="text-xs text-gray-500 dark:text-gray-400">{item.desc}</span>
+                    </button>
+                  ))}
+                </div>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-w-lg mt-8">
+
+              <div className="flex flex-wrap justify-center gap-2">
                 {[
-                  "Help me draft a cover letter for an Amazon Ops role.",
-                  "Analyze this job description for systemic gaps.",
-                  "Explain my 'Build the System' philosophy.",
-                  "Prepare me for a Tier 1 interview."
+                  "Tier 1 Interview Prep",
+                  "Analyze Systemic Gaps",
+                  "Recovering $50k+ Revenue",
+                  "Amazon SP-API Integration"
                 ].map((suggestion, i) => (
                   <button 
                     key={i}
                     onClick={() => setInput(suggestion)}
-                    className="p-3 text-left text-sm bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl hover:border-blue-500 dark:hover:border-blue-500 transition-all shadow-sm group"
+                    className="px-3 py-1.5 text-xs bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:text-blue-600 transition-all border border-transparent hover:border-blue-200"
                   >
                     {suggestion}
                   </button>
