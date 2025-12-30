@@ -1,30 +1,38 @@
-import { Wrench } from 'lucide-react';
-import { RESUME_DATA } from '../../data/resumeData';
+import { Wrench } from 'lucide-react'
+import { RESUME_DATA } from '../../data/resumeData'
 
 export const SkillsSection = () => {
   return (
     <section aria-labelledby="skills-heading" className="animate-fadeIn [animation-delay:820ms]">
-      <h2 id="skills-heading" className="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 border-b-2 border-blue-200 dark:border-gray-700 pb-2 flex items-center gap-2">
-        <Wrench className="w-5 h-5" />
+      <h2
+        id="skills-heading"
+        className="mb-4 flex items-center gap-2 border-b-2 border-blue-200 pb-2 text-xl font-bold text-blue-600 dark:border-gray-700 dark:text-blue-400"
+      >
+        <Wrench className="h-5 w-5" />
         Technical Skillset
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {RESUME_DATA.skills.map((skillGroup: { category: string; items: string[] }, idx: number) => (
-          <div key={idx} className="space-y-4">
-            <h3 className="font-bold text-gray-900 dark:text-white text-sm uppercase tracking-wider flex items-center gap-2">
-              <span className="w-1 h-4 bg-blue-500 rounded-full" />
-              {skillGroup.category}
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {skillGroup.items.map((skill: string, sIdx: number) => (
-                <span key={sIdx} className="px-3 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-xs font-medium rounded-full hover:border-blue-400 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:border-blue-400 transition-all cursor-default shadow-sm">
-                  {skill}
-                </span>
-              ))}
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {RESUME_DATA.skills.map(
+          (skillGroup: { category: string; items: string[] }, idx: number) => (
+            <div key={idx} className="space-y-4">
+              <h3 className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white">
+                <span className="h-4 w-1 rounded-full bg-blue-500" />
+                {skillGroup.category}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {skillGroup.items.map((skill: string, sIdx: number) => (
+                  <span
+                    key={sIdx}
+                    className="cursor-default rounded-full border border-gray-200 bg-white px-3 py-1 text-xs font-medium text-gray-700 shadow-sm transition-all hover:border-blue-400 hover:text-blue-600 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:border-blue-400"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ),
+        )}
       </div>
     </section>
-  );
-};
+  )
+}

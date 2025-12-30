@@ -1,25 +1,25 @@
-import React from 'react';
+import React from 'react'
 
 interface WesAILogoProps {
-  className?: string;
-  width?: number | string;
-  height?: number | string;
-  variant?: 'full' | 'icon';
+  className?: string
+  width?: number | string
+  height?: number | string
+  variant?: 'full' | 'icon'
 }
 
-export const WesAILogo: React.FC<WesAILogoProps> = ({ 
-  className = "", 
-  width, 
+export const WesAILogo: React.FC<WesAILogoProps> = ({
+  className = '',
+  width,
   height,
-  variant = 'full'
+  variant = 'full',
 }) => {
   if (variant === 'icon') {
     return (
-      <svg 
-        width={width || 32} 
-        height={height || 32} 
-        viewBox="0 0 32 32" 
-        fill="none" 
+      <svg
+        width={width || 32}
+        height={height || 32}
+        viewBox="0 0 32 32"
+        fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className={className}
       >
@@ -30,48 +30,48 @@ export const WesAILogo: React.FC<WesAILogoProps> = ({
             <stop offset="100%" stopColor="var(--logo-end)" />
           </linearGradient>
         </defs>
-        
+
         {/* Background Circle - Adaptive to theme via CSS */}
-        <circle 
-          cx="16" 
-          cy="16" 
-          r="15" 
-          className="fill-white dark:fill-wes-secondary transition-colors" 
-          stroke="url(#favicon-gradient)" 
+        <circle
+          cx="16"
+          cy="16"
+          r="15"
+          className="fill-white transition-colors dark:fill-wes-secondary"
+          stroke="url(#favicon-gradient)"
           strokeWidth="1.5"
         />
-        
+
         {/* AI Brain Icon */}
-        <path 
-          d="M12 10C12 9.44772 12.4477 9 13 9H19C19.5523 9 20 9.44772 20 10V14C20 14.5523 19.5523 15 19 15H13C12.4477 15 12 14.5523 12 14V10Z" 
-          fill="url(#favicon-gradient)" 
+        <path
+          d="M12 10C12 9.44772 12.4477 9 13 9H19C19.5523 9 20 9.44772 20 10V14C20 14.5523 19.5523 15 19 15H13C12.4477 15 12 14.5523 12 14V10Z"
+          fill="url(#favicon-gradient)"
           opacity="1"
         />
-        
+
         {/* Neural Nodes */}
-        <circle cx="10" cy="20" r="1.5" fill="url(#favicon-gradient)" opacity="0.8"/>
-        <circle cx="16" cy="20" r="2" fill="url(#favicon-gradient)"/>
-        <circle cx="22" cy="20" r="1.5" fill="url(#favicon-gradient)" opacity="0.8"/>
-        
+        <circle cx="10" cy="20" r="1.5" fill="url(#favicon-gradient)" opacity="0.8" />
+        <circle cx="16" cy="20" r="2" fill="url(#favicon-gradient)" />
+        <circle cx="22" cy="20" r="1.5" fill="url(#favicon-gradient)" opacity="0.8" />
+
         {/* Connections */}
-        <path 
-          d="M11.5 20H14.5M17.5 20H20.5" 
-          stroke="url(#favicon-gradient)" 
-          strokeWidth="1.2" 
-          strokeLinecap="round" 
+        <path
+          d="M11.5 20H14.5M17.5 20H20.5"
+          stroke="url(#favicon-gradient)"
+          strokeWidth="1.2"
+          strokeLinecap="round"
           opacity="0.9"
         />
       </svg>
-    );
+    )
   }
 
   // Full Logo variant (Header)
   return (
-    <svg 
-      width={width || 120} 
-      height={height || 40} 
-      viewBox="0 0 120 40" 
-      fill="none" 
+    <svg
+      width={width || 120}
+      height={height || 40}
+      viewBox="0 0 120 40"
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
@@ -82,39 +82,39 @@ export const WesAILogo: React.FC<WesAILogoProps> = ({
           <stop offset="100%" stopColor="var(--logo-end)" />
         </linearGradient>
       </defs>
-      
+
       {/* AI Brain Icon */}
-      <path 
-        d="M15 8C15 6.89543 15.8954 6 17 6H23C24.1046 6 25 6.89543 25 8V12C25 13.1046 24.1046 14 23 14H17C15.8954 14 15 13.1046 15 12V8Z" 
-        fill="url(#wesai-gradient)" 
+      <path
+        d="M15 8C15 6.89543 15.8954 6 17 6H23C24.1046 6 25 6.89543 25 8V12C25 13.1046 24.1046 14 23 14H17C15.8954 14 15 13.1046 15 12V8Z"
+        fill="url(#wesai-gradient)"
         opacity="1"
       />
-      
+
       {/* Neural Network Nodes */}
-      <circle cx="12" cy="20" r="2" fill="url(#wesai-gradient)" opacity="0.8"/>
-      <circle cx="20" cy="20" r="3" fill="url(#wesai-gradient)"/>
-      <circle cx="28" cy="20" r="2" fill="url(#wesai-gradient)" opacity="0.8"/>
-      
+      <circle cx="12" cy="20" r="2" fill="url(#wesai-gradient)" opacity="0.8" />
+      <circle cx="20" cy="20" r="3" fill="url(#wesai-gradient)" />
+      <circle cx="28" cy="20" r="2" fill="url(#wesai-gradient)" opacity="0.8" />
+
       {/* Connecting Lines */}
-      <path 
-        d="M14 20H18M22 20H26" 
-        stroke="url(#wesai-gradient)" 
-        strokeWidth="1.8" 
-        strokeLinecap="round" 
+      <path
+        d="M14 20H18M22 20H26"
+        stroke="url(#wesai-gradient)"
+        strokeWidth="1.8"
+        strokeLinecap="round"
         opacity="0.9"
       />
-      
+
       {/* Text: WesAI */}
-      <text 
-        x="35" 
-        y="25" 
-        fontFamily="system-ui, -apple-system, sans-serif" 
-        fontSize="24" 
-        fontWeight="800" 
+      <text
+        x="35"
+        y="25"
+        fontFamily="system-ui, -apple-system, sans-serif"
+        fontSize="24"
+        fontWeight="800"
         fill="url(#wesai-gradient)"
       >
         WesAI
       </text>
     </svg>
-  );
-};
+  )
+}

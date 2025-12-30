@@ -1,162 +1,190 @@
-import { useState } from 'react';
-import { GoogleGenerativeAI } from '@google/generative-ai';
-import { GEMINI_MODEL } from '../constants';
-import { WES_JOB_AI_SYSTEM_INSTRUCTION, WES_JOB_AI_KNOWLEDGE_BASE } from '../ai-agent';
-import toast from 'react-hot-toast';
+import { useState } from 'react'
+import { GoogleGenerativeAI } from '@google/generative-ai'
+import { GEMINI_MODEL } from '../constants'
+import { WES_JOB_AI_SYSTEM_INSTRUCTION, WES_JOB_AI_KNOWLEDGE_BASE } from '../ai-agent'
+import toast from 'react-hot-toast'
+
+export interface GroundingChunk {
+  web?: {
+    uri: string
+    title?: string
+  }
+}
+
+export interface GroundingMetadata {
+  groundingChunks?: GroundingChunk[]
+  searchEntryPoint?: {
+    renderedContent?: string
+  }
+}
 
 export interface Message {
-  role: 'user' | 'model';
-  content: string;
-  image?: string; // base64 string
-  isError?: boolean;
-  groundingMetadata?: any;
+  role: 'user' | 'model'
+  content: string
+  image?: string // base64 string
+  isError?: boolean
+  groundingMetadata?: GroundingMetadata
 }
 
 export const useGemini = () => {
-  const [messages, setMessages] = useState<Message[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [messages, setMessages] = useState<Message[]>([])
+  const [isLoading, setIsLoading] = useState(false)
   const [apiKey, setApiKey] = useState(
-    localStorage.getItem('GEMINI_API_KEY') || 
-    import.meta.env.VITE_GEMINI_API_KEY || 
-    ''
-  );
-  const [showApiKeyInput, setShowApiKeyInput] = useState(!apiKey && !import.meta.env.VITE_GEMINI_API_KEY);
-  const MAX_RETRIES = 2;
+    localStorage.getItem('GEMINI_API_KEY') || import.meta.env.VITE_GEMINI_API_KEY || '',
+  )
+  const [showApiKeyInput, setShowApiKeyInput] = useState(
+    !apiKey && !import.meta.env.VITE_GEMINI_API_KEY,
+  )
+  const MAX_RETRIES = 2
 
   const saveApiKey = (newKey: string) => {
     if (newKey.trim()) {
-      localStorage.setItem('GEMINI_API_KEY', newKey);
-      setApiKey(newKey);
-      setShowApiKeyInput(false);
-      toast.success('API Key saved successfully!');
-      return true;
+      localStorage.setItem('GEMINI_API_KEY', newKey)
+      setApiKey(newKey)
+      setShowApiKeyInput(false)
+      toast.success('API Key saved successfully!')
+      return true
     } else {
-      toast.error('Please enter a valid API Key');
-      return false;
+      toast.error('Please enter a valid API Key')
+      return false
     }
-  };
+  }
 
   const clearChat = () => {
-    setMessages([]);
-    toast.success('Chat cleared');
-  };
+    setMessages([])
+    toast.success('Chat cleared')
+  }
 
   const sendMessage = async (input: string, image: string | null = null, isRetry = false) => {
-    if ((!input.trim() && !image && !isRetry) || isLoading || !apiKey) return;
+    if ((!input.trim() && !image && !isRetry) || isLoading || !apiKey) return
 
-    let currentInput = input;
-    let currentImage = image;
+    let currentInput = input
+    let currentImage = image
 
     if (!isRetry) {
-      const userMessage: Message = { 
-        role: 'user', 
+      const userMessage: Message = {
+        role: 'user',
         content: input,
-        image: image || undefined 
-      };
-      setMessages(prev => [...prev, userMessage]);
+        image: image || undefined,
+      }
+      setMessages((prev) => [...prev, userMessage])
     } else {
-      const lastUserMessage = [...messages].reverse().find(m => m.role === 'user');
+      const lastUserMessage = [...messages].reverse().find((m) => m.role === 'user')
       if (lastUserMessage) {
-        currentInput = lastUserMessage.content;
-        currentImage = lastUserMessage.image || null;
+        currentInput = lastUserMessage.content
+        currentImage = lastUserMessage.image || null
       }
       // Remove the previous error message if retrying
-      setMessages(prev => {
-        const newMessages = [...prev];
+      setMessages((prev) => {
+        const newMessages = [...prev]
         if (newMessages.length > 0 && newMessages[newMessages.length - 1].isError) {
-          newMessages.pop();
+          newMessages.pop()
         }
-        return newMessages;
-      });
+        return newMessages
+      })
     }
 
-    setIsLoading(true);
-    
-    const attemptCall = async (retryAttempt = 0): Promise<{ text: string; metadata?: any }> => {
+    setIsLoading(true)
+
+    const attemptCall = async (
+      retryAttempt = 0,
+    ): Promise<{ text: string; metadata?: GroundingMetadata }> => {
       try {
-        const genAI = new GoogleGenerativeAI(apiKey);
-        const model = genAI.getGenerativeModel({ 
-          model: GEMINI_MODEL, 
+        const genAI = new GoogleGenerativeAI(apiKey)
+        const model = genAI.getGenerativeModel({
+          model: GEMINI_MODEL,
           systemInstruction: `${WES_JOB_AI_SYSTEM_INSTRUCTION}\n\n${WES_JOB_AI_KNOWLEDGE_BASE}`,
           tools: [
             {
-              // @ts-ignore
+              // @ts-expect-error googleSearch is not yet in the official types
               googleSearch: {},
             },
           ],
-        });
+        })
 
         // Prepare history for chat
         const history = messages
-          .filter(m => !m.isError)
-          .map(m => ({
+          .filter((m) => !m.isError)
+          .map((m) => ({
             role: m.role,
             parts: [{ text: m.content }],
-          }));
+          }))
 
-        let result;
+        let result
         if (currentImage) {
-          const base64Data = currentImage.split(',')[1];
-          const mimeType = currentImage.split(';')[0].split(':')[1] || 'image/jpeg';
-          
-          const chat = model.startChat({ history });
+          const base64Data = currentImage.split(',')[1]
+          const mimeType = currentImage.split(';')[0].split(':')[1] || 'image/jpeg'
+
+          const chat = model.startChat({ history })
           result = await chat.sendMessage([
             { text: currentInput },
             {
               inlineData: {
                 data: base64Data,
-                mimeType: mimeType
-              }
-            }
-          ]);
+                mimeType: mimeType,
+              },
+            },
+          ])
         } else {
-          const chat = model.startChat({ history });
-          result = await chat.sendMessage(currentInput);
+          const chat = model.startChat({ history })
+          result = await chat.sendMessage(currentInput)
         }
 
-        const response = await result.response;
+        const response = await result.response
         return {
           text: response.text(),
-          metadata: response.candidates?.[0]?.groundingMetadata
-        };
-      } catch (error: any) {
-        if (retryAttempt < MAX_RETRIES && !error.message?.includes('401') && !error.message?.includes('API_KEY_INVALID')) {
-          const delay = Math.pow(2, retryAttempt) * 1000;
-          await new Promise(resolve => setTimeout(resolve, delay));
-          return attemptCall(retryAttempt + 1);
+          metadata: response.candidates?.[0]?.groundingMetadata as GroundingMetadata,
         }
-        throw error;
+      } catch (error: unknown) {
+        const err = error as { message?: string }
+        if (
+          retryAttempt < MAX_RETRIES &&
+          !err.message?.includes('401') &&
+          !err.message?.includes('API_KEY_INVALID')
+        ) {
+          const delay = Math.pow(2, retryAttempt) * 1000
+          await new Promise((resolve) => setTimeout(resolve, delay))
+          return attemptCall(retryAttempt + 1)
+        }
+        throw error
       }
-    };
+    }
 
     try {
-      const { text, metadata } = await attemptCall();
-      setMessages(prev => [...prev, { role: 'model', content: text, groundingMetadata: metadata }]);
-    } catch (error: any) {
-      console.error('Error calling Gemini:', error);
-      let errorMessage = 'Something went wrong. Please check your API key.';
-      
-      if (error.message?.includes('401') || error.message?.includes('API_KEY_INVALID')) {
-        errorMessage = 'Invalid API Key. Please update it in settings.';
-        setShowApiKeyInput(true);
-      } else if (error.message?.includes('429')) {
-        errorMessage = 'Rate limit exceeded. Please wait a moment.';
-      } else if (error.message?.includes('404')) {
-        errorMessage = 'Model not found or API version mismatch.';
-      } else if (error.message?.includes('fetch')) {
-        errorMessage = 'Network error. Please check your internet connection.';
+      const { text, metadata } = await attemptCall()
+      setMessages((prev) => [
+        ...prev,
+        { role: 'model', content: text, groundingMetadata: metadata },
+      ])
+    } catch (error: unknown) {
+      console.error('Error calling Gemini:', error)
+      const err = error as { message?: string }
+      let errorMessage = 'Something went wrong. Please check your API key.'
+
+      if (err.message?.includes('401') || err.message?.includes('API_KEY_INVALID')) {
+        errorMessage = 'Invalid API Key. Please update it in settings.'
+        setShowApiKeyInput(true)
+      } else if (err.message?.includes('429')) {
+        errorMessage = 'Rate limit exceeded. Please wait a moment.'
+      } else if (err.message?.includes('404')) {
+        errorMessage = 'Model not found or API version mismatch.'
+      } else if (err.message?.includes('fetch')) {
+        errorMessage = 'Network error. Please check your internet connection.'
       }
 
-      toast.error(errorMessage);
-      setMessages(prev => [...prev, { 
-        role: 'model', 
-        content: errorMessage,
-        isError: true
-      }]);
+      toast.error(errorMessage)
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: 'model',
+          content: errorMessage,
+          isError: true,
+        },
+      ])
     } finally {
-      setIsLoading(false);
+      setIsLoading(false)
     }
-  };
+  }
 
   return {
     messages,
@@ -167,6 +195,6 @@ export const useGemini = () => {
     setShowApiKeyInput,
     saveApiKey,
     clearChat,
-    sendMessage
-  };
-};
+    sendMessage,
+  }
+}

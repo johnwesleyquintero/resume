@@ -30,7 +30,7 @@
   }
 
   * {
-    @apply transition-colors duration-300 border-[var(--border-main)];
+    @apply border-[var(--border-main)] transition-colors duration-300;
   }
 }
 
@@ -53,10 +53,10 @@
   .no-print {
     display: none !important;
   }
-  a[href^="http"]::after {
+  a[href^='http']::after {
     content: '';
   }
-  a[href^="mailto"]::after {
+  a[href^='mailto']::after {
     content: '';
   }
 }

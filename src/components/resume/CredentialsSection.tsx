@@ -1,67 +1,80 @@
-import { GraduationCap, Award, Languages, ExternalLink } from 'lucide-react';
-import { RESUME_DATA } from '../../data/resumeData';
+import { GraduationCap, Award, Languages, ExternalLink } from 'lucide-react'
+import { RESUME_DATA } from '../../data/resumeData'
 
 export const CredentialsSection = () => {
   return (
-    <section aria-labelledby="credentials-heading" className="animate-fadeIn [animation-delay:850ms]">
-      <h2 id="credentials-heading" className="text-xl font-bold mb-6 text-blue-600 dark:text-blue-400 border-b-2 border-blue-200 dark:border-gray-700 pb-2 flex items-center gap-2">
-        <GraduationCap className="w-5 h-5" />
+    <section
+      aria-labelledby="credentials-heading"
+      className="animate-fadeIn [animation-delay:850ms]"
+    >
+      <h2
+        id="credentials-heading"
+        className="mb-6 flex items-center gap-2 border-b-2 border-blue-200 pb-2 text-xl font-bold text-blue-600 dark:border-gray-700 dark:text-blue-400"
+      >
+        <GraduationCap className="h-5 w-5" />
         Education & Credentials
       </h2>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {/* Education & Certifications */}
         <div className="space-y-6">
           <div className="space-y-4">
-            <h3 className="font-bold text-gray-900 dark:text-white text-sm uppercase tracking-wider flex items-center gap-2">
-              <span className="w-1 h-4 bg-blue-500 rounded-full" />
+            <h3 className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white">
+              <span className="h-4 w-1 rounded-full bg-blue-500" />
               Education
             </h3>
             {RESUME_DATA.education.map((edu, idx) => (
-              <div key={idx} className="border-l-2 border-gray-100 dark:border-gray-800 pl-4 py-1">
-                <h4 className="font-bold text-gray-900 dark:text-white text-sm">{edu.degree}</h4>
+              <div key={idx} className="border-l-2 border-gray-100 py-1 pl-4 dark:border-gray-800">
+                <h4 className="text-sm font-bold text-gray-900 dark:text-white">{edu.degree}</h4>
                 {edu.url ? (
-                  <a 
-                    href={edu.url} 
-                    target="_blank" 
+                  <a
+                    href={edu.url}
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs text-blue-600 dark:text-blue-400 font-medium hover:underline flex items-center gap-1 w-fit"
+                    className="flex w-fit items-center gap-1 text-xs font-medium text-blue-600 hover:underline dark:text-blue-400"
                   >
                     {edu.school}
-                    <ExternalLink className="w-2.5 h-2.5" />
+                    <ExternalLink className="h-2.5 w-2.5" />
                   </a>
                 ) : (
-                  <p className="text-xs text-blue-600 dark:text-blue-400 font-medium">{edu.school}</p>
+                  <p className="text-xs font-medium text-blue-600 dark:text-blue-400">
+                    {edu.school}
+                  </p>
                 )}
-                <p className="text-[10px] text-gray-500 dark:text-gray-500 mt-0.5">{edu.period}</p>
+                <p className="mt-0.5 text-[10px] text-gray-500 dark:text-gray-500">{edu.period}</p>
                 {edu.details && (
-                  <p className="text-xs text-gray-600 dark:text-gray-400 mt-2 italic">{edu.details}</p>
+                  <p className="mt-2 text-xs italic text-gray-600 dark:text-gray-400">
+                    {edu.details}
+                  </p>
                 )}
               </div>
             ))}
           </div>
 
           <div className="space-y-4">
-            <h3 className="font-bold text-gray-900 dark:text-white text-sm uppercase tracking-wider flex items-center gap-2">
-              <span className="w-1 h-4 bg-blue-500 rounded-full" />
+            <h3 className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white">
+              <span className="h-4 w-1 rounded-full bg-blue-500" />
               Certifications
             </h3>
             <div className="grid grid-cols-1 gap-2">
               {RESUME_DATA.certifications.map((cert, idx) => (
-                <div key={idx} className="flex items-center gap-2 text-xs text-gray-700 dark:text-gray-300">
-                  <Award className="w-3 h-3 text-blue-500 flex-shrink-0" />
+                <div
+                  key={idx}
+                  className="flex items-center gap-2 text-xs text-gray-700 dark:text-gray-300"
+                >
+                  <Award className="h-3 w-3 flex-shrink-0 text-blue-500" />
                   <span>{cert}</span>
                 </div>
               ))}
               {RESUME_DATA.links.certifications && (
-                <a 
+                <a
                   href={RESUME_DATA.links.certifications}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 flex items-center gap-1.5 text-xs text-blue-600 dark:text-blue-400 hover:underline font-medium group w-fit"
+                  className="group mt-2 flex w-fit items-center gap-1.5 text-xs font-medium text-blue-600 hover:underline dark:text-blue-400"
                 >
                   <span>View All LinkedIn Certifications</span>
-                  <Award className="w-3 h-3 transition-transform group-hover:scale-110" />
+                  <Award className="h-3 w-3 transition-transform group-hover:scale-110" />
                 </a>
               )}
             </div>
@@ -70,18 +83,23 @@ export const CredentialsSection = () => {
 
         {/* Languages */}
         <div className="space-y-4">
-          <h3 className="font-bold text-gray-900 dark:text-white text-sm uppercase tracking-wider flex items-center gap-2">
-            <span className="w-1 h-4 bg-blue-500 rounded-full" />
+          <h3 className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-gray-900 dark:text-white">
+            <span className="h-4 w-1 rounded-full bg-blue-500" />
             Languages
           </h3>
           <div className="flex flex-wrap gap-3">
             {RESUME_DATA.languages.map((lang, idx) => (
-              <div key={idx} className="flex flex-col gap-1 p-3 bg-gray-50 dark:bg-zinc-900 rounded-xl border border-gray-100 dark:border-zinc-800 flex-1 min-w-[120px]">
+              <div
+                key={idx}
+                className="flex min-w-[120px] flex-1 flex-col gap-1 rounded-xl border border-gray-100 bg-gray-50 p-3 dark:border-zinc-800 dark:bg-zinc-900"
+              >
                 <div className="flex items-center gap-2">
-                  <Languages className="w-3 h-3 text-blue-500" />
-                  <span className="text-xs font-bold text-gray-900 dark:text-white">{lang.split(' (')[0]}</span>
+                  <Languages className="h-3 w-3 text-blue-500" />
+                  <span className="text-xs font-bold text-gray-900 dark:text-white">
+                    {lang.split(' (')[0]}
+                  </span>
                 </div>
-                <span className="text-[10px] text-gray-500 dark:text-gray-400 font-medium">
+                <span className="text-[10px] font-medium text-gray-500 dark:text-gray-400">
                   {lang.includes('(') ? lang.split('(')[1].replace(')', '') : 'Professional'}
                 </span>
               </div>
@@ -90,5 +108,5 @@ export const CredentialsSection = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

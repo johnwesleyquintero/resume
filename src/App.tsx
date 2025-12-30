@@ -1,8 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Resume from './pages/Resume';
-import WesJobAI from './pages/WesJobAI';
-import { Toaster } from 'react-hot-toast';
-import ErrorBoundary from './components/ErrorBoundary';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Resume from './pages/Resume'
+import WesJobAI from './pages/WesJobAI'
+import { Toaster } from 'react-hot-toast'
+import ErrorBoundary from './components/ErrorBoundary'
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
         </Routes>
       </Router>
     </ErrorBoundary>
-  );
-};
+  )
+}
 
-export default App;
+export default App
