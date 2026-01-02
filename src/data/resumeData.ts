@@ -116,6 +116,20 @@ export const RESUME_DATA: ResumeData = {
         'Developing operational playbooks to help streamline team onboarding and daily tasks.',
         'Monitoring account health daily to ensure compliance and minimize issues.',
         {
+          text: 'Created pre-interview strategic case studies for SpeedTalk and SecuLife, which were instrumental in securing my current role at VAXPH.',
+          link: {
+            text: 'View SpeedTalk Case Study',
+            url: 'https://case-study-speedtalk-mobile.netlify.app/',
+          },
+        },
+        {
+          text: 'Strategic Analysis: SecuLife Growth Plan',
+          link: {
+            text: 'View SecuLife Case Study',
+            url: 'https://case-study-seculife.netlify.app/',
+          },
+        },
+        {
           text: 'Developed Operation Citadel: A GitHub documentation repository created to serve as a reliable reference for product listings and operational playbooks.',
           link: {
             text: 'View Documentation',
@@ -123,14 +137,14 @@ export const RESUME_DATA: ResumeData = {
           },
         },
         {
-          text: 'Built WesBI Cockpit to assist with inventory forecasting, helping to reduce stock-outs and improve capital management.',
+          text: 'Built WesBI Cockpit as my daily "mission control" for inventory forecasting, helping to ensure consistent stock levels and improve capital management.',
           link: {
             text: 'View WesBI',
             url: 'https://wes-bi.vercel.app/',
           },
         },
         {
-          text: 'Created Buy Box Master to monitor pricing gaps and help maintain competitive positioning on Amazon.',
+          text: 'Created Buy Box Master, an essential daily tool used to monitor pricing gaps and help maintain competitive positioning on Amazon.',
           link: {
             text: 'View Buy Box Master',
             url: 'https://buy-box-master.vercel.app/',
