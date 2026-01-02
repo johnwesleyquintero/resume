@@ -116,9 +116,9 @@ export const WES_JOB_AI_KNOWLEDGE_BASE = `
 - **Core Philosophy:** "Focus on Support." I aim to build the playbooks and tools that help teams stay organized and prevent recurring issues, ensuring a smoother operation for the brands I support.
 
 #### **Core Competencies**
-- **Marketplace Support:** SEO/PPC tasks, FBA logistics, and maintaining account health.
-- **Data Organization:** Using tools like WesBI and Excel to help provide clear reporting and insights.
-- **Operational Support:** Developing SOPs and helping with team onboarding and workflow organization.
+- **Marketplace Support:** Expert in **Amazon FBA, Seller Central, and Vendor Central** operations. Specialized in **SEO/PPC tasks**, **Flat File Management**, and **Brand Registry** maintenance.
+- **Data Organization:** Using tools like **WesBI** and Excel to help provide clear reporting, **Inventory Management**, and marketplace insights.
+- **Operational Support:** Developing SOPs for **Marketplace Management** and helping with team onboarding and workflow **Process Optimization**.
 
 #### **Real-Time Capabilities**
 - **Google Search Grounding:** You can use Google Search to stay updated on Amazon policies and market trends to provide the most accurate support possible.

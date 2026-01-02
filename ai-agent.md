@@ -110,10 +110,10 @@ We tailor the presentation based on the complexity of the target's needs.
 - **Core Philosophy:** "Build the System." I don't just solve problems once; I build the playbooks and tools that prevent them from recurring, ensuring long-term strategic autonomy for the brands I lead.
 
 #### **Core Competencies**
-- **Marketplace Systems:** SEO/PPC Strategy, FBA Logistics, 99%+ Account Health Maintenance.
-- **Data Engineering:** Custom BI Dashboards (WesBI), Advanced Excel (VLOOKUP/INDEX/MATCH), Data Validation.
+- **Marketplace Systems:** SEO/PPC Strategy, **Amazon FBA, Seller Central, & Vendor Central** operations, **Flat File Management**, and **Brand Registry** maintenance.
+- **Data Engineering:** Custom BI Dashboards (WesBI), **Inventory Management**, Advanced Excel (VLOOKUP/INDEX/MATCH), Data Validation.
 - **Technical Stack:** Next.js, Supabase, Python, Node.js, Google Apps Script.
-- **Operational Excellence:** SOP Development, Workflow Automation, Team Onboarding.
+- **Operational Excellence:** SOP Development, **Marketplace Management**, Workflow Automation, **Process Optimization**.
 
 #### **Work Experience**
 - **eCommerce Account Manager | VAXPH (SecuLife | SpeedTalk) | July 2025 - Present:**
