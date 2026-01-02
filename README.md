@@ -1,9 +1,9 @@
 # John Wesley Quintero — The Generalist Codex 🚀
 
-Welcome to the digital architecture of my professional journey. This repository isn't just a resume; it's a high-performance, responsive system designed to showcase the intersection of strategic e-commerce operations and technical automation.
+Welcome to the digital foundation of my professional journey. This repository isn't just a resume; it's a high-performance, responsive system designed to showcase the intersection of strategic e-commerce operations and technical automation.
 
 ## 📝 Project Overview
-This is my sovereign digital asset, built to demonstrate my dual expertise as a **Hands-On Amazon & E-commerce Specialist** and a **Systems Architect**. It serves as the central hub for my professional identity, featuring real-time interactive components and a built-in strategic AI advisor.
+This is my sovereign digital asset, built to demonstrate my dual expertise as a **Hands-On Amazon & E-commerce Specialist** and a **Systems Specialist**. It serves as the central hub for my professional identity, featuring real-time interactive components and a built-in strategic AI advisor.
 
 ## ✨ Key Features
 - **WesJobAI Integration**: A built-in, context-aware AI agent (powered by Gemini 2.0) that acts as my "2nd Brain," capable of answering strategic operational questions and assisting with job applications.

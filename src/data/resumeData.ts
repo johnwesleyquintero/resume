@@ -101,9 +101,9 @@ export const RESUME_DATA: ResumeData = {
   languages: ['English (Professional)', 'Tagalog (Native)', 'Cebuano (Native)'],
   summary: {
     quote:
-      'I am committed to identifying operational challenges and developing sustainable processes that help teams work more efficiently and consistently.',
+      'I am committed to identifying operational challenges and developing sustainable processes that help brands scale efficiently on Amazon and other marketplaces.',
     content:
-      'I am a dedicated Amazon & E-commerce Specialist with 6+ years of experience focused on improving profitability by organizing workflows and building reliable operational systems. I enjoy using data-driven tools like WesBI and Buy Box Master to support inventory management and pricing strategies, bridging the gap between planning and daily execution. My goal is to create practical solutions that empower teams and support steady growth.',
+      'I am a Hands-On Amazon & E-commerce Specialist with over 6 years of experience driving growth through operational excellence and data-backed strategies. I specialize in Amazon FBA management, advanced flat file manipulation, and PPC optimization. By bridging the gap between high-level strategy and daily execution, I build reliable systems and custom tools like WesBI to ensure consistent profitability and brand visibility across global marketplaces.',
   },
   experience: [
     {
@@ -212,27 +212,27 @@ export const RESUME_DATA: ResumeData = {
     },
   ],
   uniqueEdge: {
-    title: 'Core Expertise: Process Improvement & Hands-On Support',
+    title: 'Core Expertise: Hands-On Amazon Operations & Process Design',
     description:
-      'I focus on simplifying complex Amazon tasks through platform knowledge and the development of clear, repeatable operational procedures.',
+      'I excel at solving complex marketplace challenges by combining deep platform knowledge with advanced data management and automated workflows.',
     playbookLink: 'https://wescode.vercel.app/blog/flat-file',
     cards: [
       {
-        title: 'Amazon Workflow Support',
+        title: 'Hands-On Amazon Management',
         icon: 'file-spreadsheet',
         points: [
-          '**Proficient** in flat file manipulation for bulk updates and listing corrections.',
-          '**Consistent** approach to account health and case logs for timely resolutions.',
-          '**Experienced** in using advanced Excel (VLOOKUP, INDEX/MATCH) for data validation.',
+          '**Expert** in flat file manipulation for bulk catalog updates, variations, and listing troubleshooting.',
+          '**Proactive** account health monitoring and case log management for rapid issue resolution.',
+          '**Specialized** in Amazon FBA logistics, inventory forecasting, and shipment reconciliation.',
         ],
       },
       {
-        title: 'Data-Driven Insights',
+        title: 'E-commerce Data Specialist',
         icon: 'database-zap',
         points: [
-          '**Supportive** insights from reports to help optimize demand and inventory strategy.',
-          '**Utilized** custom tools like **WesBI** and **Buy Box Master** to help translate data into actionable inventory and pricing plans.',
-          '**Diligent** at manual dataset audits to identify growth opportunities.',
+          '**Developed** custom BI tools like **WesBI** and **Buy Box Master** to automate pricing and inventory tasks.',
+          '**Advanced** Excel & Google Sheets integration for complex data validation and procurement workflows.',
+          '**Strategic** PPC optimization and SEO auditing to maximize organic and paid reach.',
         ],
       },
     ],
@@ -241,28 +241,28 @@ export const RESUME_DATA: ResumeData = {
     {
       category: 'Amazon & E-commerce',
       items: [
-        'Multi-Channel Management (Amazon, eBay, Walmart)',
-        'Marketplace SEO & Listing Optimization',
-        'PPC & Advertising (Amazon Ads)',
-        'FBA Inventory & Logistics',
+        'Advanced Flat File Management',
+        'Amazon SEO & PPC Optimization',
+        'FBA Operations & Inventory Logistics',
+        'Multi-Channel Scaling (eBay, Walmart)',
       ],
     },
     {
-      category: 'Data & Analytics',
+      category: 'Data & Tech Stack',
       items: [
-        'Data Visualization (Tableau, Power BI)',
-        'Seller Central Reporting',
-        'Business Intelligence & Insights (Including custom tool development like WesBI)',
-        'Advanced Excel (VLOOKUP, Pivots)',
+        'E-commerce BI & Custom Tooling',
+        'Data Analysis (Excel, Power BI, Tableau)',
+        'Workflow Automation (Google Apps Script)',
+        'Full-Stack Concepts (React, Node.js)',
       ],
     },
     {
-      category: 'Automation & Development',
+      category: 'Operational Excellence',
       items: [
-        'Custom E-commerce Tooling (Node.js)',
-        'AI/ML Implementation Concepts',
-        'Workflow Automation',
-        'Google Apps Script',
+        'SOP Development & Documentation',
+        'Account Health Compliance',
+        'Brand Registry & Protection',
+        'Supply Chain Management',
       ],
     },
   ],
