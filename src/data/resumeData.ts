@@ -111,7 +111,7 @@ export const RESUME_DATA: ResumeData = {
     quote:
       'I am committed to identifying operational challenges and developing sustainable processes that help brands scale efficiently on Amazon and other marketplaces.',
     content:
-      'I am a Hands-On Amazon & E-commerce Specialist with 6+ years of experience accelerating growth for brands across Amazon and global marketplaces. By leveraging advanced data analysis, SEO/PPC optimization, and custom operational systems, I streamline workflows, boost profitability, and amplify brand visibility. I thrive at the intersection of strategy and execution, turning complex challenges into repeatable, scalable wins and building processes that keep brands ahead of the curve.',
+      'I am a Hands-On Amazon & E-commerce Specialist with 6+ years driving growth across Amazon and global marketplaces. I turn data, workflows, and operational insight into repeatable wins—boosting profitability, streamlining processes, and keeping brands ahead of the curve.',
   },
   experience: [
     {
@@ -121,7 +121,7 @@ export const RESUME_DATA: ResumeData = {
       responsibilities: [
         'Supporting consistent sales growth and brand visibility across Amazon, eBay, and Walmart.',
         'Managing product listing lifecycles while maintaining account health standards.',
-        'Developing operational playbooks to help streamline team onboarding and daily tasks.',
+        'Developing operational View to help streamline team onboarding and daily tasks.',
         'Monitoring account health daily to ensure compliance and minimize issues.',
         {
           text: 'Created pre-interview strategic case studies for SpeedTalk and SecuLife, which were instrumental in securing my current role at VAXPH.',
@@ -138,7 +138,7 @@ export const RESUME_DATA: ResumeData = {
           },
         },
         {
-          text: 'Developed Operation Docs: A GitHub documentation repository created to serve as a reliable reference for product listings and operational playbooks.',
+          text: 'Developed Operation Docs: A GitHub documentation repository created to serve as a reliable reference for product listings and operational View.',
           link: {
             text: 'View Documentation',
             url: 'https://github.com/johnwesleyquintero/listing-documentation',
@@ -308,24 +308,24 @@ export const RESUME_DATA: ResumeData = {
   dailyRhythm: {
     title: 'Daily Focus: Support & Maintenance',
     description:
-      'I manage the day-to-day operations of Amazon accounts with a focus on proactive problem-solving and continuous optimization. My routine balances immediate action and long-term improvement:',
+      'I manage Amazon accounts daily, balancing urgent problem-solving with long-term optimization:',
     items: [
-      'Morning Review & Health Check – Analyze account health, performance alerts, and customer feedback to tackle urgent issues before they escalate.',
-      'Catalog & Listing Optimization – Address suppressions and compliance issues while identifying opportunities to increase visibility and sales.',
-      'Case Management – Resolve Amazon support cases efficiently to minimize downtime and maintain operational continuity.',
-      'PPC & Advertising Monitoring – Track campaigns daily, ensuring efficiency and maximizing ROI.',
-      'Data Analysis & Reporting – Audit FBA performance and reconcile trackers to provide accurate, actionable insights.',
+      'Morning Review: Monitor health and feedback to prevent escalation.',
+      'Catalog & Listing Optimization: Solve suppressions, improve visibility, and boost sales potential.',
+      'Case Management: Resolve support cases efficiently to maintain account continuity.',
+      'PPC & Advertising: Track campaigns to maximize ROI',
+      'Data Analysis & Reporting: Audit performance and reconcile FBA trackers for accuracy.',
       {
-        text: 'Knowledge Base & Tool Maintenance – Keep documentation, dashboards, and operational tools updated so teams can work seamlessly.',
+        text: 'Knowledge Base & Tools: Keep operational systems and documentation up-to-date.',
         link: {
-          text: 'View Operation Docs',
+          text: 'Docs',
           url: 'https://github.com/johnwesleyquintero/listing-documentation',
         },
       },
       {
-        text: 'Continuous Learning & Playbook Updates – Review strategies, update playbooks, and incorporate best practices to drive long-term growth.',
+        text: 'Continuous Learning: Update playbooks and incorporate best practices to drive growth.',
         link: {
-          text: 'Explore Playbooks',
+          text: 'View',
           url: 'https://wescode.vercel.app/blog',
         },
       },
