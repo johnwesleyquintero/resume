@@ -111,7 +111,7 @@ export const RESUME_DATA: ResumeData = {
     quote:
       'I am committed to identifying operational challenges and developing sustainable processes that help brands scale efficiently on **Amazon** and other marketplaces.',
     content:
-      'I am a **Hands-On Amazon & E-commerce Specialist** with 6+ years driving growth across **Amazon** and global marketplaces. I turn data, workflows, and operational insight into repeatable wins—boosting profitability, streamlining processes, and keeping brands ahead of the curve.',
+      'I am a **Hands-On Amazon & E-commerce Specialist** with 6+ years driving growth across **Amazon** and global marketplaces. I bridge the gap between complex marketplace data and operational excellence by balancing **automated workflows** with **precise manual execution**—ensuring every listing is vetted and every process is scalable.',
   },
   experience: [
     {
@@ -119,10 +119,10 @@ export const RESUME_DATA: ResumeData = {
       company: 'VAXPH - Seculife | Speedtalk',
       period: 'July 2025 - Present',
       responsibilities: [
-        'Driving cross-channel growth across **Amazon**, **eBay**, and **Walmart** through data-driven listing optimization and brand visibility strategies.',
-        'Managing end-to-end product lifecycles, utilizing **Advanced Flat Files** for bulk catalog management and troubleshooting.',
-        'Developing automated operational dashboards and **SOPs** to streamline team onboarding and daily workflows.',
-        'Ensuring 100% account health compliance through proactive monitoring of performance metrics and **VOC sentiment**.',
+        'Driving cross-channel growth across **Amazon**, **eBay**, and **Walmart** through hands-on listing optimization and brand visibility strategies.',
+        'Managing end-to-end product lifecycles, utilizing **Advanced Flat Files** for bulk catalog management and manual troubleshooting.',
+        'Developing automated operational dashboards and **SOPs** to streamline team onboarding and manual workflows.',
+        'Ensuring 100% account health compliance through proactive, hands-on monitoring of performance metrics and **VOC sentiment**.',
         {
           text: 'Created pre-interview strategic case studies for SpeedTalk and SecuLife, which were instrumental in securing my current role at VAXPH.',
           link: {
@@ -374,29 +374,29 @@ export const RESUME_DATA: ResumeData = {
   ],
   operatingPrinciples: [
     {
-      title: 'Focus on Systems',
+      title: 'Manual Precision',
       description:
-        'Building and optimizing automated systems to improve team efficiency and simplify complex daily workflows.',
+        'Executing high-stakes tasks manually when precision is paramount, ensuring zero-error catalog updates.',
+    },
+    {
+      title: 'Systems & Logic',
+      description:
+        'Building automated systems to simplify workflows while maintaining hands-on oversight for quality control.',
     },
     {
       title: 'Data Integrity',
       description:
-        'Engineering reliable BI tools and dashboards that deliver clear, actionable insights for smarter decisions.',
+        'Engineering reliable BI tools that deliver actionable insights, vetted through manual data validation.',
     },
     {
       title: 'Team Empowerment',
       description:
-        'Clarifying processes and reducing operational friction through clear, actionable documentation and SOPs.',
+        'Reducing friction through clear documentation and SOPs that guide both manual and automated tasks.',
     },
     {
       title: 'Marketplace Ops',
       description:
-        'Expert flat-file manipulation for bulk catalog updates and proactive management of account health.',
-    },
-    {
-      title: 'Data & Growth',
-      description:
-        'Designing custom BI intelligence and automated workflows to eliminate manual bottlenecks and scale.',
+        'Expert flat-file manipulation for bulk updates and proactive, hands-on management of account health.',
     },
   ],
   dailyRhythm: {
@@ -404,11 +404,11 @@ export const RESUME_DATA: ResumeData = {
     description:
       'Proactively managing Amazon account ecosystems by balancing high-priority problem solving with continuous growth optimization:',
     items: [
-      '**Account Health Guard**: Real-time monitoring of performance metrics and **VOC signals** to prevent suppressions.',
-      '**Catalog Integrity**: Executing bulk updates via **flat files** to resolve listing issues and improve organic discoverability.',
-      '**Logistics & FBA**: Reconciling inventory shipments and forecasting stock levels via custom BI tools (**WesBI**).',
-      '**PPC & Demand**: Scaling high-performing ad campaigns while harvesting new keyword opportunities to lower **ACoS**.',
-      '**Case & Dispute Management**: Navigating complex **Seller Support** cases to maintain operational continuity.',
+      '**Account Health Guard**: Real-time monitoring and hands-on resolution of performance metrics and **VOC signals**.',
+      '**Catalog Integrity**: Executing bulk updates via **flat files** with manual vetting to ensure listing accuracy.',
+      '**Logistics & FBA**: Hands-on reconciliation of inventory shipments and stock forecasting via **WesBI**.',
+      '**PPC & Demand**: Scaling ad campaigns while manually harvesting new keyword opportunities to lower **ACoS**.',
+      '**Case Management**: Directly navigating and negotiating complex **Seller Support** cases for operational continuity.',
       {
         text: '**Systems & SOPs**: Updating documentation and automating repetitive workflows to empower team efficiency.',
         link: {
