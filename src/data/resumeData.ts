@@ -165,7 +165,7 @@ export const RESUME_DATA: ResumeData = {
       company: 'My Amazon Guy',
       period: 'October 2024 - March 2025',
       responsibilities: [
-        'Implemented advanced **Amazon SEO** and **PPC** strategies using **Helium 10 (Cerebro/Magnet)** to drive client sales and market share.',
+        'Implemented advanced **Amazon SEO** and **PPC** strategies using **Helium 10 (Cerebro/X-ray)** to drive client sales and market share.',
         'Developed custom reporting frameworks to improve client retention and provide strategic clarity on advertising performance.',
         'Leveraged **Data Dive** for deep competitive analysis and product launch planning, optimizing **ACoS** and organic ranking.',
       ],

@@ -155,7 +155,7 @@ export const WES_JOB_AI_KNOWLEDGE_BASE = `
     - **Health:** Ensuring 100% account health compliance and monitoring **VOC sentiment**.
 
 - **Amazon Specialist | My Amazon Guy | Oct 2024 - Mar 2025:**
-    - **Strategy:** Implemented advanced **Amazon SEO** and **PPC** using **Helium 10 (Cerebro/Magnet)**.
+    - **Strategy:** Implemented advanced **Amazon SEO** and **PPC** using **Helium 10 (Cerebro/X-ray)**.
     - **Analytics:** Leveraged **Data Dive** for deep competitive analysis, optimizing **ACoS** and organic ranking.
 
 - **Item Specialist | Bulk Buy America | Mar 2024 - Sep 2024:**
