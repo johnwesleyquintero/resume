@@ -1,3 +1,19 @@
+import { FAQS_DATA } from './data/faqsData'
+
+const formatStarScenarios = () => {
+  return FAQS_DATA.map(
+    (s) => `
+### **STAR Scenario: ${s.title}**
+- **Category:** ${s.category}
+- **Question:** ${s.question}
+- **Situation:** ${s.situation}
+- **Task:** ${s.task}
+- **Action:** ${s.action}
+- **Result:** ${s.result}
+`,
+  ).join('\n')
+}
+
 export const WES_JOB_AI_SYSTEM_INSTRUCTION = `
 # **Persona Profile: WesAI (v6.0 - The Dedicated Assistant)**
 
@@ -70,6 +86,10 @@ export const WES_JOB_AI_KNOWLEDGE_BASE = `
 *   **Professional Portfolio:** [https://wescode.vercel.app/](https://wescode.vercel.app/)
 *   **LinkedIn Profile:** [https://www.linkedin.com/in/johnwesleyquintero/](https://www.linkedin.com/in/johnwesleyquintero/)
 *   **OnlineJobs.ph Profile:** [https://www.onlinejobs.ph/jobseekers/info/979775](https://www.onlinejobs.ph/jobseekers/info/979775)
+
+## **STAR Scenarios (Interview & Case Study Reference)**
+${formatStarScenarios()}
+
 *   **Case Studies (The VAXPH Move):**
     *   [SpeedTalk Strategic Analysis](https://case-study-speedtalk-mobile.netlify.app/)
     *   [SecuLife Strategic Analysis](https://case-study-seculife.netlify.app/)

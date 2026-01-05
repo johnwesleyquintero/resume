@@ -1,31 +1,21 @@
 import React from 'react'
 import { WesAILogo } from '../WesAILogo'
+import { FAQS_DATA } from '../../data/faqsData'
 
 interface EmptyStateProps {
   onSuggestionClick: (prompt: string) => void
 }
 
 const EmptyState: React.FC<EmptyStateProps> = ({ onSuggestionClick }) => {
-  const recruiterToolbox = [
-    {
-      label: 'Buy Box Master',
-      desc: 'Pricing Intelligence System',
-      prompt:
-        'How does the Buy Box Master tool help dominate Amazon sales and optimize pricing strategy?',
-    },
-    {
-      label: 'WesBI Cockpit',
-      desc: 'Inventory Intelligence System',
-      prompt:
-        'Tell me about WesBI. How did it significantly improve inventory planning efficiency?',
-    },
-  ]
+  // Use specific STAR scenarios for the "Toolbox" style cards
+  const featuredScenarios = FAQS_DATA.filter((s) =>
+    ['operational-efficiency-004', 'inventory-automation-005'].includes(s.id),
+  )
 
-  const suggestions = [
-    'Draft a professional cover letter',
-    'How do you optimize an Amazon SOP?',
-    "Explain the 'Build the System' philosophy",
-  ]
+  // Use the rest for simple suggestions
+  const otherScenarios = FAQS_DATA.filter(
+    (s) => !['operational-efficiency-004', 'inventory-automation-005'].includes(s.id),
+  )
 
   return (
     <div className="flex min-h-[60vh] animate-fadeIn flex-col items-center justify-center space-y-12 py-10 text-center">
@@ -45,29 +35,31 @@ const EmptyState: React.FC<EmptyStateProps> = ({ onSuggestionClick }) => {
 
       <div className="w-full max-w-2xl px-4">
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-          {recruiterToolbox.map((item, i) => (
+          {featuredScenarios.map((item) => (
             <button
-              key={i}
-              onClick={() => onSuggestionClick(item.prompt)}
+              key={item.id}
+              onClick={() => onSuggestionClick(item.question)}
               className="group flex flex-col gap-1.5 rounded-xl border border-wes-border bg-wes-main p-4 text-left shadow-sm transition-all hover:bg-wes-secondary"
             >
               <span className="text-xs font-bold uppercase tracking-tight text-wes-text opacity-70 group-hover:opacity-100">
-                {item.label}
+                {item.title.split(':')[0]}
               </span>
-              <span className="text-[13px] leading-snug text-wes-muted">{item.desc}</span>
+              <span className="text-[13px] leading-snug text-wes-muted">
+                {item.question}
+              </span>
             </button>
           ))}
         </div>
       </div>
 
       <div className="flex max-w-xl flex-wrap justify-center gap-2 px-4">
-        {suggestions.map((suggestion, i) => (
+        {otherScenarios.map((item) => (
           <button
-            key={i}
-            onClick={() => onSuggestionClick(suggestion)}
+            key={item.id}
+            onClick={() => onSuggestionClick(item.question)}
             className="hover:border-wes-muted/30 rounded-full border border-wes-border bg-wes-main px-4 py-2 text-[13px] text-wes-muted transition-all hover:bg-wes-secondary"
           >
-            {suggestion}
+            {item.question}
           </button>
         ))}
       </div>
