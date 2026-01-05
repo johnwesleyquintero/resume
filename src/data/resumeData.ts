@@ -138,7 +138,7 @@ export const RESUME_DATA: ResumeData = {
           },
         },
         {
-          text: 'Developed Operation Citadel: A GitHub documentation repository created to serve as a reliable reference for product listings and operational playbooks.',
+          text: 'Developed Operation Docs: A GitHub documentation repository created to serve as a reliable reference for product listings and operational playbooks.',
           link: {
             text: 'View Documentation',
             url: 'https://github.com/johnwesleyquintero/listing-documentation',
@@ -297,7 +297,7 @@ export const RESUME_DATA: ResumeData = {
     {
       title: 'Data Integrity',
       description:
-        'I prioritize building tools and dashboards (like WesBI) that provide clear, reliable insights to help inform better business decisions.',
+        'I prioritize building tools and dashboards that provide clear, reliable insights to help inform better business decisions.',
     },
     {
       title: 'Team Empowerment',

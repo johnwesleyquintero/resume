@@ -11,7 +11,7 @@ This is my sovereign digital asset, built to demonstrate my dual expertise as a 
 - **Project Showcases**: Integrated links to my custom-built BI tools:
   - **WesBI Cockpit**: Inventory intelligence and forecasting system.
   - **Buy Box Master**: Pricing strategy and win-rate analysis tool.
-  - **Operation Citadel**: Definitive listing documentation system.
+  - **Operation Docs**: Definitive listing documentation system.
 - **Modern Tech Stack**: Built with React 18, Vite, and Tailwind CSS for lightning-fast performance.
 - **Dark Mode Support**: Fully responsive design with native dark/light mode toggling.
 - **Print Optimized**: Custom CSS ensures the digital experience translates perfectly to a clean, professional PDF for traditional applications.
