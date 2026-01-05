@@ -44,9 +44,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ onSuggestionClick }) => {
               <span className="text-xs font-bold uppercase tracking-tight text-wes-text opacity-70 group-hover:opacity-100">
                 {item.title.split(':')[0]}
               </span>
-              <span className="text-[13px] leading-snug text-wes-muted">
-                {item.question}
-              </span>
+              <span className="text-[13px] leading-snug text-wes-muted">{item.question}</span>
             </button>
           ))}
         </div>
