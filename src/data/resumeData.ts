@@ -104,14 +104,14 @@ export const RESUME_DATA: ResumeData = {
   certifications: [
     "Professional Teacher's License (LPT)",
     'Amazon SEO & PPC Certification',
-    'Advanced Google Data Analytics',
+    'Data Modeling for Power BI',
   ],
   languages: ['English (Professional)', 'Tagalog (Native)', 'Cebuano (Native)'],
   summary: {
     quote:
       'I am committed to identifying operational challenges and developing sustainable processes that help brands scale efficiently on Amazon and other marketplaces.',
     content:
-      'I am a Hands-On Amazon & E-commerce Specialist with over 6 years of experience driving growth through operational excellence and data-backed strategies. I specialize in Amazon FBA management, advanced flat file manipulation, and PPC optimization. By bridging the gap between high-level strategy and daily execution, I build reliable systems and custom tools to ensure consistent profitability and brand visibility across global marketplaces.',
+      'I am a Hands-On Amazon & E-commerce Specialist with 6+ years of experience accelerating growth for brands across Amazon and global marketplaces. By leveraging advanced data analysis, SEO/PPC optimization, and custom operational systems, I streamline workflows, boost profitability, and amplify brand visibility. I thrive at the intersection of strategy and execution, turning complex challenges into repeatable, scalable wins and building processes that keep brands ahead of the curve.',
   },
   experience: [
     {
@@ -292,38 +292,38 @@ export const RESUME_DATA: ResumeData = {
     {
       title: 'Focus on Systems',
       description:
-        'I believe in building systems that solve problems for the long term, making work easier and more efficient for the whole team.',
+        'I build systems and run the ones already in place, improving efficiency and making work simpler for the whole team.',
     },
     {
       title: 'Data Integrity',
       description:
-        'I prioritize building tools and dashboards that provide clear, reliable insights to help inform better business decisions.',
+        'I build tools and dashboards—and improve existing ones—to deliver clear, reliable insights that drive smarter business decisions.',
     },
     {
       title: 'Team Empowerment',
       description:
-        'My goal is to support teams by providing clarity and reducing operational friction through well-documented processes.',
+        'I empower teams by clarifying workflows and reducing friction with clear, actionable processes.',
     },
   ],
   dailyRhythm: {
     title: 'Daily Focus: Support & Maintenance',
     description:
-      'A look into my daily routine, focused on proactive account management and helping solve operational challenges:',
+      'I manage the day-to-day operations of Amazon accounts with a focus on proactive problem-solving and continuous optimization. My routine balances immediate action and long-term improvement:',
     items: [
-      'Morning Review & Health Check: Reviewing Account Health, performance notifications, and customer feedback to address any immediate needs.',
-      'Catalog & Listing Support: Addressing suppressions and compliance issues while looking for ways to improve listing visibility.',
-      'Case Log & Support Management: Following up on Amazon support cases to help ensure timely resolutions.',
-      'PPC & Advertising Monitoring: Regular checks on active campaigns to monitor performance and efficiency.',
-      'Data Analysis & Reporting: Reconciling performance trackers and FBA audits to help ensure accuracy.',
+      'Morning Review & Health Check – Analyze account health, performance alerts, and customer feedback to tackle urgent issues before they escalate.',
+      'Catalog & Listing Optimization – Address suppressions and compliance issues while identifying opportunities to increase visibility and sales.',
+      'Case Management – Resolve Amazon support cases efficiently to minimize downtime and maintain operational continuity.',
+      'PPC & Advertising Monitoring – Track campaigns daily, ensuring efficiency and maximizing ROI.',
+      'Data Analysis & Reporting – Audit FBA performance and reconcile trackers to provide accurate, actionable insights.',
       {
-        text: 'Knowledge Base Support: Keeping documentation and tools like WesBI updated to ensure the team has access to current information.',
+        text: 'Knowledge Base & Tool Maintenance – Keep documentation, dashboards, and operational tools updated so teams can work seamlessly.',
         link: {
           text: 'View Operation Docs',
           url: 'https://github.com/johnwesleyquintero/listing-documentation',
         },
       },
       {
-        text: 'Continuous Learning: Reviewing and updating playbooks on Amazon strategies and e-commerce best practices.',
+        text: 'Continuous Learning & Playbook Updates – Review strategies, update playbooks, and incorporate best practices to drive long-term growth.',
         link: {
           text: 'Explore Playbooks',
           url: 'https://wescode.vercel.app/blog',
