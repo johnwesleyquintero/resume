@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import {
   Download,
-  FileSpreadsheet,
-  DatabaseZap,
   Copy,
   Check,
   Share2,
   Sun,
   Moon,
+  ExternalLink,
+  FolderDown,
+  FileText,
 } from 'lucide-react'
 import { RESUME_DATA } from '../data/resumeData'
 import { cn } from '../utils/cn'
@@ -72,7 +74,7 @@ export const DownloadHub: React.FC = () => {
 
         {/* Tooltip for Download Button */}
         <span className="pointer-events-none absolute right-full top-1/2 mr-3 -translate-y-1/2 translate-x-2 transform whitespace-nowrap rounded-md border border-blue-500 bg-blue-600 px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-white opacity-0 shadow-xl transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-          Download PDFs
+          Downloads
         </span>
 
         <div className="pointer-events-none absolute bottom-full right-0 mb-3 w-64 translate-y-2 transform rounded-xl border border-gray-200 bg-white opacity-0 shadow-2xl transition-all duration-300 after:absolute after:left-0 after:right-0 after:top-full after:h-4 after:content-[''] group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 dark:border-gray-700 dark:bg-gray-800">
@@ -88,20 +90,36 @@ export const DownloadHub: React.FC = () => {
                 className="group/item flex items-center gap-3 rounded-lg px-3 py-2.5 text-gray-700 transition-colors hover:bg-blue-50 dark:text-gray-200 dark:hover:bg-blue-900/20"
               >
                 <div className="rounded-md bg-gray-100 p-2 transition-colors group-hover/item:bg-blue-100 dark:bg-gray-700 dark:group-hover/item:bg-blue-800/40">
-                  {doc.icon === 'file-spreadsheet' ? (
-                    <FileSpreadsheet className="h-4 w-4 text-blue-600 dark:text-blue-400" />
-                  ) : (
-                    <DatabaseZap className="h-4 w-4 text-purple-600 dark:text-purple-400" />
-                  )}
+                  <FileText className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-sm font-semibold">{doc.title}</span>
-                  <span className="max-w-[140px] truncate text-[10px] text-gray-500 dark:text-gray-400">
+                  <span className="max-w-[140px] truncate text-[10px] text-gray-400 dark:text-gray-500">
                     {doc.label}
                   </span>
                 </div>
               </a>
             ))}
+
+            <div className="my-1 border-t border-gray-100 dark:border-gray-700" />
+
+            <Link
+              to="/downloads"
+              className="group/item flex items-center gap-3 rounded-lg px-3 py-2.5 text-gray-700 transition-colors hover:bg-blue-50 dark:text-gray-200 dark:hover:bg-blue-900/20"
+            >
+              <div className="rounded-md bg-blue-100 p-2 transition-colors group-hover/item:bg-blue-200 dark:bg-blue-900/40 dark:group-hover/item:bg-blue-800/60">
+                <FolderDown className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">
+                  Downloads
+                </span>
+                <span className="text-[10px] text-gray-400 dark:text-gray-500">
+                  View & download all resources
+                </span>
+              </div>
+              <ExternalLink className="ml-auto h-3 w-3 text-gray-400 opacity-0 transition-opacity group-hover/item:opacity-100" />
+            </Link>
 
             <div className="my-1 h-px bg-gray-100 dark:bg-gray-700" />
 

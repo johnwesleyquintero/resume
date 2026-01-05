@@ -56,7 +56,7 @@ const Faqs = () => {
                 Back to Resume
               </Link>
               <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-                STAR Scenarios & FAQs
+                FAQs
               </h1>
               <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
                 Real-world situations, tasks, actions, and results from my Amazon Specialist

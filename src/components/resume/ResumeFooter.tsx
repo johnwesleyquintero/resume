@@ -1,5 +1,14 @@
 import { Link } from 'react-router-dom'
-import { Linkedin, Github, Globe, Briefcase, DatabaseZap, FileSpreadsheet } from 'lucide-react'
+import {
+  Linkedin,
+  Github,
+  Globe,
+  Briefcase,
+  HelpCircle,
+  FolderDown,
+  LayoutDashboard,
+  TrendingUp,
+} from 'lucide-react'
 import { WesAILogo } from '../WesAILogo'
 import { RESUME_DATA } from '../../data/resumeData'
 
@@ -60,6 +69,20 @@ export const ResumeFooter = () => {
             Resources
           </h4>
           <div className="flex flex-col gap-2">
+            <Link
+              to="/faqs"
+              className="group flex items-center gap-2 text-sm text-gray-600 transition-colors hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400"
+            >
+              <HelpCircle className="h-4 w-4 transition-transform group-hover:scale-110" />
+              <span>FAQs</span>
+            </Link>
+            <Link
+              to="/downloads"
+              className="group flex items-center gap-2 text-sm text-gray-600 transition-colors hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400"
+            >
+              <FolderDown className="h-4 w-4 transition-transform group-hover:scale-110" />
+              <span>Downloads</span>
+            </Link>
             {RESUME_DATA.tools?.map((tool) => (
               <a
                 key={tool.label}
@@ -69,25 +92,9 @@ export const ResumeFooter = () => {
                 className="group flex items-center gap-2 text-sm text-gray-600 transition-colors hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400"
               >
                 {tool.icon === 'database-zap' ? (
-                  <DatabaseZap className="h-4 w-4 transition-transform group-hover:scale-110" />
+                  <LayoutDashboard className="h-4 w-4 transition-transform group-hover:scale-110" />
                 ) : (
-                  <FileSpreadsheet className="h-4 w-4 transition-transform group-hover:scale-110" />
-                )}
-                <span>{tool.label}</span>
-              </a>
-            ))}
-            {RESUME_DATA.downloads.map((tool) => (
-              <a
-                key={tool.label}
-                href={tool.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-2 text-sm text-gray-600 transition-colors hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400"
-              >
-                {tool.icon === 'database-zap' ? (
-                  <DatabaseZap className="h-4 w-4 transition-transform group-hover:scale-110" />
-                ) : (
-                  <FileSpreadsheet className="h-4 w-4 transition-transform group-hover:scale-110" />
+                  <TrendingUp className="h-4 w-4 transition-transform group-hover:scale-110" />
                 )}
                 <span>{tool.label}</span>
               </a>
