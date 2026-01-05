@@ -76,10 +76,11 @@ const Downloads = () => {
                 Back to Resume
               </Link>
               <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-                Download Hub
+                Strategic Analysis Templates
               </h1>
               <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-                Access all professional resources, including Excel templates and resume versions.
+                Advanced Excel templates designed to automate complex Amazon data analysis and guide
+                strategic decision-making through structured frameworks.
               </p>
             </div>
           </div>
@@ -222,11 +223,12 @@ const Downloads = () => {
               <Info className="h-6 w-6 text-blue-600 dark:text-blue-400" />
             </div>
             <div>
-              <h4 className="font-bold text-blue-900 dark:text-blue-300">Usage Note</h4>
+              <h4 className="font-bold text-blue-900 dark:text-blue-300">Operational Note</h4>
               <p className="mt-1 text-sm text-blue-800/80 dark:text-blue-400/80">
-                These resources are provided for professional evaluation and operational use. Excel
-                templates include pre-configured logic for Amazon sellers. For best results, open
-                templates with Microsoft Excel 2019 or later.
+                These templates are part of an automated suite designed for high-level Amazon
+                operations. They provide structured frameworks for inventory management,
+                profitability assessment, and competitive tracking. For best results, open templates
+                with Microsoft Excel 2019 or later.
               </p>
             </div>
           </div>
