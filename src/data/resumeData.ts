@@ -59,6 +59,13 @@ export interface ResumeData {
     description: string
     items: (string | { text: string; link: { text: string; url: string } })[]
   }
+  amazonTools: {
+    category: string
+    items: {
+      name: string
+      description: string
+    }[]
+  }[]
   downloads: {
     title: string
     label: string
@@ -285,6 +292,111 @@ export const RESUME_DATA: ResumeData = {
         'Account Health Compliance',
         'Brand Registry & Protection',
         'Supply Chain Management',
+      ],
+    },
+  ],
+  amazonTools: [
+    {
+      category: 'Product Research & Opportunity Discovery',
+      items: [
+        {
+          name: 'Helium 10',
+          description: 'Black Box, Magnet, Cerebro',
+        },
+        {
+          name: 'Jungle Scout',
+          description: 'Product Database, Opportunity Finder, Sales Estimator',
+        },
+        {
+          name: 'Amazon Brand Analytics',
+          description: 'Search Query Performance (SQP), Market Basket, Repeat Purchase Behavior',
+        },
+      ],
+    },
+    {
+      category: 'Wholesale, Catalog Scanning & ASIN Validation',
+      items: [
+        {
+          name: 'ScanUnlimited',
+          description: 'Bulk wholesale & catalog scanning',
+        },
+        {
+          name: 'SellerAmp SAS',
+          description: 'ASIN profitability, restriction checks, Buy Box eligibility',
+        },
+        {
+          name: 'Price Checker 2',
+          description: 'Rapid price validation, ROI and margin filtering',
+        },
+      ],
+    },
+    {
+      category: 'Data Dive Analysis & Decision Support',
+      items: [
+        {
+          name: 'Data Dive',
+          description:
+            'A mastery level education on finding profitable products, advanced keyword research, competitive analysis, sourcing, optimization, PPC and brand building.',
+        },
+        {
+          name: 'Keepa',
+          description: 'Price history, sales rank trends, Buy Box behavior',
+        },
+        {
+          name: 'Amazon Brand Analytics',
+          description: 'Keyword demand vs. conversion validation',
+        },
+        {
+          name: 'Helium 10',
+          description: 'Keyword Tracker & historical demand signals',
+        },
+        {
+          name: 'Excel & Google Sheets',
+          description: 'Deep data dives (fees, ROI, velocity, risk scoring)',
+        },
+      ],
+    },
+    {
+      category: 'Voice of Customer (VOC) & Listing Intelligence',
+      items: [
+        {
+          name: 'Amazon VOC',
+          description: 'Customer complaints, sentiment analysis, root-cause insights',
+        },
+        {
+          name: 'Reviews & Returns Analysis',
+          description: 'Feedback-driven optimization and risk mitigation',
+        },
+      ],
+    },
+    {
+      category: 'Advertising, Demand Signals & Performance Monitoring',
+      items: [
+        {
+          name: 'Amazon Ads Console',
+          description: 'Search Term Reports, campaign performance, demand validation',
+        },
+        {
+          name: 'PPC Diagnostics',
+          description: 'Identifying keyword/product opportunities through ad data',
+        },
+      ],
+    },
+    {
+      category: 'Amazon Operations & Listing Execution',
+      items: [
+        {
+          name: 'Amazon Seller Central',
+          description: 'FBA, FBM, Flat Files, inventory & catalog management',
+        },
+        {
+          name: 'Account Health Dashboard',
+          description: 'Performance notifications, policy compliance',
+        },
+        {
+          name: 'Reimbursements',
+          description: 'Lost, damaged, misplaced, and returned inventory tracking',
+        },
       ],
     },
   ],
