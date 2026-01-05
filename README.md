@@ -6,22 +6,21 @@ Welcome to the digital foundation of my professional journey. This repository is
 This is my sovereign digital asset, built to demonstrate my dual expertise as a **Hands-On Amazon & E-commerce Specialist** and a **Systems Specialist**. It serves as the central hub for my professional identity, featuring real-time interactive components and a built-in strategic AI advisor.
 
 ## ✨ Key Features
-- **WesJobAI Integration**: A built-in, context-aware AI agent (powered by Gemini 2.0) that acts as my "2nd Brain," capable of answering strategic operational questions and assisting with job applications.
-- **Dynamic Skill Intelligence**: Interactive and scannable technical skillset layout reflecting 6+ years of marketplace experience.
-- **Project Showcases**: Integrated links to my custom-built BI tools:
-  - **WesBI Cockpit**: Inventory intelligence and forecasting system.
-  - **Buy Box Master**: Pricing strategy and win-rate analysis tool.
-  - **Operation Docs**: Definitive listing documentation system.
+- **WesJobAI Integration**: A built-in, context-aware AI agent (powered by Gemini 1.5 Flash) that acts as my "2nd Brain," capable of answering strategic operational questions and assisting with job applications.
+- **Operating Principles & Strategic Approach**: A high-level overview of my professional philosophy, focusing on systems, data integrity, and team empowerment.
+- **Amazon Tools & Platform Intelligence**: Interactive grid showcasing deep expertise across the Amazon ecosystem, including Product Research, Listing Intelligence, and Performance Monitoring.
+- **Dynamic Credentials**: Scannable education and certifications layout with progress-tracked language proficiency.
 - **Modern Tech Stack**: Built with React 18, Vite, and Tailwind CSS for lightning-fast performance.
 - **Dark Mode Support**: Fully responsive design with native dark/light mode toggling.
 - **Print Optimized**: Custom CSS ensures the digital experience translates perfectly to a clean, professional PDF for traditional applications.
 
 ## 🛠️ Built With
 - **Framework**: [React.js](https://reactjs.org/) + [Vite](https://vitejs.dev/)
-- **AI Engine**: [Google Gemini 2.0 Flash](https://ai.google.dev/)
+- **AI Engine**: [Google Gemini 1.5 Flash](https://ai.google.dev/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **State & Logic**: TypeScript
 - **Icons**: [Lucide React](https://lucide.dev/)
-- **Deployment**: [Netlify](https://www.netlify.com/)
+- **Deployment**: [Netlify](https://www.netlify.com/) / [Vercel](https://vercel.com/)
 
 ## 🚀 Quick Start
 
@@ -64,4 +63,4 @@ This is my sovereign digital asset, built to demonstrate my dual expertise as a 
 - 🐙 **GitHub**: [@johnwesleyquintero](https://github.com/johnwesleyquintero)
 
 ---
-*Built with precision and purpose by John Wesley Quintero. v2.5*
+*Built with precision and purpose by John Wesley Quintero. v3.0*

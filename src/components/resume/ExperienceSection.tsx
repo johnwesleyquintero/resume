@@ -1,5 +1,6 @@
 import { Briefcase, ChevronRight } from 'lucide-react'
 import { RESUME_DATA, type ResumeData } from '../../data/resumeData'
+import { renderTextWithBold } from '../../utils/text'
 
 export const ExperienceSection = () => {
   return (
@@ -7,13 +8,18 @@ export const ExperienceSection = () => {
       aria-labelledby="experience-heading"
       className="animate-fadeIn [animation-delay:750ms]"
     >
-      <h2
-        id="experience-heading"
-        className="mb-6 flex items-center gap-2 border-b-2 border-blue-200 pb-2 text-xl font-bold text-blue-600 dark:border-gray-700 dark:text-blue-400"
-      >
-        <Briefcase className="h-5 w-5" />
-        Professional Experience
-      </h2>
+      <div className="mb-8 flex items-center justify-between border-b-2 border-blue-200 pb-2 dark:border-gray-700">
+        <h2
+          id="experience-heading"
+          className="flex items-center gap-2 text-xl font-bold text-blue-600 dark:text-blue-400"
+        >
+          <Briefcase className="h-5 w-5" />
+          Professional Experience
+        </h2>
+        <span className="text-[10px] font-medium uppercase tracking-widest text-gray-400 dark:text-gray-500">
+          Career Timeline & Roles
+        </span>
+      </div>
       <div className="space-y-12">
         {RESUME_DATA.experience.map((exp: ResumeData['experience'][number], idx: number) => (
           <div key={idx} className="group relative pb-2 pl-6 sm:pl-8">
@@ -40,10 +46,10 @@ export const ExperienceSection = () => {
                       <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-current text-blue-400" />
                       <span>
                         {typeof resp === 'string' ? (
-                          resp
+                          renderTextWithBold(resp)
                         ) : (
                           <>
-                            {resp.text}{' '}
+                            {renderTextWithBold(resp.text)}{' '}
                             <a
                               href={resp.link.url}
                               target="_blank"

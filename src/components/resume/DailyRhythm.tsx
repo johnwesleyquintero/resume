@@ -9,6 +9,7 @@ import {
   Zap,
 } from 'lucide-react'
 import { RESUME_DATA } from '../../data/resumeData'
+import { renderTextWithBold } from '../../utils/text'
 
 export const DailyRhythm = () => {
   const icons = [
@@ -22,13 +23,18 @@ export const DailyRhythm = () => {
 
   return (
     <section aria-labelledby="routine-heading" className="animate-fadeIn [animation-delay:850ms]">
-      <h2
-        id="routine-heading"
-        className="mb-4 flex items-center gap-2 border-b-2 border-blue-200 pb-2 text-xl font-bold text-blue-600 dark:border-gray-700 dark:text-blue-400"
-      >
-        <Clock className="h-5 w-5" />
-        {RESUME_DATA.dailyRhythm.title}
-      </h2>
+      <div className="mb-6 flex items-center justify-between border-b-2 border-blue-200 pb-2 dark:border-gray-700">
+        <h2
+          id="routine-heading"
+          className="flex items-center gap-2 text-xl font-bold text-blue-600 dark:text-blue-400"
+        >
+          <Clock className="h-5 w-5" />
+          {RESUME_DATA.dailyRhythm.title}
+        </h2>
+        <span className="text-[10px] font-medium uppercase tracking-widest text-gray-400 dark:text-gray-500">
+          Account Management & Maintenance
+        </span>
+      </div>
       <div className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800/50">
         <p className="mb-6 border-l-2 border-gray-200 pl-4 text-sm italic text-gray-600 dark:border-gray-600 dark:text-gray-400">
           {RESUME_DATA.dailyRhythm.description}
@@ -45,17 +51,17 @@ export const DailyRhythm = () => {
                 </div>
                 <div className="pt-1 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
                   {typeof item === 'string' ? (
-                    item
+                    renderTextWithBold(item)
                   ) : (
                     <>
-                      {item.text}{' '}
+                      {renderTextWithBold(item.text)}{' '}
                       <a
                         href={item.link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-medium text-blue-600 hover:underline dark:text-blue-400"
+                        className="inline-flex items-center gap-0.5 font-medium text-blue-600 hover:underline dark:text-blue-400"
                       >
-                        {item.link.text}
+                        {item.link.text} <Zap className="h-3 w-3" />
                       </a>
                     </>
                   )}

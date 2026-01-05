@@ -36,20 +36,6 @@ export interface ResumeData {
     period: string
     responsibilities: (string | { text: string; link: { text: string; url: string } })[]
   }[]
-  uniqueEdge: {
-    title: string
-    description: string
-    playbookLink: string
-    cards: {
-      title: string
-      icon: string
-      points: string[]
-    }[]
-  }
-  skills: {
-    category: string
-    items: string[]
-  }[]
   operatingPrinciples: {
     title: string
     description: string
@@ -64,6 +50,7 @@ export interface ResumeData {
     items: {
       name: string
       description: string
+      url?: string
     }[]
   }[]
   downloads: {
@@ -107,6 +94,12 @@ export const RESUME_DATA: ResumeData = {
       details: 'Major in General Education, Licensed Professional Teacher (LPT)',
       url: 'https://www.usep.edu.ph/',
     },
+    {
+      degree: 'Information Technology',
+      school: 'Magugpo Institute of Technology',
+      period: '2011 - 2014',
+      details: 'Major in Computer Tech and Programming',
+    },
   ],
   certifications: [
     "Professional Teacher's License (LPT)",
@@ -116,9 +109,9 @@ export const RESUME_DATA: ResumeData = {
   languages: ['English (Professional)', 'Tagalog (Native)', 'Cebuano (Native)'],
   summary: {
     quote:
-      'I am committed to identifying operational challenges and developing sustainable processes that help brands scale efficiently on Amazon and other marketplaces.',
+      'I am committed to identifying operational challenges and developing sustainable processes that help brands scale efficiently on **Amazon** and other marketplaces.',
     content:
-      'I am a Hands-On Amazon & E-commerce Specialist with 6+ years driving growth across Amazon and global marketplaces. I turn data, workflows, and operational insight into repeatable wins—boosting profitability, streamlining processes, and keeping brands ahead of the curve.',
+      'I am a **Hands-On Amazon & E-commerce Specialist** with 6+ years driving growth across **Amazon** and global marketplaces. I turn data, workflows, and operational insight into repeatable wins—boosting profitability, streamlining processes, and keeping brands ahead of the curve.',
   },
   experience: [
     {
@@ -126,10 +119,10 @@ export const RESUME_DATA: ResumeData = {
       company: 'VAXPH - Seculife | Speedtalk',
       period: 'July 2025 - Present',
       responsibilities: [
-        'Supporting consistent sales growth and brand visibility across Amazon, eBay, and Walmart.',
-        'Managing product listing lifecycles while maintaining account health standards.',
-        'Developing operational View to help streamline team onboarding and daily tasks.',
-        'Monitoring account health daily to ensure compliance and minimize issues.',
+        'Driving cross-channel growth across **Amazon**, **eBay**, and **Walmart** through data-driven listing optimization and brand visibility strategies.',
+        'Managing end-to-end product lifecycles, utilizing **Advanced Flat Files** for bulk catalog management and troubleshooting.',
+        'Developing automated operational dashboards and **SOPs** to streamline team onboarding and daily workflows.',
+        'Ensuring 100% account health compliance through proactive monitoring of performance metrics and **VOC sentiment**.',
         {
           text: 'Created pre-interview strategic case studies for SpeedTalk and SecuLife, which were instrumental in securing my current role at VAXPH.',
           link: {
@@ -145,21 +138,21 @@ export const RESUME_DATA: ResumeData = {
           },
         },
         {
-          text: 'Developed Operation Docs: A GitHub documentation repository created to serve as a reliable reference for product listings and operational View.',
+          text: 'Developed Operation Docs: A **GitHub** documentation repository created to serve as a reliable reference for product listings and operational workflows.',
           link: {
             text: 'View Documentation',
             url: 'https://github.com/johnwesleyquintero/listing-documentation',
           },
         },
         {
-          text: 'Built WesBI Cockpit as my daily "mission control" for inventory forecasting, helping to ensure consistent stock levels and improve capital management.',
+          text: 'Built **WesBI Cockpit** as my daily "mission control" for **inventory forecasting**, transforming raw **FBA** data into actionable stock-level insights.',
           link: {
             text: 'View WesBI',
             url: 'https://wes-bi.vercel.app/',
           },
         },
         {
-          text: 'Created Buy Box Master, an essential daily tool used to monitor pricing gaps and help maintain competitive positioning on Amazon.',
+          text: 'Created **Buy Box Master**, a real-time pricing intelligence tool used to monitor competitive gaps and maintain **Buy Box** dominance.',
           link: {
             text: 'View Buy Box Master',
             url: 'https://buy-box-master.vercel.app/',
@@ -172,9 +165,9 @@ export const RESUME_DATA: ResumeData = {
       company: 'My Amazon Guy',
       period: 'October 2024 - March 2025',
       responsibilities: [
-        'Implemented data-driven Amazon SEO and PPC strategies to help drive growth in client sales.',
-        'Developed reporting frameworks to improve client retention and strategic clarity.',
-        'Created custom analytics solutions for monitoring advertising performance and optimizing ACoS.',
+        'Implemented advanced **Amazon SEO** and **PPC** strategies using **Helium 10 (Cerebro/Magnet)** to drive client sales and market share.',
+        'Developed custom reporting frameworks to improve client retention and provide strategic clarity on advertising performance.',
+        'Leveraged **Data Dive** for deep competitive analysis and product launch planning, optimizing **ACoS** and organic ranking.',
       ],
     },
     {
@@ -182,8 +175,9 @@ export const RESUME_DATA: ResumeData = {
       company: 'Bulk Buy America',
       period: 'March 2024 - September 2024',
       responsibilities: [
-        'Optimized Amazon catalogs for discoverability and data accuracy.',
-        'Built custom Excel tools with VLOOKUP to improve procurement efficiency and data reliability.',
+        'Managed and optimized the Master Inventory File using **Price Checker 2** and **Keepa** to provide Amazon sellers with real-time profitability and pricing competitiveness data.',
+        'Developed custom **Excel** tools to synchronize stock updates across the company website, ensuring 100% sell-through of updated inventory.',
+        'Optimized large-scale **Amazon** catalogs for discoverability and data accuracy using advanced **Excel** functions (**VLOOKUP**, **Index-Match**) and automated procurement workflows.',
       ],
     },
     {
@@ -191,16 +185,16 @@ export const RESUME_DATA: ResumeData = {
       company: 'Adorama',
       period: 'May 2023 - September 2023',
       responsibilities: [
-        'Provided technical support for B2B clients, resolving Seller Central integration issues within standard SLAs.',
+        'Provided technical B2B support, resolving complex **Seller Central** integration issues and **API** discrepancies within standard SLAs.',
         {
-          text: 'Developed the Amazon Catalog Management/Listing Management SOP, helping to recover lost revenue and establishing a repeatable audit process for catalog integrity.',
+          text: 'Developed the **Amazon Catalog Management SOP**, helping to recover lost revenue through systematic auditing and listing restoration.',
           link: {
             text: 'View SOP',
             url: 'https://docs.google.com/spreadsheets/d/1e9Z5XJ1P0x8PR8T5pSqWJ1zCs6W4nBUO/edit?gid=1206805883#gid=1206805883',
           },
         },
         {
-          text: 'Created a Google Sheet SOP for Amazon Jira Issues to improve issue tracking.',
+          text: 'Created a **Google Sheet SOP** for **Amazon Jira Issues** to streamline issue tracking and resolution across departments.',
           link: {
             text: 'View SOP',
             url: 'https://docs.google.com/spreadsheets/d/1vNUC94hgtNINdk3u57DufQUQVAmOsiEr/edit?usp=sharing&ouid=116050988128963817360&rtpof=true&sd=true',
@@ -213,10 +207,10 @@ export const RESUME_DATA: ResumeData = {
       company: 'Champion E-com LLC',
       period: 'October 2022 - September 2023',
       responsibilities: [
-        'Managed account health, performance metrics, and compliance for multiple B2B clients.',
-        'Implemented SEO and PPC campaigns, contributing to a steady increase in sales.',
+        'Managed end-to-end account health and performance metrics, utilizing **Keepa** for price history analysis and competitive monitoring.',
+        'Implemented **SEO** and **PPC** campaigns that contributed to steady sales growth and improved organic visibility.',
         {
-          text: 'Developed a comprehensive SOP for FBA Department Operations to help prevent inventory discrepancies and ensure operational continuity.',
+          text: 'Developed a comprehensive **SOP** for **FBA Department Operations** to prevent inventory discrepancies and ensure **FBA shipment reconciliation**.',
           link: {
             text: 'View SOP',
             url: 'https://docs.google.com/document/d/1bRH9HDYbzK4NaVwLjTbAY-a6RlxMaTw3/edit?usp=sharing&ouid=116050988128963817360&rtpof=true&sd=true',
@@ -229,69 +223,14 @@ export const RESUME_DATA: ResumeData = {
       company: 'Sales.support',
       period: 'October 2018 - July 2022',
       responsibilities: [
-        'Sourced profitable wholesale products for Amazon FBA/FBM, contributing to revenue growth.',
+        'Sourced profitable wholesale products using **SellerAmp SAS** and **ScanUnlimited** for rapid catalog validation and **ROI analysis**.',
         {
-          text: 'Developed an SOP for Amazon Wholesale Buyers to help streamline the sourcing and negotiation process.',
+          text: 'Developed an **SOP** for **Amazon Wholesale Buyers** to streamline the sourcing, negotiation, and procurement process.',
           link: {
             text: 'View SOP',
             url: 'https://docs.google.com/document/d/143PWwLDuCBMsXHWcmdAS83sQZthw0pUG/edit?usp=sharing&ouid=116050988128963817360&rtpof=true&sd=true',
           },
         },
-      ],
-    },
-  ],
-  uniqueEdge: {
-    title: 'Core Expertise: Hands-On Amazon Operations & Process Design',
-    description:
-      'I excel at solving complex marketplace challenges by combining deep platform knowledge with advanced data management and automated workflows.',
-    playbookLink: 'https://wescode.vercel.app/blog/flat-file',
-    cards: [
-      {
-        title: 'Hands-On Amazon Management',
-        icon: 'file-spreadsheet',
-        points: [
-          '**Expert** in flat file manipulation for bulk catalog updates, variations, and listing troubleshooting.',
-          '**Proactive** account health monitoring and case log management for rapid issue resolution.',
-          '**Specialized** in Amazon FBA logistics, inventory forecasting, and shipment reconciliation.',
-        ],
-      },
-      {
-        title: 'E-commerce Data Specialist',
-        icon: 'database-zap',
-        points: [
-          '**Developed** custom BI tools like **WesBI** and **Buy Box Master** to automate pricing and inventory tasks.',
-          '**Advanced** Excel & Google Sheets integration for complex data validation and procurement workflows.',
-          '**Strategic** PPC optimization and SEO auditing to maximize organic and paid reach.',
-        ],
-      },
-    ],
-  },
-  skills: [
-    {
-      category: 'Amazon & E-commerce',
-      items: [
-        'Advanced Flat File Management',
-        'Amazon SEO & PPC Optimization',
-        'FBA Operations & Inventory Logistics',
-        'Multi-Channel Scaling (eBay, Walmart)',
-      ],
-    },
-    {
-      category: 'Data & Tech Stack',
-      items: [
-        'E-commerce BI & Custom Tooling',
-        'Data Analysis (Excel, Power BI, Tableau)',
-        'Workflow Automation (Google Apps Script)',
-        'Full-Stack Concepts (React, Node.js)',
-      ],
-    },
-    {
-      category: 'Operational Excellence',
-      items: [
-        'SOP Development & Documentation',
-        'Account Health Compliance',
-        'Brand Registry & Protection',
-        'Supply Chain Management',
       ],
     },
   ],
@@ -301,15 +240,21 @@ export const RESUME_DATA: ResumeData = {
       items: [
         {
           name: 'Helium 10',
-          description: 'Black Box, Magnet, Cerebro',
+          description:
+            'Used for deep keyword research (Cerebro/Magnet) and identifying high-converting traffic sources via Reverse ASIN lookups.',
+          url: 'https://www.helium10.com/',
         },
         {
           name: 'Jungle Scout',
-          description: 'Product Database, Opportunity Finder, Sales Estimator',
+          description:
+            'Leveraged for competitive benchmarking, demand estimation, and identifying emerging product trends in the database.',
+          url: 'https://www.junglescout.com/',
         },
         {
-          name: 'Amazon Brand Analytics',
-          description: 'Search Query Performance (SQP), Market Basket, Repeat Purchase Behavior',
+          name: 'Keepa',
+          description:
+            'Critical analysis of historical price stability, sales rank consistency, and competitor inventory levels to mitigate risk.',
+          url: 'https://keepa.com/',
         },
       ],
     },
@@ -318,15 +263,88 @@ export const RESUME_DATA: ResumeData = {
       items: [
         {
           name: 'ScanUnlimited',
-          description: 'Bulk wholesale & catalog scanning',
+          description:
+            'Executing mass-scans of supplier price lists to rapidly identify profitable FBA/FBM opportunities at scale.',
+          url: 'https://www.scanunlimited.com/',
         },
         {
           name: 'SellerAmp SAS',
-          description: 'ASIN profitability, restriction checks, Buy Box eligibility',
+          description:
+            'Real-time profitability analysis, restriction checks, and Buy Box eligibility validation during high-speed product sourcing.',
+          url: 'https://selleramp.com/',
         },
         {
           name: 'Price Checker 2',
-          description: 'Rapid price validation, ROI and margin filtering',
+          description:
+            'Rapid validation of multi-supplier catalogs against live Amazon data to ensure target ROIs and margin integrity.',
+          url: 'https://www.pricechecker2.com/',
+        },
+      ],
+    },
+    {
+      category: 'Amazon Operations & Listing Execution',
+      items: [
+        {
+          name: 'Amazon Seller Central',
+          description:
+            'End-to-end account management, including flat-file catalog updates, FBA logistics, and complex case resolution.',
+          url: 'https://sellercentral.amazon.com/',
+        },
+        {
+          name: 'Account Health Dashboard',
+          description:
+            'Proactive monitoring of performance metrics and policy compliance to protect brand equity and prevent account suppression.',
+          url: 'https://sellercentral.amazon.com/performance/dashboard',
+        },
+        {
+          name: 'Reimbursements',
+          description:
+            'Reconciling FBA inventory discrepancies to recover lost revenue from damaged, misplaced, or unreturned stock.',
+        },
+      ],
+    },
+    {
+      category: 'Voice of Customer (VOC) & Listing Intelligence',
+      items: [
+        {
+          name: 'Amazon VOC',
+          description:
+            'Extracting actionable product improvement insights from customer feedback, sentiment analysis, and return root-cause data.',
+          url: 'https://sellercentral.amazon.com/voice-of-the-customer/',
+        },
+        {
+          name: 'Reviews & Returns Analysis',
+          description:
+            'Systematic auditing of customer sentiment to reduce return rates and improve listing conversion through feedback-driven optimization.',
+          url: 'https://sellercentral.amazon.com/brand-customer-reviews/ref=xx_crvws_dnav_xx?includeDone=true&pageSize=50&stars=1',
+        },
+        {
+          name: 'Amazon Brand Analytics',
+          description:
+            'Analyzing first-party Search Query Performance (SQP) and Market Basket data to validate customer search intent and repeat purchase behavior.',
+          url: 'https://sellercentral.amazon.com/analytics/dashboard/search-query-performance',
+        },
+      ],
+    },
+    {
+      category: 'Advertising, Demand Signals & Performance Monitoring',
+      items: [
+        {
+          name: 'Amazon Ads Console',
+          description:
+            'Managing Sponsored Products/Brands/Display campaigns with a focus on ACoS optimization and market share growth.',
+          url: 'https://advertising.amazon.com/',
+        },
+        {
+          name: 'PPC Diagnostics',
+          description:
+            'Identifying search term trends and harvest opportunities to scale high-performing keywords and defend brand presence.',
+        },
+        {
+          name: 'Looker Studio',
+          description:
+            'Creating custom, high-level data visualizations and cross-channel performance dashboards for stakeholder reporting.',
+          url: 'https://lookerstudio.google.com/',
         },
       ],
     },
@@ -336,66 +354,20 @@ export const RESUME_DATA: ResumeData = {
         {
           name: 'Data Dive',
           description:
-            'A mastery level education on finding profitable products, advanced keyword research, competitive analysis, sourcing, optimization, PPC and brand building.',
+            'Advanced competitive analysis and launch strategy development by aggregating massive data signals into actionable product roadmaps.',
+          url: 'https://datadive.tools/',
         },
         {
-          name: 'Keepa',
-          description: 'Price history, sales rank trends, Buy Box behavior',
+          name: 'Excel',
+          description:
+            'Building custom financial models for fee reconciliation, inventory velocity tracking, and risk-adjusted ROI scoring.',
+          url: 'https://excel.cloud.microsoft/',
         },
         {
-          name: 'Amazon Brand Analytics',
-          description: 'Keyword demand vs. conversion validation',
-        },
-        {
-          name: 'Helium 10',
-          description: 'Keyword Tracker & historical demand signals',
-        },
-        {
-          name: 'Excel & Google Sheets',
-          description: 'Deep data dives (fees, ROI, velocity, risk scoring)',
-        },
-      ],
-    },
-    {
-      category: 'Voice of Customer (VOC) & Listing Intelligence',
-      items: [
-        {
-          name: 'Amazon VOC',
-          description: 'Customer complaints, sentiment analysis, root-cause insights',
-        },
-        {
-          name: 'Reviews & Returns Analysis',
-          description: 'Feedback-driven optimization and risk mitigation',
-        },
-      ],
-    },
-    {
-      category: 'Advertising, Demand Signals & Performance Monitoring',
-      items: [
-        {
-          name: 'Amazon Ads Console',
-          description: 'Search Term Reports, campaign performance, demand validation',
-        },
-        {
-          name: 'PPC Diagnostics',
-          description: 'Identifying keyword/product opportunities through ad data',
-        },
-      ],
-    },
-    {
-      category: 'Amazon Operations & Listing Execution',
-      items: [
-        {
-          name: 'Amazon Seller Central',
-          description: 'FBA, FBM, Flat Files, inventory & catalog management',
-        },
-        {
-          name: 'Account Health Dashboard',
-          description: 'Performance notifications, policy compliance',
-        },
-        {
-          name: 'Reimbursements',
-          description: 'Lost, damaged, misplaced, and returned inventory tracking',
+          name: 'Google Sheets',
+          description:
+            'Designing automated workflow solutions and collaborative dashboards for real-time inventory and performance tracking.',
+          url: 'https://docs.google.com/spreadsheets/u/0/',
         },
       ],
     },
@@ -404,40 +376,50 @@ export const RESUME_DATA: ResumeData = {
     {
       title: 'Focus on Systems',
       description:
-        'I build systems and run the ones already in place, improving efficiency and making work simpler for the whole team.',
+        'Building and optimizing automated systems to improve team efficiency and simplify complex daily workflows.',
     },
     {
       title: 'Data Integrity',
       description:
-        'I build tools and dashboards—and improve existing ones—to deliver clear, reliable insights that drive smarter business decisions.',
+        'Engineering reliable BI tools and dashboards that deliver clear, actionable insights for smarter decisions.',
     },
     {
       title: 'Team Empowerment',
       description:
-        'I empower teams by clarifying workflows and reducing friction with clear, actionable processes.',
+        'Clarifying processes and reducing operational friction through clear, actionable documentation and SOPs.',
+    },
+    {
+      title: 'Marketplace Ops',
+      description:
+        'Expert flat-file manipulation for bulk catalog updates and proactive management of account health.',
+    },
+    {
+      title: 'Data & Growth',
+      description:
+        'Designing custom BI intelligence and automated workflows to eliminate manual bottlenecks and scale.',
     },
   ],
   dailyRhythm: {
     title: 'Daily Focus: Support & Maintenance',
     description:
-      'I manage Amazon accounts daily, balancing urgent problem-solving with long-term optimization:',
+      'Proactively managing Amazon account ecosystems by balancing high-priority problem solving with continuous growth optimization:',
     items: [
-      'Morning Review: Monitor health and feedback to prevent escalation.',
-      'Catalog & Listing Optimization: Solve suppressions, improve visibility, and boost sales potential.',
-      'Case Management: Resolve support cases efficiently to maintain account continuity.',
-      'PPC & Advertising: Track campaigns to maximize ROI',
-      'Data Analysis & Reporting: Audit performance and reconcile FBA trackers for accuracy.',
+      '**Account Health Guard**: Real-time monitoring of performance metrics and **VOC signals** to prevent suppressions.',
+      '**Catalog Integrity**: Executing bulk updates via **flat files** to resolve listing issues and improve organic discoverability.',
+      '**Logistics & FBA**: Reconciling inventory shipments and forecasting stock levels via custom BI tools (**WesBI**).',
+      '**PPC & Demand**: Scaling high-performing ad campaigns while harvesting new keyword opportunities to lower **ACoS**.',
+      '**Case & Dispute Management**: Navigating complex **Seller Support** cases to maintain operational continuity.',
       {
-        text: 'Knowledge Base & Tools: Keep operational systems and documentation up-to-date.',
+        text: '**Systems & SOPs**: Updating documentation and automating repetitive workflows to empower team efficiency.',
         link: {
-          text: 'Docs',
+          text: 'View Docs',
           url: 'https://github.com/johnwesleyquintero/listing-documentation',
         },
       },
       {
-        text: 'Continuous Learning: Update playbooks and incorporate best practices to drive growth.',
+        text: '**Growth Strategy**: Analyzing market trends and competitor behavior to refine brand playbooks.',
         link: {
-          text: 'View',
+          text: 'View Insights',
           url: 'https://wescode.vercel.app/blog',
         },
       },

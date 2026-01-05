@@ -1,5 +1,6 @@
 import { User } from 'lucide-react'
 import { RESUME_DATA } from '../../data/resumeData'
+import { renderTextWithBold } from '../../utils/text'
 
 export const ProfessionalSummary = () => {
   return (
@@ -13,11 +14,11 @@ export const ProfessionalSummary = () => {
       </h2>
       <div className="rounded-lg border border-blue-100 bg-blue-50 p-4 shadow-sm dark:border-blue-900/30 dark:bg-gray-800/50">
         <p className="italic leading-relaxed text-gray-700 dark:text-gray-300">
-          "{RESUME_DATA.summary.quote}"
+          "{renderTextWithBold(RESUME_DATA.summary.quote)}"
         </p>
       </div>
       <p className="mt-4 leading-relaxed text-gray-700 dark:text-gray-300">
-        {RESUME_DATA.summary.content}
+        {renderTextWithBold(RESUME_DATA.summary.content)}
       </p>
     </section>
   )

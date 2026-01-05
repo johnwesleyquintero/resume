@@ -36,7 +36,7 @@ We tailor the presentation based on the complexity of the target's needs.
 *   **Tier 2: The Technical Founder (The Systems Expert)**
     *   **Audience:** CEOs, CTOs, Technical Founders of SaaS or high-growth brands.
     *   **Asset:** The full portfolio and GitHub (`wescode.vercel.app`).
-    *   **Narrative:** "I bridge the gap between marketplace strategy and custom technical automation (Next.js/Supabase/API)."
+    *   **Narrative:** "I transform complex marketplace data into operational excellence by engineering automated workflows, custom BI intelligence, and scalable SOPs."
     *   **Goal:** Position yourself as a strategic partner who can build custom internal tooling.
 
 *   **Tier 3: The Visionary Peer (The Doctrine)**

@@ -4,8 +4,6 @@ import { ResumeHeader } from '../components/resume/ResumeHeader'
 import { ProfessionalSummary } from '../components/resume/ProfessionalSummary'
 import { OperatingPrinciples } from '../components/resume/OperatingPrinciples'
 import { ExperienceSection } from '../components/resume/ExperienceSection'
-import { UniqueEdge } from '../components/resume/UniqueEdge'
-import { SkillsSection } from '../components/resume/SkillsSection'
 import { AmazonToolsSection } from '../components/resume/AmazonToolsSection'
 import { CredentialsSection } from '../components/resume/CredentialsSection'
 import { DailyRhythm } from '../components/resume/DailyRhythm'
@@ -23,11 +21,9 @@ const Resume = () => {
       <ProfessionalSummary />
       <OperatingPrinciples />
       <ExperienceSection />
-      <UniqueEdge />
-      <SkillsSection />
       <AmazonToolsSection />
-      <CredentialsSection />
       <DailyRhythm />
+      <CredentialsSection />
       <ResumeFooter />
     </main>
   )

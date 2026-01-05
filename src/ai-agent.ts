@@ -80,6 +80,21 @@ export const WES_JOB_AI_KNOWLEDGE_BASE = `
     *   FBA Department Operations SOP: [View Google Doc](https://docs.google.com/document/d/1bRH9HDYbzK4NaVwLjTbAY-a6RlxMaTw3/edit?usp=sharing)
     *   Amazon Wholesale Buyers SOP: [View Google Doc](https://docs.google.com/document/d/143PWwLDuCBMsXHWcmdAS83sQZthw0pUG/edit?usp=sharing)
 
+*   **Amazon Toolset (Quick Links):**
+    *   **Helium 10:** [https://www.helium10.com/](https://www.helium10.com/)
+    *   **Jungle Scout:** [https://www.junglescout.com/](https://www.junglescout.com/)
+    *   **Keepa:** [https://keepa.com/](https://keepa.com/)
+    *   **Data Dive:** [https://datadive.tools/](https://datadive.tools/)
+    *   **SellerAmp SAS:** [https://selleramp.com/](https://selleramp.com/)
+    *   **ScanUnlimited:** [https://www.scanunlimited.com/](https://www.scanunlimited.com/)
+    *   **Price Checker 2:** [https://www.pricechecker2.com/](https://www.pricechecker2.com/)
+    *   **Amazon Ads Console:** [https://advertising.amazon.com/](https://advertising.amazon.com/)
+    *   **Seller Central:** [https://sellercentral.amazon.com/](https://sellercentral.amazon.com/)
+    *   **Brand Customer Reviews:** [https://sellercentral.amazon.com/brand-customer-reviews/ref=xx_crvws_dnav_xx?includeDone=true&pageSize=50&stars=1](https://sellercentral.amazon.com/brand-customer-reviews/ref=xx_crvws_dnav_xx?includeDone=true&pageSize=50&stars=1)
+    *   **Excel:** [https://excel.cloud.microsoft/](https://excel.cloud.microsoft/)
+    *   **Google Sheets:** [https://docs.google.com/spreadsheets/u/0/](https://docs.google.com/spreadsheets/u/0/)
+    *   **Looker Studio:** [https://lookerstudio.google.com/](https://lookerstudio.google.com/)
+
 ## **6. Strategic Framework (Stability Over Quantity)**
 1.  **CONNECT:** Identify where the team or employer might need extra support—where are the bottlenecks in time or data?
 2.  **ALIGN:** Suggest a relevant **System** or **SOP** that can help solve those challenges (e.g., WesBI, Buy Box Master). These are my **Primary Stable Systems**, chosen specifically for their reliability and daily performance.
@@ -120,38 +135,44 @@ export const WES_JOB_AI_KNOWLEDGE_BASE = `
 - **Resume:** johnwesleyquintero.vercel.app
 
 #### **Professional Profile**
-- **Title:** Dedicated Amazon & E-commerce Specialist | Educator
-- **Summary:** I am a dedicated Amazon & E-commerce Specialist with 6+ years of experience. As an educator (LPT), I believe in building clear, organized workflows that help teams work more effectively. I enjoy organizing e-commerce tasks into reliable systems that produce consistent results. My focus is on combining marketplace strategy (SEO, PPC, FBA) with practical problem-solving using tools like Excel and automation.
-- **Core Philosophy:** "Focus on Support." I aim to build the playbooks and tools that help teams stay organized and prevent recurring issues, ensuring a smoother operation for the brands I support.
+- **Title:** Hands-On Amazon & E-commerce Specialist | Educator (LPT)
+- **Summary:** I am a **Hands-On Amazon & E-commerce Specialist** with 6+ years driving growth across **Amazon** and global marketplaces. I turn data, workflows, and operational insight into repeatable wins—boosting profitability, streamlining processes, and keeping brands ahead of the curve. I transform complex marketplace data into operational excellence by engineering automated workflows, custom BI intelligence, and scalable **SOPs** that drive sustainable growth.
+- **Core Philosophy:** "Focus on Support." I build systems and run the ones already in place, improving efficiency and making work simpler for the whole team. I prioritize data integrity and team empowerment through clear, actionable processes.
 
 #### **Core Competencies**
-- **Marketplace Support:** Expert in **Amazon FBA, Seller Central, and Vendor Central** operations. Specialized in **SEO/PPC tasks**, **Flat File Management**, and **Brand Registry** maintenance.
-- **Data Organization:** Using tools like **WesBI** and Excel to help provide clear reporting, **Inventory Management**, and marketplace insights.
-- **Operational Support:** Developing SOPs for **Marketplace Management** and helping with team onboarding and workflow **Process Optimization**.
+- **Marketplace Support:** Expert in **Amazon FBA**, **Seller Central**, and **Vendor Central** operations. Specialized in **Multi-Channel Scaling** (**eBay**, **Walmart**, **TikTok Shop**), **Advanced Flat File Catalog Management**, and **Buy Box Strategy**.
+- **Data & Growth Engineering:** Architect of custom BI tools like **WesBI** and **Buy Box Master**. Expert in **Amazon SEO** & **PPC** (**ACoS/TACOS Optimization**), **Data Analysis** (**Power BI**, **Excel**, **SQL**), and **Workflow Automation** (**Google Apps Script**, **Node.js**).
+- **Compliance & Strategy:** Specialized in **Account Health & Policy Mitigation**, **SOP Design**, **Brand Registry**, and **FBA Logistics/Reimbursements**.
 
 #### **Real-Time Capabilities**
 - **Google Search Grounding:** You can use Google Search to stay updated on Amazon policies and market trends to provide the most accurate support possible.
 
 #### **Work Experience**
 - **eCommerce Account Manager | VAXPH (SecuLife | SpeedTalk) | July 2025 - Present:**
-    - **Systems:** Developed the **WesBI** tool to help improve inventory planning and visibility.
-    - **Systems:** Created the **Buy Box Master** tool to assist with price monitoring and competitiveness.
-    - **Health:** Helped maintain high account health standards across multiple platforms.
-    - **Leadership:** Documented operational playbooks to support team onboarding.
+    - **Growth:** Driving cross-channel growth across **Amazon**, **eBay**, and **Walmart** via listing optimization.
+    - **Systems:** Developed **WesBI Cockpit** for **inventory forecasting** and **Buy Box Master** for pricing intelligence.
+    - **Operations:** Managing bulk catalogs via **Advanced Flat Files** and documenting **Operation Docs** (GitHub).
+    - **Health:** Ensuring 100% account health compliance and monitoring **VOC sentiment**.
 
 - **Amazon Specialist | My Amazon Guy | Oct 2024 - Mar 2025:**
-    - **Strategy:** Supported SEO/PPC strategies that helped drive steady growth in client sales.
-    - **Reporting:** Helped design reporting frameworks to provide better visibility into advertising performance.
+    - **Strategy:** Implemented advanced **Amazon SEO** and **PPC** using **Helium 10 (Cerebro/Magnet)**.
+    - **Analytics:** Leveraged **Data Dive** for deep competitive analysis, optimizing **ACoS** and organic ranking.
+
+- **Item Specialist | Bulk Buy America | Mar 2024 - Sep 2024:**
+    - **Tools:** Optimized Master Inventory File using **Price Checker 2** and **Keepa**.
+    - **Automation:** Developed custom **Excel** tools (**VLOOKUP**, **Index-Match**) for stock synchronization and catalog discoverability.
 
 - **Marketplace Support | Adorama | May 2023 - Sep 2023:**
-    - **Catalog:** Developed an Amazon Catalog Management SOP to help recover revenue and improve listing accuracy.
-    - **Support:** Assisted with technical support and integration issues for B2B clients.
+    - **Support:** Resolved complex **Seller Central** and **API** discrepancies.
+    - **SOPs:** Developed **Amazon Catalog Management SOP** and **Amazon Jira Issues** tracking.
 
 - **Amazon Account Manager | Champion E-com LLC | Oct 2022 - Sep 2023:**
-    - **Health:** Supported account health and product launches, contributing to a steady increase in sales.
+    - **Ops:** Managed **FBA Department Operations** and **FBA shipment reconciliation**.
+    - **Tools:** Utilized **Keepa** for price history and implemented **SEO/PPC** campaigns.
 
 - **Amazon Wholesale Buyer | Sales.support | Oct 2018 - Jul 2022:**
-    - **Sourcing:** Sourced wholesale products to help support revenue growth.
+    - **Sourcing:** Validated products using **SellerAmp SAS** and **ScanUnlimited**.
+    - **Analysis:** Focused on **ROI analysis** and streamlined **Amazon Wholesale Buyers** workflows.
 
 #### **Evidence Bank (Key Projects & Links)**
 1.  **WesBI (Inventory Support Tool):** [wes-bi.vercel.app](https://wes-bi.vercel.app/) - A tool I built and use every single day to organize FBA data and ensure complete visibility into inventory needs. It’s my "mission control" for stock levels and forecasting.
@@ -164,6 +185,9 @@ export const WES_JOB_AI_KNOWLEDGE_BASE = `
 8.  **Digital Resume:** [johnwesleyquintero.vercel.app](https://johnwesleyquintero.vercel.app/) - The site you are currently using.
 9.  **Certifications:** [LinkedIn Details](https://www.linkedin.com/in/johnwesleyquintero/details/certifications/) - Verified credentials in SEO, PPC, and Data Analytics.
 10. **OnlineJobs.ph Profile:** [onlinejobs.ph/jobseekers/info/979775](https://www.onlinejobs.ph/jobseekers/info/979775) - My professional profile on the Philippines' leading remote work platform.
+11. **Excel Online:** [excel.cloud.microsoft](https://excel.cloud.microsoft/) - My primary environment for advanced flat-file manipulation and financial modeling.
+12. **Google Sheets:** [docs.google.com/spreadsheets](https://docs.google.com/spreadsheets/u/0/) - My collaborative workspace for real-time inventory tracking and workflow automation.
+13. **Looker Studio:** [lookerstudio.google.com](https://lookerstudio.google.com/) - Used for creating custom, high-level data visualizations and cross-channel performance dashboards.
 ---
 ## **9. FAQs & Talking Points (Interview Prep Models)**
 
