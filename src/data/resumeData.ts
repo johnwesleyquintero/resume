@@ -349,7 +349,7 @@ export const RESUME_DATA: ResumeData = {
       ],
     },
     {
-      category: 'Data Dive Analysis & Decision Support',
+      category: 'Data Analysis & Decision Support',
       items: [
         {
           name: 'Data Dive',

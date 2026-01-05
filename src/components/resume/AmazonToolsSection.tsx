@@ -14,7 +14,7 @@ import { RESUME_DATA } from '../../data/resumeData'
 const CATEGORY_ICONS: Record<string, LucideIcon> = {
   'Product Research & Opportunity Discovery': Search,
   'Wholesale, Catalog Scanning & ASIN Validation': Scan,
-  'Data Dive Analysis & Decision Support': BarChart3,
+  'Data Analysis & Decision Support': BarChart3,
   'Voice of Customer (VOC) & Listing Intelligence': MessageSquare,
   'Advertising, Demand Signals & Performance Monitoring': TrendingUp,
   'Amazon Operations & Listing Execution': Settings,
