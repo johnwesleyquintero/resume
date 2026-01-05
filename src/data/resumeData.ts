@@ -9,6 +9,7 @@ export interface ResumeData {
     portfolio: string
     blog: string
     github: string
+    onlinejobs?: string
     certifications?: string
   }
   contact: {
@@ -64,6 +65,12 @@ export interface ResumeData {
     url: string
     icon: 'file-spreadsheet' | 'database-zap'
   }[]
+  tools?: {
+    title: string
+    label: string
+    url: string
+    icon: 'file-spreadsheet' | 'database-zap'
+  }[]
 }
 
 export const RESUME_DATA: ResumeData = {
@@ -77,6 +84,7 @@ export const RESUME_DATA: ResumeData = {
     portfolio: 'https://wescode.vercel.app/',
     blog: 'https://wescode.vercel.app/blog',
     github: 'https://github.com/johnwesleyquintero',
+    onlinejobs: 'https://www.onlinejobs.ph/jobseekers/info/979775',
     certifications: 'https://www.linkedin.com/in/johnwesleyquintero/details/certifications/',
   },
   contact: {
@@ -103,7 +111,7 @@ export const RESUME_DATA: ResumeData = {
     quote:
       'I am committed to identifying operational challenges and developing sustainable processes that help brands scale efficiently on Amazon and other marketplaces.',
     content:
-      'I am a Hands-On Amazon & E-commerce Specialist with over 6 years of experience driving growth through operational excellence and data-backed strategies. I specialize in Amazon FBA management, advanced flat file manipulation, and PPC optimization. By bridging the gap between high-level strategy and daily execution, I build reliable systems and custom tools like WesBI to ensure consistent profitability and brand visibility across global marketplaces.',
+      'I am a Hands-On Amazon & E-commerce Specialist with over 6 years of experience driving growth through operational excellence and data-backed strategies. I specialize in Amazon FBA management, advanced flat file manipulation, and PPC optimization. By bridging the gap between high-level strategy and daily execution, I build reliable systems and custom tools to ensure consistent profitability and brand visibility across global marketplaces.',
   },
   experience: [
     {
@@ -310,7 +318,7 @@ export const RESUME_DATA: ResumeData = {
       {
         text: 'Knowledge Base Support: Keeping documentation and tools like WesBI updated to ensure the team has access to current information.',
         link: {
-          text: 'View Operation Citadel',
+          text: 'View Operation Docs',
           url: 'https://github.com/johnwesleyquintero/listing-documentation',
         },
       },
@@ -323,6 +331,20 @@ export const RESUME_DATA: ResumeData = {
       },
     ],
   },
+  tools: [
+    {
+      title: 'WesBI Intelligence Cockpit',
+      label: 'WesBI - FBA Intelligence Cockpit',
+      url: 'https://wes-bi.vercel.app/',
+      icon: 'database-zap',
+    },
+    {
+      title: 'Buy Box Master Pricing Tool',
+      label: 'Buy Box Master - Strategic Pricing',
+      url: 'https://buy-box-master.vercel.app/',
+      icon: 'file-spreadsheet',
+    },
+  ],
   downloads: [
     {
       title: 'Latest Version Amazon Specialist',

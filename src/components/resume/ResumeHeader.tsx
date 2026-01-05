@@ -1,6 +1,16 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Mail, Linkedin, Globe, BookOpen, Printer, MapPin, Check, Copy } from 'lucide-react'
+import {
+  Mail,
+  Linkedin,
+  Globe,
+  BookOpen,
+  Printer,
+  MapPin,
+  Check,
+  Copy,
+  Briefcase,
+} from 'lucide-react'
 import { WesAILogo } from '../WesAILogo'
 import { RESUME_DATA } from '../../data/resumeData'
 import { cn } from '../../utils/cn'
@@ -88,6 +98,17 @@ export const ResumeHeader = () => {
               <Linkedin className="h-4 w-4 shrink-0 transition-transform group-hover:scale-110" />
               <span>LinkedIn</span>
             </a>
+            {RESUME_DATA.links.onlinejobs && (
+              <a
+                href={RESUME_DATA.links.onlinejobs}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-center gap-2 rounded-xl bg-white/5 p-2.5 transition-colors hover:text-white md:justify-start md:rounded-none md:bg-transparent md:p-0"
+              >
+                <Briefcase className="h-4 w-4 shrink-0 transition-transform group-hover:scale-110" />
+                <span>OnlineJobs.ph</span>
+              </a>
+            )}
             <a
               href={RESUME_DATA.links.portfolio}
               target="_blank"

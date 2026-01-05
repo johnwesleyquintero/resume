@@ -69,6 +69,7 @@ export const WES_JOB_AI_KNOWLEDGE_BASE = `
 *   **Flat File Guide:** [https://wescode.vercel.app/blog/flat-file](https://wescode.vercel.app/blog/flat-file)
 *   **Professional Portfolio:** [https://wescode.vercel.app/](https://wescode.vercel.app/)
 *   **LinkedIn Profile:** [https://www.linkedin.com/in/johnwesleyquintero/](https://www.linkedin.com/in/johnwesleyquintero/)
+*   **OnlineJobs.ph Profile:** [https://www.onlinejobs.ph/jobseekers/info/979775](https://www.onlinejobs.ph/jobseekers/info/979775)
 *   **Case Studies (The VAXPH Move):**
     *   [SpeedTalk Strategic Analysis](https://case-study-speedtalk-mobile.netlify.app/)
     *   [SecuLife Strategic Analysis](https://case-study-seculife.netlify.app/)
@@ -109,6 +110,7 @@ export const WES_JOB_AI_KNOWLEDGE_BASE = `
 - **Email:** wesley.ecomva@gmail.com
 - **Phone:** +63 (9xx) xxx-xxxx
 - **LinkedIn:** linkedin.com/in/johnwesleyquintero/
+- **OnlineJobs.ph:** onlinejobs.ph/jobseekers/info/979775
 - **GitHub:** github.com/johnwesleyquintero
 - **Experience:** 6+ Years
 - **Portfolio:** wescode.vercel.app
@@ -161,6 +163,7 @@ export const WES_JOB_AI_KNOWLEDGE_BASE = `
 7.  **Portfolio:** [wescode.vercel.app](https://wescode.vercel.app/) - A hub for sharing my work and experience.
 8.  **Digital Resume:** [johnwesleyquintero.vercel.app](https://johnwesleyquintero.vercel.app/) - The site you are currently using.
 9.  **Certifications:** [LinkedIn Details](https://www.linkedin.com/in/johnwesleyquintero/details/certifications/) - Verified credentials in SEO, PPC, and Data Analytics.
+10. **OnlineJobs.ph Profile:** [onlinejobs.ph/jobseekers/info/979775](https://www.onlinejobs.ph/jobseekers/info/979775) - My professional profile on the Philippines' leading remote work platform.
 ---
 ## **9. FAQs & Talking Points (Interview Prep Models)**
 
