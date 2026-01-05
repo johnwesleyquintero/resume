@@ -50,7 +50,7 @@ This is my sovereign digital asset, built to demonstrate my dual expertise as a 
    ```
 
 ## 🎯 Strategic Assets
-- **Main Resume**: [johnwesleyquintero.netlify.app](https://johnwesleyquintero.netlify.app)
+- **Main Resume**: [johnwesleyquintero.vercel.app](https://johnwesleyquintero.vercel.app)
 - **Portfolio & Blog**: [wescode.vercel.app](https://wescode.vercel.app/)
 - **WesBI Cockpit**: [wes-bi.vercel.app](https://wes-bi.vercel.app/)
 - **Buy Box Master**: [buy-box-master.vercel.app](https://buy-box-master.vercel.app/)
