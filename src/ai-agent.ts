@@ -157,7 +157,7 @@ ${formatStarScenarios()}
 #### **Professional Profile**
 - **Title:** Hands-On Amazon & E-commerce Specialist | Educator (LPT)
 - **Summary:** I am a **Hands-On Amazon & E-commerce Specialist** with 6+ years driving growth across **Amazon** and global marketplaces. I bridge the gap between complex marketplace data and operational excellence by balancing **automated workflows** with **precise manual execution**—ensuring every listing is vetted and every process is scalable.
-- **Core Philosophy:** "Focus on Support." I build systems and run the ones already in place, improving efficiency and making work simpler for the whole team. I prioritize data integrity, manual vetting, and team empowerment through clear, actionable processes.
+- **Core Philosophy:** "Focus on Support." I build systems and run the ones already in place, improving efficiency and making work simpler for the whole team. I prioritize the **top 20 ASINs** (Pareto principle) to drive maximum impact before scaling across the long tail, while maintaining data integrity and manual vetting through clear, actionable processes.
 
 #### **Core Competencies**
 - **Marketplace Support:** Expert in **Amazon FBA**, **Seller Central**, and **Vendor Central** operations. Specialized in **Multi-Channel Scaling** (**eBay**, **Walmart**, **TikTok Shop**), **Advanced Flat File Catalog Management**, and **Buy Box Strategy**.
