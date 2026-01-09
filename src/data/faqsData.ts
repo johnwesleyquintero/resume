@@ -140,4 +140,17 @@ export const FAQS_DATA: StarScenario[] = [
       'We recovered approximately $15,000 in potentially lost monthly revenue and reduced catalog sync errors by 90%, ensuring price and stock accuracy across the entire account.',
     category: 'listing',
   },
+  {
+    id: 'a-plus-framework-011',
+    title: 'A+ Premium Framework: Conversion-Focused Product Storytelling',
+    question: 'How do you approach building high-converting A+ or Premium A+ content?',
+    situation:
+      'Both SecuLife and SpeedTalk had A+ content that was visually inconsistent, feature-heavy, and not aligned with how customers actually evaluated compatibility, coverage, and value. This led to confusion, increased pre-sale questions, and missed conversion opportunities.',
+    task: 'My goal was to design a repeatable A+ / Premium A+ framework that could improve conversion rates, reduce customer friction, and scale across multiple ASINs and product lines.',
+    action:
+      'I created the A+ Premium Framework v1.0, grounded in SQP data, Voice of the Customer analysis, and competitor benchmarking. I mapped customer decision-making into modular sections such as Hero, Compatibility, Plan Options, Activation Steps, Coverage, and FAQs. I designed reusable Canva wireframes, implemented disciplined keyword layering, and enforced a brand-safe visual doctrine to ensure consistency across all future builds.',
+    result:
+      'The framework standardized how we tell product stories across the catalog, reduced customer confusion around compatibility and activation, and improved conversion efficiency on priority ASINs. It also enabled faster A+ production, easier iteration, and consistent brand presentation across SpeedTalk and SecuLife.',
+    category: 'listing',
+  },
 ]
