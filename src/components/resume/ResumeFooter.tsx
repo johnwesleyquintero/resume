@@ -8,6 +8,7 @@ import {
   FolderDown,
   LayoutDashboard,
   TrendingUp,
+  Zap,
 } from 'lucide-react'
 import { WesAILogo } from '../WesAILogo'
 import { RESUME_DATA } from '../../data/resumeData'
@@ -83,22 +84,28 @@ export const ResumeFooter = () => {
               <FolderDown className="h-4 w-4 transition-transform group-hover:scale-110" />
               <span>Downloads</span>
             </Link>
-            {RESUME_DATA.tools?.map((tool) => (
-              <a
-                key={tool.label}
-                href={tool.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-2 text-sm text-gray-600 transition-colors hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400"
-              >
-                {tool.icon === 'database-zap' ? (
-                  <LayoutDashboard className="h-4 w-4 transition-transform group-hover:scale-110" />
-                ) : (
-                  <TrendingUp className="h-4 w-4 transition-transform group-hover:scale-110" />
-                )}
-                <span>{tool.label}</span>
-              </a>
-            ))}
+            {RESUME_DATA.tools?.map((tool) => {
+              const ToolIcon =
+                tool.icon === 'layout-dashboard'
+                  ? LayoutDashboard
+                  : tool.icon === 'trending-up'
+                    ? TrendingUp
+                    : tool.icon === 'zap'
+                      ? Zap
+                      : LayoutDashboard
+              return (
+                <a
+                  key={tool.label}
+                  href={tool.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-2 text-sm text-gray-600 transition-colors hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400"
+                >
+                  <ToolIcon className="h-4 w-4 transition-transform group-hover:scale-110" />
+                  <span>{tool.label}</span>
+                </a>
+              )
+            })}
           </div>
         </div>
 

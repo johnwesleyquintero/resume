@@ -57,13 +57,13 @@ export interface ResumeData {
     title: string
     label: string
     url: string
-    icon: 'file-spreadsheet' | 'database-zap'
+    icon: string
   }[]
   tools?: {
     title: string
     label: string
     url: string
-    icon: 'file-spreadsheet' | 'database-zap'
+    icon: string
   }[]
 }
 
@@ -437,19 +437,19 @@ export const RESUME_DATA: ResumeData = {
       title: 'WesBI Intelligence Cockpit',
       label: 'WesBI - FBA Intelligence Cockpit',
       url: 'https://wes-bi.vercel.app/',
-      icon: 'database-zap',
+      icon: 'layout-dashboard',
     },
     {
       title: 'Buy Box Master Pricing Tool',
       label: 'Buy Box Master - Strategic Pricing',
       url: 'https://buy-box-master.vercel.app/',
-      icon: 'file-spreadsheet',
+      icon: 'trending-up',
     },
     {
       title: 'Wholesale ROI Scouter',
       label: 'Wholesale ROI Scouter - Sourcing Brain',
       url: 'https://ws-roi-sc.vercel.app/',
-      icon: 'database-zap',
+      icon: 'zap',
     },
   ],
   downloads: [
@@ -457,13 +457,13 @@ export const RESUME_DATA: ResumeData = {
       title: 'Latest Version Amazon Specialist',
       label: 'John Wesley Quintero - Hands-On Amazon Specialist.pdf',
       url: '/documents/John Wesley Quintero - Hands-On Amazon Specialist.pdf',
-      icon: 'database-zap',
+      icon: 'file-text',
     },
     {
       title: 'Old Version Standard Resume',
       label: 'John Wesley Quintero - Resume Old Version.pdf',
       url: '/documents/John Wesley Quintero - Resume Old Version.pdf',
-      icon: 'file-spreadsheet',
+      icon: 'file-archive',
     },
   ],
 }

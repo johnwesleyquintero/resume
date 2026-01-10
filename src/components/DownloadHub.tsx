@@ -10,6 +10,7 @@ import {
   ExternalLink,
   FolderDown,
   FileText,
+  FileArchive,
 } from 'lucide-react'
 import { RESUME_DATA } from '../data/resumeData'
 import { cn } from '../utils/cn'
@@ -82,24 +83,27 @@ export const DownloadHub: React.FC = () => {
             <p className="mb-1 px-2 text-[10px] font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500">
               Available Documents
             </p>
-            {RESUME_DATA.downloads.map((doc, idx) => (
-              <a
-                key={idx}
-                href={doc.url}
-                download
-                className="group/item flex items-center gap-3 rounded-lg px-3 py-2.5 text-gray-700 transition-colors hover:bg-blue-50 dark:text-gray-200 dark:hover:bg-blue-900/20"
-              >
-                <div className="rounded-md bg-gray-100 p-2 transition-colors group-hover/item:bg-blue-100 dark:bg-gray-700 dark:group-hover/item:bg-blue-800/40">
-                  <FileText className="h-4 w-4 text-blue-600 dark:text-blue-400" />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-sm font-semibold">{doc.title}</span>
-                  <span className="max-w-[140px] truncate text-[10px] text-gray-400 dark:text-gray-500">
-                    {doc.label}
-                  </span>
-                </div>
-              </a>
-            ))}
+            {RESUME_DATA.downloads.map((doc, idx) => {
+              const DocIcon = doc.icon === 'file-archive' ? FileArchive : FileText
+              return (
+                <a
+                  key={idx}
+                  href={doc.url}
+                  download
+                  className="group/item flex items-center gap-3 rounded-lg px-3 py-2.5 text-gray-700 transition-colors hover:bg-blue-50 dark:text-gray-200 dark:hover:bg-blue-900/20"
+                >
+                  <div className="rounded-md bg-gray-100 p-2 transition-colors group-hover/item:bg-blue-100 dark:bg-gray-700 dark:group-hover/item:bg-blue-800/40">
+                    <DocIcon className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-sm font-semibold">{doc.title}</span>
+                    <span className="max-w-[140px] truncate text-[10px] text-gray-400 dark:text-gray-500">
+                      {doc.label}
+                    </span>
+                  </div>
+                </a>
+              )
+            })}
 
             <div className="my-1 border-t border-gray-100 dark:border-gray-700" />
 
