@@ -166,4 +166,30 @@ export const FAQS_DATA: StarScenario[] = [
       'The tool reduced catalog processing time by over 70% and allowed us to identify high-ROI opportunities that were previously missed due to manual fatigue. It standardized our "Wholesale Buyer" workflow, ensuring that every purchase was vetted against real-time profitability and brand safety metrics.',
     category: 'inventory',
   },
+  {
+    id: 'inventory-sync-013',
+    title: 'Multi-Channel Stock Synchronization via Excel Automation',
+    question: 'How do you ensure stock accuracy between Amazon and other sales channels?',
+    situation:
+      'At Bulk Buy America, we struggled to keep our company website synchronized with our live Amazon FBA inventory, leading to occasional overselling and manual data entry errors.',
+    task: 'My goal was to create a reliable, automated bridge between Amazon and our website to ensure 100% stock accuracy.',
+    action:
+      'I optimized the Master Inventory File by integrating Price Checker 2 and Keepa data. I developed a custom Excel tool using advanced VLOOKUP and Index-Match functions that automated the synchronization process, allowing us to update website stock levels based on real-time Amazon velocity and FBA availability.',
+    result:
+      'We achieved a 100% sell-through rate on updated inventory and completely eliminated overselling incidents. This automation saved the team hours of manual data entry and ensured a seamless customer experience across channels.',
+    category: 'inventory',
+  },
+  {
+    id: 'fba-logistics-014',
+    title: 'Standardizing FBA Logistics & Shipment Reconciliation',
+    question: 'How do you handle inventory discrepancies and FBA reimbursements?',
+    situation:
+      'Champion E-com LLC was experiencing frequent inventory losses during the FBA inbound process, resulting in unrecovered revenue and skewed stock levels.',
+    task: 'I needed to implement a standardized logistics workflow that would ensure every unit sent to FBA was accounted for or reimbursed.',
+    action:
+      'I developed a comprehensive "FBA Department Operations SOP." I established a disciplined shipment reconciliation cycle, using Seller Central reports to identify missing units and opening evidence-based cases for reimbursements. I also improved the physical prep-and-pack checklist to ensure 100% labeling accuracy before shipments left the warehouse.',
+    result:
+      'Inventory discrepancies dropped by 90% within the first quarter. We successfully recovered thousands of dollars in lost revenue through systematic reimbursements, and the account maintained a perfect FBA inbound performance rating.',
+    category: 'operational',
+  },
 ]
