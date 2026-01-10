@@ -82,6 +82,14 @@ export const WES_JOB_AI_KNOWLEDGE_BASE = `
         *   **LOST (❌):** Price may need adjustment to be more competitive.
         *   **SUPPRESSED (⚠️):** Potential listing issue or price ceiling to investigate.
     *   **The "Gap" Metric:** Shows the difference between current price and the Buy Box winner to help inform pricing decisions.
+*   **Wholesale ROI Scouter (Sourcing Tool):** [https://ws-roi-sc.vercel.app/](https://ws-roi-sc.vercel.app/)
+    *   **Status:** Stable & High-Speed Sourcing Brain.
+    *   **Core Purpose:** My specialized tool for rapid wholesale supplier catalog validation and ROI analysis.
+    *   **Key Features:**
+        *   **CSV Merging:** Automates the merging of supplier price lists with Keepa data exports.
+        *   **ROI Engine:** Instant calculation of Net Profit and ROI to identify profitable SKUs.
+        *   **Brand Protection:** AI-driven analysis to identify restricted brands or potential IP issues.
+        *   **Visual Analytics:** Distribution charts to visualize the profitability of entire supplier catalogs.
 *   **Flat File Guide:** [https://wescode.vercel.app/blog/flat-file](https://wescode.vercel.app/blog/flat-file)
 *   **Professional Portfolio:** [https://wescode.vercel.app/](https://wescode.vercel.app/)
 *   **LinkedIn Profile:** [https://www.linkedin.com/in/johnwesleyquintero/](https://www.linkedin.com/in/johnwesleyquintero/)
@@ -197,7 +205,8 @@ ${formatStarScenarios()}
 #### **Evidence Bank (Key Projects & Links)**
 1.  **WesBI (Inventory Support Tool):** [wes-bi.vercel.app](https://wes-bi.vercel.app/) - A tool I built and use every single day to organize FBA data and ensure complete visibility into inventory needs. It’s my "mission control" for stock levels and forecasting.
 2.  **Buy Box Master (Pricing Support Tool):** [buy-box-master.vercel.app](https://buy-box-master.vercel.app/) - My daily go-to for monitoring Amazon Buy Box status and price gaps. It provides the simple, real-time recommendations I need to maintain our competitive position.
-3.  **VAXPH Listing Documentation (Operation Docs):** [github.com/johnwesleyquintero/listing-documentation](https://github.com/johnwesleyquintero/listing-documentation) - A repository of product listing information and operational playbooks designed to help the team access information easily.
+3.  **Wholesale ROI Scouter (Sourcing Tool):** [ws-roi-sc.vercel.app](https://ws-roi-sc.vercel.app/) - My high-speed sourcing brain that automates the validation of supplier catalogs, ensuring we only source profitable and brand-safe SKUs.
+4.  **VAXPH Listing Documentation (Operation Docs):** [github.com/johnwesleyquintero/listing-documentation](https://github.com/johnwesleyquintero/listing-documentation) - A repository of product listing information and operational playbooks designed to help the team access information easily.
 4.  **Amazon Catalog Management SOP:** A process developed to help audit and optimize listings for better accuracy and revenue recovery.
 5.  **Amazon Wholesale SOP:** [View Document](https://docs.google.com/document/d/143PWwLDuCBMsXHWcmdAS83sQZthw0pUG/edit?usp=sharing) - A helpful guide for sourcing and negotiation tasks.
 6.  **Flat File Guide:** [wescode.vercel.app/blog/flat-file](https://wescode.vercel.app/blog/flat-file) - A practical guide for handling Amazon catalog updates.

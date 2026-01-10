@@ -158,6 +158,13 @@ export const RESUME_DATA: ResumeData = {
             url: 'https://buy-box-master.vercel.app/',
           },
         },
+        {
+          text: 'Developed **Wholesale ROI Scouter**, a high-speed sourcing tool that automates supplier CSV merging, ROI calculations, and AI-driven brand protection.',
+          link: {
+            text: 'View ROI Scouter',
+            url: 'https://ws-roi-sc.vercel.app/',
+          },
+        },
       ],
     },
     {
@@ -437,6 +444,12 @@ export const RESUME_DATA: ResumeData = {
       label: 'Buy Box Master - Strategic Pricing',
       url: 'https://buy-box-master.vercel.app/',
       icon: 'file-spreadsheet',
+    },
+    {
+      title: 'Wholesale ROI Scouter',
+      label: 'Wholesale ROI Scouter - Sourcing Brain',
+      url: 'https://ws-roi-sc.vercel.app/',
+      icon: 'database-zap',
     },
   ],
   downloads: [

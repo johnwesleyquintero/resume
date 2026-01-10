@@ -153,4 +153,17 @@ export const FAQS_DATA: StarScenario[] = [
       'The framework standardized how we tell product stories across the catalog, reduced customer confusion around compatibility and activation, and improved conversion efficiency on priority ASINs. It also enabled faster A+ production, easier iteration, and consistent brand presentation across SpeedTalk and SecuLife.',
     category: 'listing',
   },
+  {
+    id: 'wholesale-scouter-012',
+    title: 'Wholesale ROI Scouter: From Manual Sourcing to Automated Intelligence',
+    question: 'How do you scale wholesale sourcing when dealing with thousands of SKUs?',
+    situation:
+      'During my time at Sales.support, we were sourcing profitable wholesale products from massive supplier catalogs. Even with ScanUnlimited and SellerAmp, we faced constant bottlenecks in data cleanup, column mapping, and identifying "hidden gems" in lists with thousands of lines.',
+    task: 'I set out to build a "Sourcing Brain" that could automate the validation process and provide an instant, visual verdict on catalog profitability.',
+    action:
+      'I developed the "Wholesale ROI Scouter," a custom application that processes supplier CSVs and merges them with Keepa data in seconds. I implemented automated ROI/Net Profit calculations, AI-driven brand restriction checks to avoid IP complaints, and integrated Recharts to visualize the profit distribution of the entire catalog. This moved us away from manual Excel manipulation and into high-speed, data-backed procurement.',
+    result:
+      'The tool reduced catalog processing time by over 70% and allowed us to identify high-ROI opportunities that were previously missed due to manual fatigue. It standardized our "Wholesale Buyer" workflow, ensuring that every purchase was vetted against real-time profitability and brand safety metrics.',
+    category: 'inventory',
+  },
 ]
